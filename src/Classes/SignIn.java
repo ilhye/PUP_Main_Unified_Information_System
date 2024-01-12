@@ -333,7 +333,7 @@ public class SignIn extends javax.swing.JFrame {
         
         if (data.isUsernameExist(login.getUsername())) {
             if(data.isUnamePassValid(login.getUsername(), login.getPassword())) {
-                Homes1 options = new Homes1();
+                Home options = new Home();
                 options.pack();
                 options.setVisible(true);
                 dispose();

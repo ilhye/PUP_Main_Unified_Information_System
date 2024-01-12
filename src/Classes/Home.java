@@ -17,6 +17,117 @@ public class Home extends javax.swing.JFrame {
         
         JTabbedNavigation.setSelectedIndex(0); // to show the page of Home
     }
+    
+    private void ContentAchievements(){
+        jTxtHolder1.setText("• Top school of choice of many companies in the country (2016, JobStreet.com Philippines)\n" +
+        "\n• PUP is 9th most popular university in the Philippines based on the popularity of its website (2016, http://www.4icu.org/ph/)\n" +
+        "\n• QS World University Rankings by Subject 2013 (Country File on the Philippines): Rank 3 in Life Science and Medicine, Rank 5 in Natural Science (Chemistry), Rank 4 in Economics and Econometrics, Rank 5 in Communication and Media Studies\n" +
+        "\n• Commission on Higher Education (CHED) Center of Development for Excellence in Journalism and Filipino (2013)\n" +
+        "\n• Accrediting Agency of Chartered Colleges and Universities in the Philippines (AACCUP): 58 programs of PUP are in the list of accreditation (4 Level III accredited programs, 15 qualified for Level III accreditation with 9 programs undergoing assessment, 14 Level II accredited programs, 11 Level I accredited programs, and 5 programs in the list as candidate for accreditation, as of 2012)\n" +
+        "\n• President of the Philippines Proclamation No. 1992 and National Historical Institute's Board Resolution No. 01, s. 2008: Declaration of the PUP Mabini Campus as the permanent home of the Mabini Shrine.\n" +
+        "\n• President of the Philippines Proclamation No. 482: Declaring the period of October 1, 2003 to October 31, 2004 as the Centenary of the Polytechnic University of the Philippines.\n" +
+        "\n• Guinness Book of World Records: World's Largest Human Rainbow (2004)");
+        jTxtHolder1.setCaretPosition(0);
+    }
+    
+     private void ContentAdmission(){
+        jTxtHolder4.setText("• Admission Details:\n" +
+        "1. Baccalaureate Degree (4 or 5 years): Requires PUPCET and application through PUP iApply.\n" +
+        "2. Diploma Program (3 years) leading to Baccalaureate Degree: Same application process as Baccalaureate Degree.\n" +
+        "\n" +
+        "• Eligibility for PUPCET:\n" +
+        "1. Grade 12 student graduating in AY 2023-2024 with GWA ≥ 82%.\n" +
+        "2. Passer of PEPT/ALS or NFEA & E-Program.\n" +
+        "\n" +
+        "• Application Process:\n" +
+        "1. Go to PUP iApply (https://www.pup.edu.ph/iapply/pupcet).\n" +
+        "2. Click Apply Now.\n" +
+        "3. Create an account.\n" +
+        "4. Answer prequalification questions.\n" +
+        "5. Fill up the registration form.\n" +
+        "6. Submit and sign in again.\n" +
+        "7. Choose from options:\n" +
+        "8. Application Form: Complete and finalize your application.\n" +
+        "9. Finalize Application: Submit your application for evaluation.\n" +
+        "10. Print ePermit: Download and print your exam permit (after approval).\n" +
+        "11. Check PUPCET Results: Check after official release.\n" +
+        "12. Sign out: Secure your account.\n" +
+        "13. Review guidelines for online application photo.\n" +
+        "14. Read FAQs about who can take PUPCET and where to apply.\n" +
+        "\n" +
+        "• Additional Information:\n" +
+        "1. Apply for PUPCET only in one branch/campus and once per academic year.\n" +
+        "2. Download ePermit 6-20 working days after application.\n" +
+        "3. Use Chrome, Firefox, or Edge for PUP iApply.");
+        jTxtHolder4.setCaretPosition(0);
+    }
+     
+     
+     
+        
+private void ContentAdmissionSHS(){
+        jTxtHolder4.setText(">> Required Documents for Online Registration <<\n" +
+        "\n" +
+        "1. Scanned photo of the applicant (JPEG file, 2x2 inches, recent, white background, name tag at chest)\n" +
+        "2. Scanned Grade 9 Report Card/F137 (JPEG file)\n" +
+        "3. Scanned Grade 10 Report Card (JPEG file, 1st and 2nd grading periods)\n" +
+        "4. ESC/QVR Certificate (for students from private schools, currently enrolled in Grade 10 for SY 2022-2023)\n" +
+        "\n" +
+        ">> Important Reminders <<\n" +
+        "• Report cards must clearly show:\n" +
+        "     oComplete name\n" +
+        "     oLRN\n" +
+        "     oGrades in English, Math, and Science\n" +
+        "• JPEG file size limit: 300 KB\n" +
+        "• Use an active and correct email address.\n" +
+        "• Finalized applications cannot be edited.\n" +
+        "\n" +
+        ">> Grounds for Invalid Registration <<\n" +
+        "1.Multiple accounts/applications\n" +
+        "2.Incorrect personal information or grades\n" +
+        "3.Failure to upload required documents properly\n" +
+        "\n" +
+        ">> Grade Requirements <<\n" +
+        "• English, Math, and Science: 85% and above\n" +
+        "• Other subjects: No grade below 82%\n" +
+        "     Admission is subject to slot availability.\n" +
+        "\n" +
+        ">> Tracks and Strands Offered <<\n" +
+        "• Academic Track:\n" +
+        "1.STEM (Science, Technology, Engineering, and Mathematics)\n" +
+        "2.ABM (Accountancy, Business, and Management)\n" +
+        "3.HUMSS (Humanities and Social Sciences)\n" +
+        "\n" +
+        "• Technical, Vocational, and Livelihood Track:\n" +
+        "1. ICT (Information Communications Technology)\n" +
+        "\n" +
+        "• Inquiries:\n" +
+        "Office of the Senior High School Admission Telephone Number: 53351787 loc. 356");
+        jTxtHolder4.setCaretPosition(0);
+    }
+
+    private void ContentAdmissionScholarship(){
+        jTxtHolder4.setText("PUP Scholarship and Financial Assistance (SFAS) Information:\n" +
+        "--------------------------------------------------------------------------------------------------------------------------\n" +
+        "\n" +
+        ">> Types of Support <<\n" +
+        "1. Scholarships:\n" +
+        "     o Entrance scholarships\n" +
+        "     o Resident scholarships\n" +
+        "     o Special grants\n" +
+        "2. Financial Assistance:\n" +
+        "     o Service grant-in-aid\n" +
+        "     o Student loan\n" +
+        "     o Work-study plan/Student assistantship\n" +
+        "\n" +
+        ">> Benefits <<\n" +
+        "• Incentive equivalent to total assessed fees, either full or partial.\n" +
+        "\n" +
+        "• Source: Scholarship and Financial Assistance Services (SFAS), PUP Student Handbook, Rev. 2019\n" +
+        "• Note: Information is from 2019. For updated details, please contact SFAS directly.\n" +
+        "• Facebook Link: https://www.facebook.com/PUPSFAS");
+        jTxtHolder4.setCaretPosition(0);
+    }
 
     // Initialize form
     @SuppressWarnings("unchecked")
@@ -72,38 +183,49 @@ public class Home extends javax.swing.JFrame {
         jLabel115 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jPanelHMV = new javax.swing.JPanel();
-        jPanelAchieves = new javax.swing.JPanel();
+        jBtnHistory = new javax.swing.JButton();
+        jBtnMission = new javax.swing.JButton();
+        jBtnVision = new javax.swing.JButton();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTxtHolder = new javax.swing.JTextArea();
+        jLabel133 = new javax.swing.JLabel();
+        jPanelAchievement = new javax.swing.JPanel();
+        jLabel131 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTxtHolder1 = new javax.swing.JTextArea();
+        jLabel132 = new javax.swing.JLabel();
         jPanelFacilities = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jFacility_PicHostel = new javax.swing.JLabel();
+        jFacility_PicMateo = new javax.swing.JLabel();
+        jFacility_PicOlonan = new javax.swing.JLabel();
+        jFacility_PicFootball = new javax.swing.JLabel();
+        jFacility_PicInterfaith = new javax.swing.JLabel();
+        jFacility_PicMedical = new javax.swing.JLabel();
+        jFacility_PicNinoyLibrary = new javax.swing.JLabel();
+        jFacility_PicSwimmingPool = new javax.swing.JLabel();
+        jFacility_PicOutdoorGym = new javax.swing.JLabel();
+        jFacility_PicLagoon = new javax.swing.JLabel();
+        jFacility_PicBalagtas = new javax.swing.JLabel();
+        jFacility_PicBookstore = new javax.swing.JLabel();
+        jFacility_PicCanteen = new javax.swing.JLabel();
+        jFacility_PicGym = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTxtHolder2 = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTxtHolder3 = new javax.swing.JTextArea();
+        jLabel130 = new javax.swing.JLabel();
         jPanelAdmission = new javax.swing.JPanel();
-        jPanel9 = new javax.swing.JPanel();
-        jLabel62 = new javax.swing.JLabel();
-        jLabel63 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
-        jLabel66 = new javax.swing.JLabel();
-        jLabel67 = new javax.swing.JLabel();
-        jLabel116 = new javax.swing.JLabel();
-        jLabel117 = new javax.swing.JLabel();
-        jLabel118 = new javax.swing.JLabel();
-        jLabel119 = new javax.swing.JLabel();
-        jLabel120 = new javax.swing.JLabel();
-        jLabel121 = new javax.swing.JLabel();
-        jLabel122 = new javax.swing.JLabel();
-        jLabel123 = new javax.swing.JLabel();
-        jLabel124 = new javax.swing.JLabel();
-        jLabel125 = new javax.swing.JLabel();
-        jLabel126 = new javax.swing.JLabel();
-        jLabel127 = new javax.swing.JLabel();
-        jLabel128 = new javax.swing.JLabel();
-        jLabel129 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jLabel49 = new javax.swing.JLabel();
-        jPanelScholarship = new javax.swing.JPanel();
+        jLabel134 = new javax.swing.JLabel();
+        jBtnScholarship = new javax.swing.JButton();
+        jBtnCollege = new javax.swing.JButton();
+        jBtnSHS = new javax.swing.JButton();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        jTxtHolder4 = new javax.swing.JTextArea();
+        jLabel135 = new javax.swing.JLabel();
         jPanelColleges = new javax.swing.JPanel();
-        jPanelCLUBS = new javax.swing.JPanel();
-        jPanelSeniorHigh = new javax.swing.JPanel();
+        jPanelClubs = new javax.swing.JPanel();
         jPanelSTEvaluation = new javax.swing.JPanel();
         jRBYes1 = new javax.swing.JRadioButton();
         jRBNo1 = new javax.swing.JRadioButton();
@@ -335,7 +457,6 @@ public class Home extends javax.swing.JFrame {
         jLabelResultTVLTrack = new javax.swing.JLabel();
         jLabel113 = new javax.swing.JLabel();
         jPanelFunFacts = new javax.swing.JPanel();
-        jPanelAccntInfo = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1080, 600));
@@ -422,7 +543,7 @@ public class Home extends javax.swing.JFrame {
         jComboBox1.setBackground(new java.awt.Color(136, 0, 0));
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Home", "History, Mission, and Vision", "Achievements", "Facilities", "Admission", "Scholarship", "Colleges", "Department Clubs", "Senior High", "Strand and Track Evaluation", "PUP Fun Facts", "Account Information", "Log out" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Home", "History, Mission, and Vision", "Achievements", "Facilities", "Admission/Scholarship", "Colleges", "Department Clubs", "Strand and Track Evaluation", "PUP Fun Facts" }));
         jComboBox1.setBorder(null);
         jComboBox1.setFocusable(false);
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -575,238 +696,317 @@ public class Home extends javax.swing.JFrame {
 
         JTabbedNavigation.addTab("tab1", jPanelHome);
 
-        javax.swing.GroupLayout jPanelHMVLayout = new javax.swing.GroupLayout(jPanelHMV);
-        jPanelHMV.setLayout(jPanelHMVLayout);
-        jPanelHMVLayout.setHorizontalGroup(
-            jPanelHMVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1075, Short.MAX_VALUE)
-        );
-        jPanelHMVLayout.setVerticalGroup(
-            jPanelHMVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
+        jPanelHMV.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jBtnHistory.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnHistory.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jBtnHistory.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnHistory.setText("HISTORY");
+        jBtnHistory.setToolTipText("");
+        jBtnHistory.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        jBtnHistory.setFocusable(false);
+        jBtnHistory.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnHistoryMouseClicked(evt);
+            }
+        });
+        jBtnHistory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnHistoryActionPerformed(evt);
+            }
+        });
+        jPanelHMV.add(jBtnHistory, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 55, 160, 80));
+
+        jBtnMission.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnMission.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jBtnMission.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnMission.setText("MISSION");
+        jBtnMission.setToolTipText("");
+        jBtnMission.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        jBtnMission.setFocusable(false);
+        jBtnMission.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnMissionMouseClicked(evt);
+            }
+        });
+        jBtnMission.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnMissionActionPerformed(evt);
+            }
+        });
+        jPanelHMV.add(jBtnMission, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 205, 160, 80));
+
+        jBtnVision.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnVision.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jBtnVision.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnVision.setText("VISION");
+        jBtnVision.setToolTipText("");
+        jBtnVision.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        jBtnVision.setFocusable(false);
+        jBtnVision.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnVisionMouseClicked(evt);
+            }
+        });
+        jBtnVision.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVisionActionPerformed(evt);
+            }
+        });
+        jPanelHMV.add(jBtnVision, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 355, 160, 80));
+
+        jTxtHolder.setEditable(false);
+        jTxtHolder.setBackground(new java.awt.Color(255, 224, 224));
+        jTxtHolder.setColumns(20);
+        jTxtHolder.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTxtHolder.setLineWrap(true);
+        jTxtHolder.setRows(1);
+        jTxtHolder.setToolTipText("");
+        jTxtHolder.setWrapStyleWord(true);
+        jTxtHolder.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 5, true));
+        jTxtHolder.setDragEnabled(true);
+        jTxtHolder.setFocusable(false);
+        jScrollPane6.setViewportView(jTxtHolder);
+
+        jPanelHMV.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 750, 390));
+        jPanelHMV.add(jLabel133, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, 500));
 
         JTabbedNavigation.addTab("tab2", jPanelHMV);
 
-        javax.swing.GroupLayout jPanelAchievesLayout = new javax.swing.GroupLayout(jPanelAchieves);
-        jPanelAchieves.setLayout(jPanelAchievesLayout);
-        jPanelAchievesLayout.setHorizontalGroup(
-            jPanelAchievesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1075, Short.MAX_VALUE)
-        );
-        jPanelAchievesLayout.setVerticalGroup(
-            jPanelAchievesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
+        jPanelAchievement.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        JTabbedNavigation.addTab("tab3", jPanelAchieves);
+        jLabel131.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel131.setText("Awards & Recognitions");
+        jPanelAchievement.add(jLabel131, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 9, 780, 70));
 
-        javax.swing.GroupLayout jPanelFacilitiesLayout = new javax.swing.GroupLayout(jPanelFacilities);
-        jPanelFacilities.setLayout(jPanelFacilitiesLayout);
-        jPanelFacilitiesLayout.setHorizontalGroup(
-            jPanelFacilitiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1075, Short.MAX_VALUE)
-        );
-        jPanelFacilitiesLayout.setVerticalGroup(
-            jPanelFacilitiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
+        jTxtHolder1.setEditable(false);
+        jTxtHolder1.setBackground(new java.awt.Color(255, 224, 224));
+        jTxtHolder1.setColumns(20);
+        jTxtHolder1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTxtHolder1.setLineWrap(true);
+        jTxtHolder1.setRows(1);
+        jTxtHolder1.setToolTipText("");
+        jTxtHolder1.setWrapStyleWord(true);
+        jTxtHolder1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 5, true));
+        jTxtHolder1.setDragEnabled(true);
+        jTxtHolder1.setFocusable(false);
+        jScrollPane2.setViewportView(jTxtHolder1);
 
-        JTabbedNavigation.addTab("tab4", jPanelFacilities);
+        jPanelAchievement.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 910, 390));
+        jPanelAchievement.add(jLabel132, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        JTabbedNavigation.addTab("tab2", jPanelAchievement);
+
+        jPanelFacilities.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollPane3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        jScrollPane3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jList1.setBackground(new java.awt.Color(255, 224, 224));
+        jList1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "1. 7-FLOOR HOSTEL", "2. DR. MATEO CONFERENCE ROOM", "3. DR. OLONAN AND DR. CARAGUE CONFERENCE ROOM", "4. FOOTBALL FIELD", "5. INTERFAITH CHAPEL", "6. MEDICAL AND DENTAL EQUIPMENT", "7. NINOY AQUINO LIBRARY AND LEARNING RESOURCES CENTER", "8. OLYMPIC SIZED SWIMMING POOL", "9. OUTDOOR GYM", "10. PUP-LAGOON", "11. THE BALAGTAS HALL (BULWAGANG BALAGTAS)", "12. UNIVERSITY BOOKSTORE", "13. UNIVERSITY CANTEEN", "14. UNIVERSITY GYMNASIUM" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jList1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jList1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jList1MouseClicked(evt);
+            }
+        });
+        jList1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                jList1ValueChanged(evt);
+            }
+        });
+        jScrollPane3.setViewportView(jList1);
+
+        jPanelFacilities.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 540, 330));
+
+        jFacility_PicHostel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/hostel.jpg"))); // NOI18N
+        jFacility_PicHostel.setText("jLabel66");
+        jFacility_PicHostel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicHostel, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicMateo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/mateo.jpg"))); // NOI18N
+        jFacility_PicMateo.setText("jLabel66");
+        jFacility_PicMateo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicMateo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicOlonan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/olona.jpg"))); // NOI18N
+        jFacility_PicOlonan.setText("jLabel66");
+        jFacility_PicOlonan.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicOlonan, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicFootball.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/football.jpg"))); // NOI18N
+        jFacility_PicFootball.setText("jLabel66");
+        jFacility_PicFootball.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicFootball, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicInterfaith.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/interfaith.jpg"))); // NOI18N
+        jFacility_PicInterfaith.setText("jLabel66");
+        jFacility_PicInterfaith.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicInterfaith, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicMedical.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/medical.jpg"))); // NOI18N
+        jFacility_PicMedical.setText("jLabel66");
+        jFacility_PicMedical.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicMedical, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicNinoyLibrary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/ninoy library.jpg"))); // NOI18N
+        jFacility_PicNinoyLibrary.setText("jLabel66");
+        jFacility_PicNinoyLibrary.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicNinoyLibrary, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicSwimmingPool.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/olympic swimming pool.jpg"))); // NOI18N
+        jFacility_PicSwimmingPool.setText("jLabel66");
+        jFacility_PicSwimmingPool.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicSwimmingPool, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicOutdoorGym.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/outdoor gym.jpg"))); // NOI18N
+        jFacility_PicOutdoorGym.setText("jLabel66");
+        jFacility_PicOutdoorGym.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicOutdoorGym, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicLagoon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/pup-lagoon.jpg"))); // NOI18N
+        jFacility_PicLagoon.setText("jLabel66");
+        jFacility_PicLagoon.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicLagoon, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicBalagtas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/balagtas.jpg"))); // NOI18N
+        jFacility_PicBalagtas.setText("jLabel66");
+        jFacility_PicBalagtas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicBalagtas, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicBookstore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/bookstore.jpg"))); // NOI18N
+        jFacility_PicBookstore.setText("jLabel66");
+        jFacility_PicBookstore.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicBookstore, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicCanteen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/canteen.jpg"))); // NOI18N
+        jFacility_PicCanteen.setText("jLabel66");
+        jFacility_PicCanteen.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicCanteen, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicGym.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/gym.jpg"))); // NOI18N
+        jFacility_PicGym.setText("jLabel66");
+        jFacility_PicGym.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicGym, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jTxtHolder2.setEditable(false);
+        jTxtHolder2.setBackground(new java.awt.Color(255, 224, 224));
+        jTxtHolder2.setColumns(20);
+        jTxtHolder2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTxtHolder2.setLineWrap(true);
+        jTxtHolder2.setRows(1);
+        jTxtHolder2.setToolTipText("");
+        jTxtHolder2.setWrapStyleWord(true);
+        jTxtHolder2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 3, true));
+        jTxtHolder2.setDragEnabled(true);
+        jTxtHolder2.setFocusable(false);
+        jScrollPane4.setViewportView(jTxtHolder2);
+
+        jPanelFacilities.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 470, 110));
+
+        jTxtHolder3.setEditable(false);
+        jTxtHolder3.setBackground(new java.awt.Color(255, 255, 153));
+        jTxtHolder3.setColumns(20);
+        jTxtHolder3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTxtHolder3.setLineWrap(true);
+        jTxtHolder3.setRows(1);
+        jTxtHolder3.setToolTipText("");
+        jTxtHolder3.setWrapStyleWord(true);
+        jTxtHolder3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jTxtHolder3.setDragEnabled(true);
+        jTxtHolder3.setFocusable(false);
+        jScrollPane5.setViewportView(jTxtHolder3);
+
+        jPanelFacilities.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 540, 110));
+        jPanelFacilities.add(jLabel130, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        JTabbedNavigation.addTab("tab2", jPanelFacilities);
 
         jPanelAdmission.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel134.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel134.setText("Admission Process");
+        jPanelAdmission.add(jLabel134, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 9, 500, 70));
 
-        jLabel62.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel62.setForeground(new java.awt.Color(136, 0, 0));
-        jLabel62.setText("REQUIRED DOCUMENTS:");
+        jBtnScholarship.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnScholarship.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jBtnScholarship.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnScholarship.setText("Scholarship");
+        jBtnScholarship.setToolTipText("");
+        jBtnScholarship.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        jBtnScholarship.setFocusable(false);
+        jBtnScholarship.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnScholarshipMouseClicked(evt);
+            }
+        });
+        jBtnScholarship.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnScholarshipActionPerformed(evt);
+            }
+        });
+        jPanelAdmission.add(jBtnScholarship, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 20, 140, 50));
 
-        jLabel63.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel63.setText("1. Scanned photo of the applicant (JPEG file, 2x2-inch recent picture with white background ");
+        jBtnCollege.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnCollege.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jBtnCollege.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnCollege.setText("College");
+        jBtnCollege.setToolTipText("");
+        jBtnCollege.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        jBtnCollege.setFocusable(false);
+        jBtnCollege.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnCollegeMouseClicked(evt);
+            }
+        });
+        jBtnCollege.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCollegeActionPerformed(evt);
+            }
+        });
+        jPanelAdmission.add(jBtnCollege, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 110, 50));
 
-        jLabel64.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel64.setText("2. Scanned Grade 9 Report Card/ F137 (JPEG file)");
+        jBtnSHS.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnSHS.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jBtnSHS.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnSHS.setText("SHS");
+        jBtnSHS.setToolTipText("");
+        jBtnSHS.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        jBtnSHS.setFocusable(false);
+        jBtnSHS.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnSHSMouseClicked(evt);
+            }
+        });
+        jBtnSHS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSHSActionPerformed(evt);
+            }
+        });
+        jPanelAdmission.add(jBtnSHS, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 20, 110, 50));
 
-        jLabel65.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel65.setText("3. Scanned Grade 10 Report Card (JPEG file, 1st and 2nd grading periods)");
+        jTxtHolder4.setEditable(false);
+        jTxtHolder4.setBackground(new java.awt.Color(255, 224, 224));
+        jTxtHolder4.setColumns(20);
+        jTxtHolder4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTxtHolder4.setLineWrap(true);
+        jTxtHolder4.setRows(1);
+        jTxtHolder4.setToolTipText("");
+        jTxtHolder4.setWrapStyleWord(true);
+        jTxtHolder4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 5, true));
+        jTxtHolder4.setDragEnabled(true);
+        jTxtHolder4.setFocusable(false);
+        jScrollPane7.setViewportView(jTxtHolder4);
 
-        jLabel66.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel66.setText("4. ESC/QVR Certificate (a MUST for students coming from PRIVATE SCHOOLs who are currently enrolled ");
+        jPanelAdmission.add(jScrollPane7, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 910, 390));
+        jPanelAdmission.add(jLabel135, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jLabel67.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel67.setText("enrolled as Grade 10 of School Year 2022-2023)");
-
-        jLabel116.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel116.setText("and applicant's name tag at the chest)");
-
-        jLabel117.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel117.setForeground(new java.awt.Color(102, 0, 0));
-        jLabel117.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel117.setText("!! REMINDERS !!");
-
-        jLabel118.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel118.setText("Report cards");
-
-        jLabel119.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel119.setText("MUST CLEARLY");
-
-        jLabel120.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel120.setText("show the applicant's Complete Name, LRN, grades in English, Math");
-
-        jLabel121.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel121.setText(", and Science");
-
-        jLabel122.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel122.setText("Each");
-
-        jLabel123.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel123.setText("JPEG");
-
-        jLabel124.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel124.setText("file size must not be more than 300 kilobytes(KB)");
-
-        jLabel125.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel125.setText("Use an active and correct email of the applicant.");
-
-        jLabel126.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel126.setText("Once your online application is ");
-
-        jLabel127.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel127.setText("FINALIZED");
-
-        jLabel128.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel128.setText("NOT ALLOWED");
-
-        jLabel129.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel129.setText("editing your application is");
-
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 678, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jPanel9Layout.createSequentialGroup()
-                            .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(413, 413, 413)))
-                    .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel117, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel66, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel118, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jLabel119, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jLabel120, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel121, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel122, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jLabel123, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jLabel124, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel126)
-                        .addGap(0, 0, 0)
-                        .addComponent(jLabel127)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel129)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel128))
-                    .addComponent(jLabel125, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(47, Short.MAX_VALUE))
-        );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jLabel62)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(jLabel117, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel118)
-                    .addComponent(jLabel119)
-                    .addComponent(jLabel120))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel121)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel122)
-                    .addComponent(jLabel123, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel124))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel125)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel126)
-                    .addComponent(jLabel127)
-                    .addComponent(jLabel129)
-                    .addComponent(jLabel128))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanelAdmission.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 770, 390));
-
-        jButton1.setBackground(new java.awt.Color(255, 204, 0));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("COLLEGE FRESHMEN");
-        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
-        jButton1.setBorderPainted(false);
-        jPanelAdmission.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 160, 60));
-
-        jButton2.setBackground(new java.awt.Color(255, 204, 0));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("SENIOR HIGH");
-        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
-        jButton2.setBorderPainted(false);
-        jPanelAdmission.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 160, 60));
-        jPanelAdmission.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 50, 90));
-
-        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/image-1080x900.jpg"))); // NOI18N
-        jPanelAdmission.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1080, 470));
-
-        JTabbedNavigation.addTab("tab5", jPanelAdmission);
-
-        javax.swing.GroupLayout jPanelScholarshipLayout = new javax.swing.GroupLayout(jPanelScholarship);
-        jPanelScholarship.setLayout(jPanelScholarshipLayout);
-        jPanelScholarshipLayout.setHorizontalGroup(
-            jPanelScholarshipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1075, Short.MAX_VALUE)
-        );
-        jPanelScholarshipLayout.setVerticalGroup(
-            jPanelScholarshipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
-
-        JTabbedNavigation.addTab("tab6", jPanelScholarship);
+        JTabbedNavigation.addTab("tab2", jPanelAdmission);
 
         javax.swing.GroupLayout jPanelCollegesLayout = new javax.swing.GroupLayout(jPanelColleges);
         jPanelColleges.setLayout(jPanelCollegesLayout);
@@ -821,31 +1021,18 @@ public class Home extends javax.swing.JFrame {
 
         JTabbedNavigation.addTab("tab7", jPanelColleges);
 
-        javax.swing.GroupLayout jPanelCLUBSLayout = new javax.swing.GroupLayout(jPanelCLUBS);
-        jPanelCLUBS.setLayout(jPanelCLUBSLayout);
-        jPanelCLUBSLayout.setHorizontalGroup(
-            jPanelCLUBSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jPanelClubsLayout = new javax.swing.GroupLayout(jPanelClubs);
+        jPanelClubs.setLayout(jPanelClubsLayout);
+        jPanelClubsLayout.setHorizontalGroup(
+            jPanelClubsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 1075, Short.MAX_VALUE)
         );
-        jPanelCLUBSLayout.setVerticalGroup(
-            jPanelCLUBSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jPanelClubsLayout.setVerticalGroup(
+            jPanelClubsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 482, Short.MAX_VALUE)
         );
 
-        JTabbedNavigation.addTab("tab8", jPanelCLUBS);
-
-        javax.swing.GroupLayout jPanelSeniorHighLayout = new javax.swing.GroupLayout(jPanelSeniorHigh);
-        jPanelSeniorHigh.setLayout(jPanelSeniorHighLayout);
-        jPanelSeniorHighLayout.setHorizontalGroup(
-            jPanelSeniorHighLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1075, Short.MAX_VALUE)
-        );
-        jPanelSeniorHighLayout.setVerticalGroup(
-            jPanelSeniorHighLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
-
-        JTabbedNavigation.addTab("tab9", jPanelSeniorHigh);
+        JTabbedNavigation.addTab("tab8", jPanelClubs);
 
         jPanelSTEvaluation.setBackground(new java.awt.Color(255, 255, 255));
         jPanelSTEvaluation.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
@@ -2278,7 +2465,6 @@ public class Home extends javax.swing.JFrame {
                         .addGap(65, 65, 65)
                         .addComponent(jRB15_1))
                     .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addGap(0, 0, 0)
                         .addComponent(jLabelNextArrow3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(48, 48, 48)
                         .addComponent(jRB16_1)))
@@ -3339,19 +3525,6 @@ public class Home extends javax.swing.JFrame {
 
         JTabbedNavigation.addTab("tab11", jPanelFunFacts);
 
-        javax.swing.GroupLayout jPanelAccntInfoLayout = new javax.swing.GroupLayout(jPanelAccntInfo);
-        jPanelAccntInfo.setLayout(jPanelAccntInfoLayout);
-        jPanelAccntInfoLayout.setHorizontalGroup(
-            jPanelAccntInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1075, Short.MAX_VALUE)
-        );
-        jPanelAccntInfoLayout.setVerticalGroup(
-            jPanelAccntInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
-
-        JTabbedNavigation.addTab("tab12", jPanelAccntInfo);
-
         getContentPane().add(JTabbedNavigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 91, 1080, 510));
 
         pack();
@@ -3398,35 +3571,26 @@ public class Home extends javax.swing.JFrame {
             case "History, Mission, and Vision":
                 JTabbedNavigation.setSelectedIndex(1);
                 break;
-            case "Achievement":
+            case "Achievements":
                 JTabbedNavigation.setSelectedIndex(2);
                 break;
             case "Facilities":
                 JTabbedNavigation.setSelectedIndex(3);
                 break;
-            case "Admission":
+            case "Admission/Scholarship":
                 JTabbedNavigation.setSelectedIndex(4);
                 break;
-            case "Sholarship":
+            case "Colleges":
                 JTabbedNavigation.setSelectedIndex(5);
                 break;
-            case "Colleges":
+            case "Department Clubs":
                 JTabbedNavigation.setSelectedIndex(6);
                 break;
-            case "Department Clubs":
+            case "Strand and Track Evaluation":
                 JTabbedNavigation.setSelectedIndex(7);
                 break;
-            case "Senior High":
-                JTabbedNavigation.setSelectedIndex(8);
-                break;
-            case "Strand and Track Evaluation":
-                JTabbedNavigation.setSelectedIndex(9);
-                break;
             case "PUP Fun Facts":
-                JTabbedNavigation.setSelectedIndex(14);
-                break;
-            case "Account Information":
-                JTabbedNavigation.setSelectedIndex(15);
+                JTabbedNavigation.setSelectedIndex(12);
                 break;
         }
         /*if (strSelected.equals("Strand and Track Evaluation")){
@@ -4665,6 +4829,383 @@ public class Home extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jLabel72MouseClicked
 
+    private void jList1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jList1MouseClicked
+
+    private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
+        switch (jList1.getSelectedIndex()) {
+            case 0:
+            // hostel
+            jFacility_PicHostel.setVisible(true);
+            jTxtHolder3.setText("Description: A spacious 7-floor hostel that can accommodate four students per room.");
+            jTxtHolder2.setText("Location:\nNot Applicable yet");
+            break;
+            case 1:
+            // mateo
+            jFacility_PicMateo.setVisible(true);
+            jFacility_PicHostel.setVisible(false);
+            jTxtHolder3.setText("Description: Dr. Mateo Conference room is an executive conference room with strong internet connection that can handle small group face-to-face and online meetings.");
+            jTxtHolder2.setText("Location:\nNot Applicable yet");
+            break;
+            case 2:
+            // olona
+            jFacility_PicMateo.setVisible(false);
+            jFacility_PicHostel.setVisible(false);
+            jFacility_PicOlonan.setVisible(true);
+            jTxtHolder3.setText("Description: Dr. Olonan and Dr. Carague Conference Rooms can handle small group face-to-face and online meetings.");
+            jTxtHolder2.setText("Location:\nNot Applicable yet");
+            break;
+            case 3:
+            // football
+            jFacility_PicMateo.setVisible(false);
+            jFacility_PicHostel.setVisible(false);
+            jFacility_PicOlonan.setVisible(false);
+            jFacility_PicFootball.setVisible(true);
+            jTxtHolder3.setText("Description: Dr. Olonan and Dr. Carague Conference Rooms can handle small group face-to-face and online meetings.");
+            jTxtHolder2.setText("Location:\nNot Applicable yet");
+            break;
+            case 4:
+            // interfaith chapel
+            jFacility_PicMateo.setVisible(false);
+            jFacility_PicHostel.setVisible(false);
+            jFacility_PicOlonan.setVisible(false);
+            jFacility_PicFootball.setVisible(false);
+            jFacility_PicInterfaith.setVisible(true);
+            jTxtHolder3.setText("Description: The Interfaith Chapel for students and faculty members of different faiths.");
+            jTxtHolder2.setText("Location:\nNot Applicable yet");
+            break;
+
+            case 5:
+            // medical clinic
+            jFacility_PicMateo.setVisible(false);
+            jFacility_PicHostel.setVisible(false);
+            jFacility_PicOlonan.setVisible(false);
+            jFacility_PicFootball.setVisible(false);
+            jFacility_PicInterfaith.setVisible(false);
+            jFacility_PicMedical.setVisible(true);
+            jTxtHolder3.setText("Description: State-of-the-art medical and dental equipment that ensures safety of students and faculty members.");
+            jTxtHolder2.setText("Location:\nNot Applicable yet");
+            break;
+
+            case 6:
+            // ninoy aquino library
+            jFacility_PicMateo.setVisible(false);
+            jFacility_PicHostel.setVisible(false);
+            jFacility_PicOlonan.setVisible(false);
+            jFacility_PicFootball.setVisible(false);
+            jFacility_PicInterfaith.setVisible(false);
+            jFacility_PicMedical.setVisible(false);
+            jFacility_PicNinoyLibrary.setVisible(true);
+            jTxtHolder3.setText("Description: The University Librarry serves as the University's gateway to the global information society, and provides various services and development of programs to its clientele.");
+            jTxtHolder2.setText("Location:\nNot Applicable yet");
+            break;
+
+            case 7:
+            // olympic sized swimming pool
+            jFacility_PicMateo.setVisible(false);
+            jFacility_PicHostel.setVisible(false);
+            jFacility_PicOlonan.setVisible(false);
+            jFacility_PicFootball.setVisible(false);
+            jFacility_PicInterfaith.setVisible(false);
+            jFacility_PicMedical.setVisible(false);
+            jFacility_PicNinoyLibrary.setVisible(false);
+            jFacility_PicSwimmingPool.setVisible(true);
+            jTxtHolder3.setText("Description: An olympic-sized swimming pool that is capable of handling several swimming classes and student athlete activities simultaneously.");
+            jTxtHolder2.setText("Location:\nNot Applicable yet");
+            break;
+
+            case 8:
+            // outdoor gym
+            jFacility_PicMateo.setVisible(false);
+            jFacility_PicHostel.setVisible(false);
+            jFacility_PicOlonan.setVisible(false);
+            jFacility_PicFootball.setVisible(false);
+            jFacility_PicInterfaith.setVisible(false);
+            jFacility_PicMedical.setVisible(false);
+            jFacility_PicNinoyLibrary.setVisible(false);
+            jFacility_PicSwimmingPool.setVisible(false);
+            jFacility_PicOutdoorGym.setVisible(true);
+            jTxtHolder3.setText("Description: Outdoor gym fit for basketball, tennis, and other Palarong Pambansa.");
+            jTxtHolder2.setText("Location:\nNot Applicable yet");
+            break;
+
+            case 9:
+            // PUP-Lagoon
+            jFacility_PicMateo.setVisible(false);
+            jFacility_PicHostel.setVisible(false);
+            jFacility_PicOlonan.setVisible(false);
+            jFacility_PicFootball.setVisible(false);
+            jFacility_PicInterfaith.setVisible(false);
+            jFacility_PicMedical.setVisible(false);
+            jFacility_PicNinoyLibrary.setVisible(false);
+            jFacility_PicSwimmingPool.setVisible(false);
+            jFacility_PicOutdoorGym.setVisible(false);
+            jFacility_PicLagoon.setVisible(true);
+            jTxtHolder3.setText("Description: The Lagoon serves as one of the major facilities in the university, wherein food, rest and enjoyment can take place.");
+            jTxtHolder2.setText("Location:\nNot Applicable yet");
+            break;
+
+            case 10:
+            // balagtas hall
+            jFacility_PicMateo.setVisible(false);
+            jFacility_PicHostel.setVisible(false);
+            jFacility_PicOlonan.setVisible(false);
+            jFacility_PicFootball.setVisible(false);
+            jFacility_PicInterfaith.setVisible(false);
+            jFacility_PicMedical.setVisible(false);
+            jFacility_PicNinoyLibrary.setVisible(false);
+            jFacility_PicSwimmingPool.setVisible(false);
+            jFacility_PicOutdoorGym.setVisible(false);
+            jFacility_PicLagoon.setVisible(false);
+            jFacility_PicBalagtas.setVisible(true);
+            jTxtHolder3.setText("Description: The Balagtas Hall (Bulwagang Balagtas) has 800-seating capacity good for programs and events.");
+            jTxtHolder2.setText("Location:\nNot Applicable yet");
+            break;
+
+            case 11:
+            // bookstore
+            jFacility_PicMateo.setVisible(false);
+            jFacility_PicHostel.setVisible(false);
+            jFacility_PicOlonan.setVisible(false);
+            jFacility_PicFootball.setVisible(false);
+            jFacility_PicInterfaith.setVisible(false);
+            jFacility_PicMedical.setVisible(false);
+            jFacility_PicNinoyLibrary.setVisible(false);
+            jFacility_PicSwimmingPool.setVisible(false);
+            jFacility_PicOutdoorGym.setVisible(false);
+            jFacility_PicLagoon.setVisible(false);
+            jFacility_PicBalagtas.setVisible(false);
+            jFacility_PicBookstore.setVisible(true);
+            jTxtHolder3.setText("Description: Books and instructional materials that passed the evaluation and have been approved for adoption and use in the University can be purchased from the bookstore");
+            jTxtHolder2.setText("Location:\nNot Applicable yet");
+            break;
+
+            case 12:
+            // canteen
+            jFacility_PicMateo.setVisible(false);
+            jFacility_PicHostel.setVisible(false);
+            jFacility_PicOlonan.setVisible(false);
+            jFacility_PicFootball.setVisible(false);
+            jFacility_PicInterfaith.setVisible(false);
+            jFacility_PicMedical.setVisible(false);
+            jFacility_PicNinoyLibrary.setVisible(false);
+            jFacility_PicSwimmingPool.setVisible(false);
+            jFacility_PicOutdoorGym.setVisible(false);
+            jFacility_PicLagoon.setVisible(false);
+            jFacility_PicBalagtas.setVisible(false);
+            jFacility_PicBookstore.setVisible(false);
+            jFacility_PicCanteen.setVisible(true);
+            jTxtHolder3.setText("Description: An in-house canteen, coffee shop, and other food services from private concessionaires renting food stalls. The University Canteen offers take-out food services and reservation for events and meetings.");
+            jTxtHolder2.setText("Location:\nNot Applicable yet");
+            break;
+
+            case 13:
+            // gym
+            jFacility_PicMateo.setVisible(false);
+            jFacility_PicHostel.setVisible(false);
+            jFacility_PicOlonan.setVisible(false);
+            jFacility_PicFootball.setVisible(false);
+            jFacility_PicInterfaith.setVisible(false);
+            jFacility_PicMedical.setVisible(false);
+            jFacility_PicNinoyLibrary.setVisible(false);
+            jFacility_PicSwimmingPool.setVisible(false);
+            jFacility_PicOutdoorGym.setVisible(false);
+            jFacility_PicLagoon.setVisible(false);
+            jFacility_PicBalagtas.setVisible(false);
+            jFacility_PicBookstore.setVisible(false);
+            jFacility_PicCanteen.setVisible(false);
+            jFacility_PicGym.setVisible(true);
+            jTxtHolder3.setText("Description: The University Gymnasium serves as the training ground for the student athletes that participate in the intercollegiate sports program.");
+            jTxtHolder2.setText("Location:\nNot Applicable yet");
+            break;
+
+            default:
+            break;
+        }
+    }//GEN-LAST:event_jList1ValueChanged
+
+    private void jBtnHistoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnHistoryMouseClicked
+        jBtnHistory.setBackground(new java.awt.Color(136, 0, 0));
+        jBtnMission.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnVision.setBackground(new java.awt.Color(219, 166, 37));
+
+        jTxtHolder.setText("------- History: 1904-1951 -----\n" +
+            "\n" +
+            "• 1904: Manila Business School (MBS) founded, offering vocational-technical courses and intermediate curriculum.\n" +
+            "\n" +
+            "• 1908: MBS renamed Philippine School of Commerce (PSC) due to focus on students from provinces. Four-year secondary course in commerce offered.\n" +
+            "\n" +
+            "• 1911: PSC placed under supervision of Superintendent of City Schools for administrative purposes, produces first batch of high school graduates.\n" +
+            "\n" +
+            "• 1912: One-year stenography course introduced and proves successful.\n" +
+            "\n" +
+            "• 1917: PSC revises courses and expands offerings, opens night classes (closed in 1932).\n" +
+            "\n" +
+            "• 1933: PSC merged with Philippine Normal School (PNS) and Philippine School of Arts and Trades, retains secondary curriculum.\n" +
+            "\n" +
+            "• 1940: President Manuel L. Quezon promises new building for PSC.\n" +
+            "\n" +
+            "• 1942: War disrupts PSC operations, school resumes after liberation in 1946.\n" +
+            "\n" +
+            "• 1947: PSC acquires Lepanto building in Sampaloc, Manila and officially moves there.\n" +
+            "\n" +
+            "• 1948: PSC acquires P.E. grounds in Sampaloc.\n" +
+            "\n" +
+            "• 1949: Teacher-training department established.\n" +
+            "\n" +
+            "• 1951: Three departments organized: Teacher Training, Business Education, and Research.\n" +
+            "\n" +
+            "----- History: 1952-1971-----\n" +
+            "\n" +
+            "• 1952: PSC becomes Philippine College of Commerce (PCC) under RA 778, broadens course offerings.\n" +
+            "\n" +
+            "• 1954: PCC celebrates Golden Jubilee.\n" +
+            "\n" +
+            "• 1955: PCC awarded \"Business College of the Year\" by Business Writers Association of the Philippines.\n" +
+            "\n" +
+            "• 1956: Prof. Pacifico A. Velilla takes over as PCC president.\n" +
+            "\n" +
+            "• 1962: Dr. Nemesio E. Prudente becomes president, establishes various initiatives.\n" +
+            "\n" +
+            "• 1963: College Code printed, Public Relations Program established, PCC Faculty Journal launched.\n" +
+            "\n" +
+            "• 1965: Pandacan site reserved for PCC, student assistantship program and financial aid introduced.\n" +
+            "\n" +
+            "• 1967: 10-hectare lot in Bicutan, Taguig reserved for PCC, student involvement policy adopted.\n" +
+            "\n" +
+            "• 1968: RA 6980 authorizes offering of social science courses, Sta. Mesa (A. Mabini) Campus assigned for PCC use.\n" +
+            "\n" +
+            "• 1969: President of Supreme Student Council becomes Board of Trustees member, Master of Arts and Master of Business Administration programs offered.\n" +
+            "\n" +
+            "• 1971: College Code revised, Laboratory High School transferred to A. Mabini Campus, Katipunan Foundation, Inc. created.\n" +
+            "\n" +
+            "----- History: 1972-1985 -----\n" +
+            "\n" +
+            "• 1972: Dr. Narciso Albaraccin, Jr. becomes OIC, introduces new courses, reorganizes faculties.\n" +
+            "\n" +
+            "• 1973: Dr. Isabelo T. Crisostomo becomes OIC, expands offerings, constructs gymnasium phase 1.\n" +
+            "\n" +
+            "• 1974: Bachelor of Business Administration and General Administration offered, various offices restructured.\n" +
+            "\n" +
+            "• 1975: PCC opens branch in Bataan Export Processing Zone (BEPZ), Mariveles, Bataan.\n" +
+            "\n" +
+            "• 1976: Faculty of Arts and Sciences (FAS) reestablished, graduate programs expanded.\n" +
+            "\n" +
+            "• 1977: Dr. Pablo T. Mateo becomes president, expands ladder program, introduces new courses.\n" +
+            "\n" +
+            "• 1978: PCC becomes Polytechnic University of the Philippines (PUP) through PD 1341, course offerings and administrative organization restructured.\n" +
+            "\n" +
+            "• 1979: Main library, university canteen, ecumenical chapel, and parts of PUP-Main Academic Building constructed, branch established in Lopez, Quezon.\n" +
+            "\n" +
+            "• 1983: Despite economic difficulties, PUP maintains 71 ladderized technical and professional programs, introduces Bachelor of Human Behavior Technology, includes computers in all degree programs, revives PUP Student Council.\n" +
+            "\n" +
+            "• 1984: University reorganized into \"cluster colleges\", University Center for Technological Research established, PUP partners with various agencies for training programs.\n" +
+            "\n" +
+            "----- History: 1986 - 2010 -----\n" +
+            "\n" +
+            "• 1986: Dr. Nemesio E. Prudente retakes presidency, focuses on education as equalizing factor, restructures University.\n" +
+            "\n" +
+            "• 1991-1999 - Period of continuous change with the appointment of the first lady president, Dr. Zenaida A. Olonan, and various initiatives.\n" +
+            "\n" +
+            "• 1999 - PUP celebrated its 95th Foundation Anniversary and underwent infrastructure projects, including the construction of the PUPWebSite.\n" +
+            "\n" +
+            "• 2000 - PUP became a Center of Development for Excellence in Information Technology, and the PUP ICT Center started operations.\n" +
+            "\n" +
+            "• 2001 - PUP achieved significant infrastructure developments, accreditation success, and student achievements.\n" +
+            "\n" +
+            "• 2003 - Dr. Ofelia M. Carague completed her term as President, and Dr. Samuel M. Salvador was designated Officer-in-Charge.\n" +
+            "\n" +
+            "• 2004 - PUP underwent various developments, including the establishment of the Research Center for Peace, Justice, and Democracy.\n" +
+            "\n" +
+            "• 2005 - Dr. Dante G. Guevarra was appointed Officer-in-Charge, and PUP celebrated its 101st Founding Anniversary.\n" +
+            "\n" +
+            "• 2006 - PUP participated in DOST's Technology Innovation for Commercialization Program and launched PUPCET iApply.\n" +
+            "\n" +
+            "• 2007 - PUP won awards in documentary competitions, became Southeast Asia's first Railway Academy, and launched PUP iText.\n" +
+            "\n" +
+            "• 2008 - PUP held an energy fair, became the permanent home of the Mabini Shrine, and partnered with Beijing Hangweili Educational Technology.\n" +
+            "\n" +
+            "• 2009 - PUP led in distance education studies, partnered with SMART Communications for PUP iText, and won the 1st College Debate Contest on Democracy.\n" +
+            "\n" +
+            "• 2010 - PUP was declared the permanent home of the Mabini Shrine, partnered with Jollibee for ACE scholarship, and conducted the 1st Gat Apolinario Mabini Awards.\n" +
+            "\n" +
+            "• 2011 - PUP won the PANAF Merit Award in IMC Youth Congress Competition, and the Bachelor in Transportation Management students won the DSFL Interschool Quiz Bee Competition.");
+        jTxtHolder.setCaretPosition(0);
+    }//GEN-LAST:event_jBtnHistoryMouseClicked
+
+    private void jBtnHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnHistoryActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnHistoryActionPerformed
+
+    private void jBtnMissionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnMissionMouseClicked
+        jBtnMission.setBackground(new java.awt.Color(136, 0, 0));
+        jBtnHistory.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnVision.setBackground(new java.awt.Color(219, 166, 37));
+
+        jTxtHolder.setText("Ensuring inclusive and equitable quality education and promoting lifelong learning opportunities through a re-engineered polytechnic university by committing to:"
+            + "\n\n• provide democratized access to educational opportunities for the holistic development of individuals with global perspective\n" +
+            "\n• offer industry-oriented curricula that produce highly-skilled professionals with managerial and technical capabilities and a strong sense of public service for nation building\n" +
+            "\n• embed a culture of research and innovation\n" +
+            "\n• continuously develop faculty and employees with the highest level of professionalism\n" +
+            "\n• engage public and private institutions and other stakeholders for the attainment of social development goal\n" +
+            "\n• establish a strong presence and impact in the international academic community");
+        jTxtHolder.setCaretPosition(0);
+    }//GEN-LAST:event_jBtnMissionMouseClicked
+
+    private void jBtnMissionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnMissionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnMissionActionPerformed
+
+    private void jBtnVisionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnVisionMouseClicked
+        jBtnVision.setBackground(new java.awt.Color(136, 0, 0));
+        jBtnHistory.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnMission.setBackground(new java.awt.Color(219, 166, 37));
+
+        jTxtHolder.setText("\"PUP: The National Polytechnic University\" or \"PUP: Pambansang Politeknikong Unibersidad.\" \n" +
+            "------------------------------------------------------------------------------------------------------\n" +
+            "\n" +
+            "This vision statement emphasizes the university's aspiration to be a premier institution for polytechnic education in the Philippines. It reflects a commitment to providing high-quality technical and vocational education, nurturing well-rounded professionals, and contributing significantly to national development.");
+        jTxtHolder.setCaretPosition(0);
+    }//GEN-LAST:event_jBtnVisionMouseClicked
+
+    private void jBtnVisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVisionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnVisionActionPerformed
+
+    private void jBtnScholarshipMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnScholarshipMouseClicked
+        jBtnCollege.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnSHS.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnScholarship.setBackground(new java.awt.Color(136, 0, 0));
+        ContentAdmissionScholarship();
+    }//GEN-LAST:event_jBtnScholarshipMouseClicked
+
+    private void jBtnScholarshipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnScholarshipActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnScholarshipActionPerformed
+
+    private void jBtnCollegeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnCollegeMouseClicked
+        jBtnCollege.setBackground(new java.awt.Color(136, 0, 0));
+        jBtnSHS.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnScholarship.setBackground(new java.awt.Color(219, 166, 37));
+        ContentAdmission();
+    }//GEN-LAST:event_jBtnCollegeMouseClicked
+
+    private void jBtnCollegeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCollegeActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnCollegeActionPerformed
+
+    private void jBtnSHSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnSHSMouseClicked
+        jBtnCollege.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnSHS.setBackground(new java.awt.Color(136, 0, 0));
+        jBtnScholarship.setBackground(new java.awt.Color(219, 166, 37));
+        ContentAdmissionSHS();
+    }//GEN-LAST:event_jBtnSHSMouseClicked
+
+    private void jBtnSHSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSHSActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnSHSActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTabbedPane JTabbedNavigation;
     private javax.swing.ButtonGroup buttonGroup1;
@@ -4697,12 +5238,30 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup7;
     private javax.swing.ButtonGroup buttonGroup8;
     private javax.swing.ButtonGroup buttonGroup9;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jBtnCollege;
+    private javax.swing.JButton jBtnHistory;
+    private javax.swing.JButton jBtnMission;
+    private javax.swing.JButton jBtnSHS;
+    private javax.swing.JButton jBtnScholarship;
+    private javax.swing.JButton jBtnVision;
     private javax.swing.JButton jButtonRessults;
     private javax.swing.JCheckBox jCBAcadRating;
     private javax.swing.JCheckBox jCBNcae;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jFacility_PicBalagtas;
+    private javax.swing.JLabel jFacility_PicBookstore;
+    private javax.swing.JLabel jFacility_PicCanteen;
+    private javax.swing.JLabel jFacility_PicFootball;
+    private javax.swing.JLabel jFacility_PicGym;
+    private javax.swing.JLabel jFacility_PicHostel;
+    private javax.swing.JLabel jFacility_PicInterfaith;
+    private javax.swing.JLabel jFacility_PicLagoon;
+    private javax.swing.JLabel jFacility_PicMateo;
+    private javax.swing.JLabel jFacility_PicMedical;
+    private javax.swing.JLabel jFacility_PicNinoyLibrary;
+    private javax.swing.JLabel jFacility_PicOlonan;
+    private javax.swing.JLabel jFacility_PicOutdoorGym;
+    private javax.swing.JLabel jFacility_PicSwimmingPool;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -4722,22 +5281,14 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel113;
     private javax.swing.JLabel jLabel114;
     private javax.swing.JLabel jLabel115;
-    private javax.swing.JLabel jLabel116;
-    private javax.swing.JLabel jLabel117;
-    private javax.swing.JLabel jLabel118;
-    private javax.swing.JLabel jLabel119;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel120;
-    private javax.swing.JLabel jLabel121;
-    private javax.swing.JLabel jLabel122;
-    private javax.swing.JLabel jLabel123;
-    private javax.swing.JLabel jLabel124;
-    private javax.swing.JLabel jLabel125;
-    private javax.swing.JLabel jLabel126;
-    private javax.swing.JLabel jLabel127;
-    private javax.swing.JLabel jLabel128;
-    private javax.swing.JLabel jLabel129;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel130;
+    private javax.swing.JLabel jLabel131;
+    private javax.swing.JLabel jLabel132;
+    private javax.swing.JLabel jLabel133;
+    private javax.swing.JLabel jLabel134;
+    private javax.swing.JLabel jLabel135;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -4776,7 +5327,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel46;
     private javax.swing.JLabel jLabel47;
     private javax.swing.JLabel jLabel48;
-    private javax.swing.JLabel jLabel49;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel50;
     private javax.swing.JLabel jLabel51;
@@ -4791,12 +5341,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel60;
     private javax.swing.JLabel jLabel61;
-    private javax.swing.JLabel jLabel62;
-    private javax.swing.JLabel jLabel63;
-    private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel65;
-    private javax.swing.JLabel jLabel66;
-    private javax.swing.JLabel jLabel67;
     private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
@@ -4856,6 +5400,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelSPORTS_COACHING;
     private javax.swing.JLabel jLabelSPORTS_OFFICIATING;
     private javax.swing.JLabel jLabelSTEM;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -4870,11 +5415,9 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPanel jPanel9;
-    private javax.swing.JPanel jPanelAccntInfo;
-    private javax.swing.JPanel jPanelAchieves;
+    private javax.swing.JPanel jPanelAchievement;
     private javax.swing.JPanel jPanelAdmission;
-    private javax.swing.JPanel jPanelCLUBS;
+    private javax.swing.JPanel jPanelClubs;
     private javax.swing.JPanel jPanelColleges;
     private javax.swing.JPanel jPanelFacilities;
     private javax.swing.JPanel jPanelFunFacts;
@@ -4885,8 +5428,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel jPanelSTEvaluation_2;
     private javax.swing.JPanel jPanelSTEvaluation_3;
     private javax.swing.JPanel jPanelSTEvaluation_4;
-    private javax.swing.JPanel jPanelScholarship;
-    private javax.swing.JPanel jPanelSeniorHigh;
     private javax.swing.JRadioButton jRB10_1;
     private javax.swing.JRadioButton jRB10_2;
     private javax.swing.JRadioButton jRB10_3;
@@ -4969,7 +5510,12 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRBYes6;
     private javax.swing.JRadioButton jRBYes7;
     private javax.swing.JRadioButton jRBYes8;
-    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
     private javax.swing.JTextField jTFAcademic;
     private javax.swing.JTextField jTFArts;
     private javax.swing.JTextField jTFEnglish;
@@ -4979,5 +5525,10 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JTextField jTFScience;
     private javax.swing.JTextField jTFSports;
     private javax.swing.JTextField jTFTVL;
+    private javax.swing.JTextArea jTxtHolder;
+    private javax.swing.JTextArea jTxtHolder1;
+    private javax.swing.JTextArea jTxtHolder2;
+    private javax.swing.JTextArea jTxtHolder3;
+    private javax.swing.JTextArea jTxtHolder4;
     // End of variables declaration//GEN-END:variables
 }

@@ -437,7 +437,7 @@ public class SignUp extends javax.swing.JFrame {
             
             if (!data.storeData(data.getfName(), data.getfUsername(), data.getfPassword(), data.getfCode())) {
                 JOptionPane.showMessageDialog(this, "Account Successfully Created! \n Your back-up code: " + data.getfCode() ,"Notice", JOptionPane.INFORMATION_MESSAGE);
-                Homes1 options = new Homes1();
+                Home options = new Home();
                 options.pack();
                 options.setVisible(true);   // Display Menu frame
                 dispose();                  // Close menu frame

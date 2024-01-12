@@ -339,11 +339,11 @@ public class SignIn extends javax.swing.JFrame {
                 dispose();
             } else {
                 jLabel10.setText("");
-                jLabel11.setText("Invalid password");
+                jLabel11.setText("*Invalid password");
             }
         } else {
             // If no matching username and password found
-            jLabel10.setText("Invalid username");
+            jLabel10.setText("*Invalid username");
             jLabel11.setText("");
         }
     }

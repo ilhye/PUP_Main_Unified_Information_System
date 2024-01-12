@@ -5,13 +5,19 @@ import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
 public class SignUp extends javax.swing.JFrame {
+    Logs logs = new Logs();
     
     // Constructor
     public SignUp() {
         initComponents();
         
-        Image icon = new ImageIcon("C:/Users/user/Documents/Programming/GitHub/PUP_Main_Unified_Information_System/src/icons/image-300x300.jpg").getImage();
+        // App icon
+        Image icon = new ImageIcon(getClass().getResource("/icons/image-300x300.jpg")).getImage();
         this.setIconImage(icon);
+        
+        // Generate backup Code
+        logs.setCode();
+        jPasswordField2.setText(String.valueOf(logs.getCode()));
     }
 
     // Iniatilize components
@@ -158,6 +164,11 @@ public class SignUp extends javax.swing.JFrame {
         jPasswordField2.setBackground(new java.awt.Color(255, 255, 255));
         jPasswordField2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPasswordField2.setText("••••••");
+        jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField2ActionPerformed(evt);
+            }
+        });
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(130, 0, 0));
@@ -394,7 +405,6 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseExited
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        Logs logs = new Logs();
         FileHandling data = new FileHandling();
         
         logs.setName(jTextField1.getText().trim());
@@ -402,7 +412,6 @@ public class SignUp extends javax.swing.JFrame {
         logs.setPassword(String.valueOf(jPasswordField1.getPassword()).trim());
         
         if(logs.credVerifier(logs.getName(), logs.getUsername(), logs.getPassword())) {
-            System.out.print("Valid: " + logs.credVerifier(logs.getName(), logs.getUsername(), logs.getPassword()));
             jLabel6.setText("*Invalid Format (only include letters)");
             jLabel8.setText("*Invalid username");
             jLabel10.setText("*Weak password");
@@ -410,7 +419,7 @@ public class SignUp extends javax.swing.JFrame {
             isNameValid = logs.nameVerifier(logs.getName());
             jLabel6.setText(isNameValid ? "":"*Invalid Format (only include letters)");
 
-            isUsernameValid = logs.usernameVerifier(logs.getUsername());
+            isUsernameValid = logs.getUsername().isEmpty();
             jLabel8.setText(isUsernameValid ? "":"*Invalid username");
 
             isPassValid= logs.passVerifier(logs.getUsername(), logs.getPassword());
@@ -424,11 +433,11 @@ public class SignUp extends javax.swing.JFrame {
             data.setfName(logs.getName());
             data.setfUsername(logs.getUsername());
             data.setfPassword(logs.getPassword());
-            data.setfCode(generatedCode);
+            data.setfCode(logs.getCode());
             
             if (!data.storeData(data.getfName(), data.getfUsername(), data.getfPassword(), data.getfCode())) {
                 JOptionPane.showMessageDialog(this, "Account Successfully Created! \n Your back-up code: " + data.getfCode() ,"Notice", JOptionPane.INFORMATION_MESSAGE);
-                Home options = new Home();
+                Homes1 options = new Homes1();
                 options.pack();
                 options.setVisible(true);   // Display Menu frame
                 dispose();                  // Close menu frame
@@ -453,16 +462,16 @@ public class SignUp extends javax.swing.JFrame {
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
         if (jCheckBox2.isSelected()){
-            if (!jTextField1.getText().trim().isEmpty() && !jTextField2.getText().trim().isEmpty() && !jTextField2.getText().trim().isEmpty()) {
-                SecureRandom secureRandomGenerator = new SecureRandom();
-                generatedCode = secureRandomGenerator.nextInt(999999);
-                jPasswordField2.setText(String.valueOf(generatedCode));
-                jPasswordField2.setEchoChar((char)0);
-            }
+            jPasswordField2.setEchoChar((char)0);
         } else{
             jPasswordField2.setEchoChar('•');
         }
     }//GEN-LAST:event_jCheckBox2ActionPerformed
+
+    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
+        // TODO add your handling code here:
+        // jPasswordField2.setText(String.valueOf(generatedCode));
+    }//GEN-LAST:event_jPasswordField2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
@@ -495,5 +504,4 @@ public class SignUp extends javax.swing.JFrame {
 private boolean isNameValid;
 private boolean isUsernameValid;
 private boolean isPassValid;
-private int generatedCode;
 }

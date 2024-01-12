@@ -147,6 +147,11 @@ public class RetrievalForm extends javax.swing.JFrame {
         jCheckBox1.setBorder(null);
         jCheckBox1.setContentAreaFilled(false);
         jCheckBox1.setFocusPainted(false);
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
 
         jCheckBox2.setBackground(new java.awt.Color(255, 255, 255));
         jCheckBox2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -154,6 +159,11 @@ public class RetrievalForm extends javax.swing.JFrame {
         jCheckBox2.setText("Show Password");
         jCheckBox2.setContentAreaFilled(false);
         jCheckBox2.setFocusPainted(false);
+        jCheckBox2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox2ActionPerformed(evt);
+            }
+        });
 
         jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(136, 0, 0));
@@ -179,6 +189,11 @@ public class RetrievalForm extends javax.swing.JFrame {
         jPasswordField1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         jPasswordField2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jPasswordField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jPasswordField2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -332,11 +347,24 @@ public class RetrievalForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseExited
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        JOptionPane.showMessageDialog(this, "Account Successfully Created! Redirecting you to the Sign In Page", "Notice", JOptionPane.INFORMATION_MESSAGE);
-        SignIn logFrame = new SignIn();
-        logFrame.pack();
-        logFrame.setVisible(true);  // Display LogIn frame
-        dispose();                  // Close LogIn frame
+        FileHandling fData = new FileHandling();
+        
+        fData.setfCode(String.valueOf(jPasswordField1.getPassword()));
+        fData.setfUsername(jTextField1.getText());
+        fData.setfPassword(String.valueOf(jPasswordField2.getPassword()));
+        
+        if (!fData.codeExist(fData.getfCode())) {
+            jLabel13.setText("*Invalid back-up code");
+        } else {
+            jLabel13.setText("");
+            
+            fData.updateDate(fData.getfCode(),fData.getfUsername(), fData.getfPassword());
+            JOptionPane.showMessageDialog(this, "Account Successfully Created! Redirecting you to the Sign In Page", "Notice", JOptionPane.INFORMATION_MESSAGE);
+            SignIn logFrame = new SignIn();
+            logFrame.pack();
+            logFrame.setVisible(true);  // Display LogIn frame
+            dispose();                  // Close LogIn frame
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -349,6 +377,26 @@ public class RetrievalForm extends javax.swing.JFrame {
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
+
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        if (jCheckBox1.isSelected()){
+            jPasswordField1.setEchoChar((char)0);
+        } else{
+            jPasswordField1.setEchoChar('•');
+        }
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
+        if (jCheckBox2.isSelected()){
+            jPasswordField2.setEchoChar((char)0);
+        } else{
+            jPasswordField2.setEchoChar('•');
+        }
+    }//GEN-LAST:event_jCheckBox2ActionPerformed
+
+    private void jPasswordField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPasswordField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPasswordField2ActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;

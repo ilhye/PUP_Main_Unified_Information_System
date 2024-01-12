@@ -1,9 +1,12 @@
 package Classes;
 
+import java.security.SecureRandom;
+
 public class Logs {
     private String name;
     private String username;
     private String password;
+    private String code;
 
     /**
      * @return the name
@@ -39,7 +42,22 @@ public class Logs {
     public String getPassword() {
         return password;
     }
-
+    
+    /**
+     * set backupCode
+     */
+    public void setCode() {
+        // Generate backup Code
+        SecureRandom secureRandomGenerator = new SecureRandom();
+        this.code = String.valueOf(secureRandomGenerator.nextInt(999999));
+    }
+    
+    /**
+     * @return the code
+     */
+    public String getCode() {
+        return code;
+    }
     /**
      * @param password the password to set
      */
@@ -55,9 +73,9 @@ public class Logs {
         return !name.matches(".*[0-9\\p{P}&&[^.]].*|^$");
     }
     
-    public boolean usernameVerifier (String username) {
+    /*public boolean usernameVerifier (String username) {
         return !username.equals("");
-    }
+    }*/
     
     public boolean passVerifier(String password, String username) {
        return !(username.equals(password) || username.equals("") || username.length() < 12);

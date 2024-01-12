@@ -1,21 +1,130 @@
 package Classes;
 import java.awt.*;
-import java.net.URL;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
-public class Home extends javax.swing.JFrame {
+public class Homes1 extends javax.swing.JFrame {
     
     
     // Constructor
-    public Home() {
+    public Homes1() {
         initComponents();
         
-        // App icon
-        Image icon = new ImageIcon(getClass().getResource("/icons/image-300x300.jpg")).getImage();
+        Image icon = new ImageIcon(this.getClass().getResource("/icon.png")).getImage();
         this.setIconImage(icon);
+        jTabbedPane1.setSelectedIndex(0); // to show the page of Home
+    }
+    
+    
+    private void ContentAchievements(){
+        jTxtHolder1.setText("• Top school of choice of many companies in the country (2016, JobStreet.com Philippines)\n" +
+        "\n• PUP is 9th most popular university in the Philippines based on the popularity of its website (2016, http://www.4icu.org/ph/)\n" +
+        "\n• QS World University Rankings by Subject 2013 (Country File on the Philippines): Rank 3 in Life Science and Medicine, Rank 5 in Natural Science (Chemistry), Rank 4 in Economics and Econometrics, Rank 5 in Communication and Media Studies\n" +
+        "\n• Commission on Higher Education (CHED) Center of Development for Excellence in Journalism and Filipino (2013)\n" +
+        "\n• Accrediting Agency of Chartered Colleges and Universities in the Philippines (AACCUP): 58 programs of PUP are in the list of accreditation (4 Level III accredited programs, 15 qualified for Level III accreditation with 9 programs undergoing assessment, 14 Level II accredited programs, 11 Level I accredited programs, and 5 programs in the list as candidate for accreditation, as of 2012)\n" +
+        "\n• President of the Philippines Proclamation No. 1992 and National Historical Institute's Board Resolution No. 01, s. 2008: Declaration of the PUP Mabini Campus as the permanent home of the Mabini Shrine.\n" +
+        "\n• President of the Philippines Proclamation No. 482: Declaring the period of October 1, 2003 to October 31, 2004 as the Centenary of the Polytechnic University of the Philippines.\n" +
+        "\n• Guinness Book of World Records: World's Largest Human Rainbow (2004)");
+        jTxtHolder1.setCaretPosition(0);
+    }
+    
+     private void ContentAdmission(){
+        jTxtHolder4.setText("• Admission Details:\n" +
+        "1. Baccalaureate Degree (4 or 5 years): Requires PUPCET and application through PUP iApply.\n" +
+        "2. Diploma Program (3 years) leading to Baccalaureate Degree: Same application process as Baccalaureate Degree.\n" +
+        "\n" +
+        "• Eligibility for PUPCET:\n" +
+        "1. Grade 12 student graduating in AY 2023-2024 with GWA ≥ 82%.\n" +
+        "2. Passer of PEPT/ALS or NFEA & E-Program.\n" +
+        "\n" +
+        "• Application Process:\n" +
+        "1. Go to PUP iApply (https://www.pup.edu.ph/iapply/pupcet).\n" +
+        "2. Click Apply Now.\n" +
+        "3. Create an account.\n" +
+        "4. Answer prequalification questions.\n" +
+        "5. Fill up the registration form.\n" +
+        "6. Submit and sign in again.\n" +
+        "7. Choose from options:\n" +
+        "8. Application Form: Complete and finalize your application.\n" +
+        "9. Finalize Application: Submit your application for evaluation.\n" +
+        "10. Print ePermit: Download and print your exam permit (after approval).\n" +
+        "11. Check PUPCET Results: Check after official release.\n" +
+        "12. Sign out: Secure your account.\n" +
+        "13. Review guidelines for online application photo.\n" +
+        "14. Read FAQs about who can take PUPCET and where to apply.\n" +
+        "\n" +
+        "• Additional Information:\n" +
+        "1. Apply for PUPCET only in one branch/campus and once per academic year.\n" +
+        "2. Download ePermit 6-20 working days after application.\n" +
+        "3. Use Chrome, Firefox, or Edge for PUP iApply.");
+        jTxtHolder4.setCaretPosition(0);
+    }
+     
+     
+     
         
-        JTabbedNavigation.setSelectedIndex(0); // to show the page of Home
+private void ContentAdmissionSHS(){
+        jTxtHolder4.setText(">> Required Documents for Online Registration <<\n" +
+        "\n" +
+        "1. Scanned photo of the applicant (JPEG file, 2x2 inches, recent, white background, name tag at chest)\n" +
+        "2. Scanned Grade 9 Report Card/F137 (JPEG file)\n" +
+        "3. Scanned Grade 10 Report Card (JPEG file, 1st and 2nd grading periods)\n" +
+        "4. ESC/QVR Certificate (for students from private schools, currently enrolled in Grade 10 for SY 2022-2023)\n" +
+        "\n" +
+        ">> Important Reminders <<\n" +
+        "• Report cards must clearly show:\n" +
+        "     oComplete name\n" +
+        "     oLRN\n" +
+        "     oGrades in English, Math, and Science\n" +
+        "• JPEG file size limit: 300 KB\n" +
+        "• Use an active and correct email address.\n" +
+        "• Finalized applications cannot be edited.\n" +
+        "\n" +
+        ">> Grounds for Invalid Registration <<\n" +
+        "1.Multiple accounts/applications\n" +
+        "2.Incorrect personal information or grades\n" +
+        "3.Failure to upload required documents properly\n" +
+        "\n" +
+        ">> Grade Requirements <<\n" +
+        "• English, Math, and Science: 85% and above\n" +
+        "• Other subjects: No grade below 82%\n" +
+        "     Admission is subject to slot availability.\n" +
+        "\n" +
+        ">> Tracks and Strands Offered <<\n" +
+        "• Academic Track:\n" +
+        "1.STEM (Science, Technology, Engineering, and Mathematics)\n" +
+        "2.ABM (Accountancy, Business, and Management)\n" +
+        "3.HUMSS (Humanities and Social Sciences)\n" +
+        "\n" +
+        "• Technical, Vocational, and Livelihood Track:\n" +
+        "1. ICT (Information Communications Technology)\n" +
+        "\n" +
+        "• Inquiries:\n" +
+        "Office of the Senior High School Admission Telephone Number: 53351787 loc. 356");
+        jTxtHolder4.setCaretPosition(0);
+    }
+
+    private void ContentAdmissionScholarship(){
+        jTxtHolder4.setText("PUP Scholarship and Financial Assistance (SFAS) Information:\n" +
+        "--------------------------------------------------------------------------------------------------------------------------\n" +
+        "\n" +
+        ">> Types of Support <<\n" +
+        "1. Scholarships:\n" +
+        "     o Entrance scholarships\n" +
+        "     o Resident scholarships\n" +
+        "     o Special grants\n" +
+        "2. Financial Assistance:\n" +
+        "     o Service grant-in-aid\n" +
+        "     o Student loan\n" +
+        "     o Work-study plan/Student assistantship\n" +
+        "\n" +
+        ">> Benefits <<\n" +
+        "• Incentive equivalent to total assessed fees, either full or partial.\n" +
+        "\n" +
+        "• Source: Scholarship and Financial Assistance Services (SFAS), PUP Student Handbook, Rev. 2019\n" +
+        "• Note: Information is from 2019. For updated details, please contact SFAS directly.\n" +
+        "• Facebook Link: https://www.facebook.com/PUPSFAS");
+        jTxtHolder4.setCaretPosition(0);
     }
 
     // Initialize form
@@ -53,57 +162,19 @@ public class Home extends javax.swing.JFrame {
         buttonGroup28 = new javax.swing.ButtonGroup();
         buttonGroup29 = new javax.swing.ButtonGroup();
         buttonGroup30 = new javax.swing.ButtonGroup();
+        buttonGroup31 = new javax.swing.ButtonGroup();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
-        JTabbedNavigation = new javax.swing.JTabbedPane();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanelHome = new javax.swing.JPanel();
-        jPanel15 = new javax.swing.JPanel();
-        jLabel68 = new javax.swing.JLabel();
-        jPanel14 = new javax.swing.JPanel();
-        jLabel72 = new javax.swing.JLabel();
-        jLabel106 = new javax.swing.JLabel();
-        jLabel114 = new javax.swing.JLabel();
-        jLabel115 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jPanelHMV = new javax.swing.JPanel();
-        jPanelAchieves = new javax.swing.JPanel();
-        jPanelFacilities = new javax.swing.JPanel();
-        jPanelAdmission = new javax.swing.JPanel();
         jPanel9 = new javax.swing.JPanel();
-        jLabel62 = new javax.swing.JLabel();
-        jLabel63 = new javax.swing.JLabel();
-        jLabel64 = new javax.swing.JLabel();
-        jLabel65 = new javax.swing.JLabel();
-        jLabel66 = new javax.swing.JLabel();
-        jLabel67 = new javax.swing.JLabel();
-        jLabel116 = new javax.swing.JLabel();
-        jLabel117 = new javax.swing.JLabel();
-        jLabel118 = new javax.swing.JLabel();
-        jLabel119 = new javax.swing.JLabel();
-        jLabel120 = new javax.swing.JLabel();
-        jLabel121 = new javax.swing.JLabel();
-        jLabel122 = new javax.swing.JLabel();
-        jLabel123 = new javax.swing.JLabel();
-        jLabel124 = new javax.swing.JLabel();
-        jLabel125 = new javax.swing.JLabel();
-        jLabel126 = new javax.swing.JLabel();
-        jLabel127 = new javax.swing.JLabel();
-        jLabel128 = new javax.swing.JLabel();
-        jLabel129 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jLabel49 = new javax.swing.JLabel();
-        jPanelScholarship = new javax.swing.JPanel();
-        jPanelColleges = new javax.swing.JPanel();
-        jPanelCLUBS = new javax.swing.JPanel();
-        jPanelSeniorHigh = new javax.swing.JPanel();
+        jLabel6 = new javax.swing.JLabel();
         jPanelSTEvaluation = new javax.swing.JPanel();
         jRBYes1 = new javax.swing.JRadioButton();
         jRBNo1 = new javax.swing.JRadioButton();
@@ -193,7 +264,7 @@ public class Home extends javax.swing.JFrame {
         jRB8_2 = new javax.swing.JRadioButton();
         jRB8_3 = new javax.swing.JRadioButton();
         jPanel5 = new javax.swing.JPanel();
-        jLabelNextArrow1 = new javax.swing.JLabel();
+        jLabelNextArrow2 = new javax.swing.JLabel();
         jPanelSTEvaluation_2 = new javax.swing.JPanel();
         jLabel35 = new javax.swing.JLabel();
         jLabel45 = new javax.swing.JLabel();
@@ -334,8 +405,48 @@ public class Home extends javax.swing.JFrame {
         jLabelResultArtsTrack = new javax.swing.JLabel();
         jLabelResultTVLTrack = new javax.swing.JLabel();
         jLabel113 = new javax.swing.JLabel();
-        jPanelFunFacts = new javax.swing.JPanel();
-        jPanelAccntInfo = new javax.swing.JPanel();
+        jPanelHistory = new javax.swing.JPanel();
+        jBtnHistory = new javax.swing.JButton();
+        jBtnMission = new javax.swing.JButton();
+        jBtnVision = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTxtHolder = new javax.swing.JTextArea();
+        jLabel49 = new javax.swing.JLabel();
+        jPanelAchievement = new javax.swing.JPanel();
+        jLabel63 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTxtHolder1 = new javax.swing.JTextArea();
+        jLabel62 = new javax.swing.JLabel();
+        jPanelFacilities = new javax.swing.JPanel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jList1 = new javax.swing.JList<>();
+        jFacility_PicHostel = new javax.swing.JLabel();
+        jFacility_PicMateo = new javax.swing.JLabel();
+        jFacility_PicOlonan = new javax.swing.JLabel();
+        jFacility_PicFootball = new javax.swing.JLabel();
+        jFacility_PicInterfaith = new javax.swing.JLabel();
+        jFacility_PicMedical = new javax.swing.JLabel();
+        jFacility_PicNinoyLibrary = new javax.swing.JLabel();
+        jFacility_PicSwimmingPool = new javax.swing.JLabel();
+        jFacility_PicOutdoorGym = new javax.swing.JLabel();
+        jFacility_PicLagoon = new javax.swing.JLabel();
+        jFacility_PicBalagtas = new javax.swing.JLabel();
+        jFacility_PicBookstore = new javax.swing.JLabel();
+        jFacility_PicCanteen = new javax.swing.JLabel();
+        jFacility_PicGym = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jTxtHolder2 = new javax.swing.JTextArea();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        jTxtHolder3 = new javax.swing.JTextArea();
+        jLabel64 = new javax.swing.JLabel();
+        jPanelAdmission = new javax.swing.JPanel();
+        jLabel66 = new javax.swing.JLabel();
+        jBtnScholarship = new javax.swing.JButton();
+        jBtnCollege = new javax.swing.JButton();
+        jBtnSHS = new javax.swing.JButton();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        jTxtHolder4 = new javax.swing.JTextArea();
+        jLabel67 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1080, 600));
@@ -345,10 +456,10 @@ public class Home extends javax.swing.JFrame {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 36)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(136, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("←");
+        jLabel1.setText("<-");
         jLabel1.setOpaque(true);
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -392,7 +503,7 @@ public class Home extends javax.swing.JFrame {
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
@@ -409,20 +520,20 @@ public class Home extends javax.swing.JFrame {
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Polytechnic University of the Philippines");
 
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/image-50x50.jpg"))); // NOI18N
-        jLabel4.setAlignmentY(0.0F);
-        jLabel4.setName(""); // NOI18N
-
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(204, 204, 204));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Sta.Mesa, Manila, Philippines");
 
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/image-50x50.jpg"))); // NOI18N
+        jLabel4.setAlignmentY(0.0F);
+        jLabel4.setName(""); // NOI18N
+
         jComboBox1.setBackground(new java.awt.Color(136, 0, 0));
         jComboBox1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(255, 255, 255));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Home", "History, Mission, and Vision", "Achievements", "Facilities", "Admission", "Scholarship", "Colleges", "Department Clubs", "Senior High", "Strand and Track Evaluation", "PUP Fun Facts", "Account Information", "Log out" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Home", "History, Mission and Vision", "Achievements", "Facilities", "Admission/Scholarship", "Colleges", "Department Clubs", "Strand and Track Evaluation", "PUP Fun Facts" }));
         jComboBox1.setBorder(null);
         jComboBox1.setFocusable(false);
         jComboBox1.addActionListener(new java.awt.event.ActionListener() {
@@ -436,19 +547,19 @@ public class Home extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap(24, Short.MAX_VALUE)
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                        .addGap(124, 124, 124)
                         .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 217, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(345, 345, 345))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(43, 43, 43)
                         .addComponent(jLabel2)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                        .addContainerGap(218, Short.MAX_VALUE))))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -460,400 +571,41 @@ public class Home extends javax.swing.JFrame {
                         .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel3)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(14, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
+                .addGap(29, 29, 29))
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 1080, 90));
 
         jPanelHome.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel15.setBackground(new java.awt.Color(0, 0, 0, 80));
-
-        jLabel68.setBackground(new java.awt.Color(254, 222, 8));
-        jLabel68.setFont(new java.awt.Font("Tahoma", 3, 24)); // NOI18N
-        jLabel68.setForeground(new java.awt.Color(254, 222, 8));
-        jLabel68.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel68.setText("\"Mula Sa 'Yo, Para sa Bayan\"");
-
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel15Layout.createSequentialGroup()
-                .addContainerGap(22, Short.MAX_VALUE)
-                .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 400, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18))
-        );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel15Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(jLabel68, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
-        );
-
-        jPanelHome.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 130, 440, 160));
-
-        jPanel14.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel72.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel72.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel72.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/icons8-facebook-50.png"))); // NOI18N
-        jLabel72.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel72MouseClicked(evt);
-            }
-        });
-
-        jLabel106.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel106.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel106.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/twitter.png"))); // NOI18N
-        jLabel106.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel106MouseClicked(evt);
-            }
-        });
-
-        jLabel114.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel114.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel114.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/youtube.png"))); // NOI18N
-        jLabel114.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel114MouseClicked(evt);
-            }
-        });
-
-        jLabel115.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel115.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel115.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/linkedlin.png"))); // NOI18N
-        jLabel115.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel115MouseClicked(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
-        jPanel14.setLayout(jPanel14Layout);
-        jPanel14Layout.setHorizontalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addContainerGap(20, Short.MAX_VALUE)
-                .addComponent(jLabel72, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel106)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel114, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(20, 20, 20))
-        );
-        jPanel14Layout.setVerticalGroup(
-            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel72, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addComponent(jLabel106)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel14Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel114, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel115, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap())
-        );
-
-        jPanelHome.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 360, 310, 70));
-
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/image-1080x480.jpg"))); // NOI18N
-        jPanelHome.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 1070, 470));
-
-        JTabbedNavigation.addTab("tab1", jPanelHome);
-
-        javax.swing.GroupLayout jPanelHMVLayout = new javax.swing.GroupLayout(jPanelHMV);
-        jPanelHMV.setLayout(jPanelHMVLayout);
-        jPanelHMVLayout.setHorizontalGroup(
-            jPanelHMVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1075, Short.MAX_VALUE)
-        );
-        jPanelHMVLayout.setVerticalGroup(
-            jPanelHMVLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
-
-        JTabbedNavigation.addTab("tab2", jPanelHMV);
-
-        javax.swing.GroupLayout jPanelAchievesLayout = new javax.swing.GroupLayout(jPanelAchieves);
-        jPanelAchieves.setLayout(jPanelAchievesLayout);
-        jPanelAchievesLayout.setHorizontalGroup(
-            jPanelAchievesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1075, Short.MAX_VALUE)
-        );
-        jPanelAchievesLayout.setVerticalGroup(
-            jPanelAchievesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
-
-        JTabbedNavigation.addTab("tab3", jPanelAchieves);
-
-        javax.swing.GroupLayout jPanelFacilitiesLayout = new javax.swing.GroupLayout(jPanelFacilities);
-        jPanelFacilities.setLayout(jPanelFacilitiesLayout);
-        jPanelFacilitiesLayout.setHorizontalGroup(
-            jPanelFacilitiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1075, Short.MAX_VALUE)
-        );
-        jPanelFacilitiesLayout.setVerticalGroup(
-            jPanelFacilitiesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
-
-        JTabbedNavigation.addTab("tab4", jPanelFacilities);
-
-        jPanelAdmission.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
-
-        jLabel62.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel62.setForeground(new java.awt.Color(136, 0, 0));
-        jLabel62.setText("REQUIRED DOCUMENTS:");
-
-        jLabel63.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel63.setText("1. Scanned photo of the applicant (JPEG file, 2x2-inch recent picture with white background ");
-
-        jLabel64.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel64.setText("2. Scanned Grade 9 Report Card/ F137 (JPEG file)");
-
-        jLabel65.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel65.setText("3. Scanned Grade 10 Report Card (JPEG file, 1st and 2nd grading periods)");
-
-        jLabel66.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel66.setText("4. ESC/QVR Certificate (a MUST for students coming from PRIVATE SCHOOLs who are currently enrolled ");
-
-        jLabel67.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel67.setText("enrolled as Grade 10 of School Year 2022-2023)");
-
-        jLabel116.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel116.setText("and applicant's name tag at the chest)");
-
-        jLabel117.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
-        jLabel117.setForeground(new java.awt.Color(102, 0, 0));
-        jLabel117.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel117.setText("!! REMINDERS !!");
-
-        jLabel118.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel118.setText("Report cards");
-
-        jLabel119.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel119.setText("MUST CLEARLY");
-
-        jLabel120.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel120.setText("show the applicant's Complete Name, LRN, grades in English, Math");
-
-        jLabel121.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel121.setText(", and Science");
-
-        jLabel122.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel122.setText("Each");
-
-        jLabel123.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel123.setText("JPEG");
-
-        jLabel124.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel124.setText("file size must not be more than 300 kilobytes(KB)");
-
-        jLabel125.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel125.setText("Use an active and correct email of the applicant.");
-
-        jLabel126.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel126.setText("Once your online application is ");
-
-        jLabel127.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel127.setText("FINALIZED");
-
-        jLabel128.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jLabel128.setText("NOT ALLOWED");
-
-        jLabel129.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jLabel129.setText("editing your application is");
-
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 578, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel62, javax.swing.GroupLayout.PREFERRED_SIZE, 678, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel9Layout.createSequentialGroup()
-                                .addGap(10, 10, 10)
-                                .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 255, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(jPanel9Layout.createSequentialGroup()
-                            .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(413, 413, 413)))
-                    .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 487, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 308, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jLabel117, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jLabel66, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 670, Short.MAX_VALUE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel118, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jLabel119, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jLabel120, javax.swing.GroupLayout.PREFERRED_SIZE, 435, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel121, javax.swing.GroupLayout.PREFERRED_SIZE, 115, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel122, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jLabel123, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, 0)
-                        .addComponent(jLabel124, javax.swing.GroupLayout.PREFERRED_SIZE, 312, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel9Layout.createSequentialGroup()
-                        .addComponent(jLabel126)
-                        .addGap(0, 0, 0)
-                        .addComponent(jLabel127)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel129)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel128))
-                    .addComponent(jLabel125, javax.swing.GroupLayout.PREFERRED_SIZE, 317, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(47, Short.MAX_VALUE))
+            .addGap(0, 220, Short.MAX_VALUE)
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(45, 45, 45)
-                .addComponent(jLabel62)
-                .addGap(18, 18, 18)
-                .addComponent(jLabel63, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel116, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel64, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel65, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel66, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel67, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
-                .addComponent(jLabel117, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel118)
-                    .addComponent(jLabel119)
-                    .addComponent(jLabel120))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel121)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel122)
-                    .addComponent(jLabel123, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel124))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel125)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel126)
-                    .addComponent(jLabel127)
-                    .addComponent(jLabel129)
-                    .addComponent(jLabel128))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGap(0, 202, Short.MAX_VALUE)
         );
 
-        jPanelAdmission.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 770, 390));
+        jPanelHome.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(1086, 105, -1, -1));
 
-        jButton1.setBackground(new java.awt.Color(255, 204, 0));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("COLLEGE FRESHMEN");
-        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
-        jButton1.setBorderPainted(false);
-        jPanelAdmission.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 160, 160, 60));
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/image-1080x480.jpg"))); // NOI18N
+        jPanelHome.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        jButton2.setBackground(new java.awt.Color(255, 204, 0));
-        jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("SENIOR HIGH");
-        jButton2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
-        jButton2.setBorderPainted(false);
-        jPanelAdmission.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 260, 160, 60));
-        jPanelAdmission.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 360, 50, 90));
+        jTabbedPane1.addTab("tab2", jPanelHome);
 
-        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/image-1080x900.jpg"))); // NOI18N
-        jPanelAdmission.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 10, 1080, 470));
-
-        JTabbedNavigation.addTab("tab5", jPanelAdmission);
-
-        javax.swing.GroupLayout jPanelScholarshipLayout = new javax.swing.GroupLayout(jPanelScholarship);
-        jPanelScholarship.setLayout(jPanelScholarshipLayout);
-        jPanelScholarshipLayout.setHorizontalGroup(
-            jPanelScholarshipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1075, Short.MAX_VALUE)
-        );
-        jPanelScholarshipLayout.setVerticalGroup(
-            jPanelScholarshipLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
-
-        JTabbedNavigation.addTab("tab6", jPanelScholarship);
-
-        javax.swing.GroupLayout jPanelCollegesLayout = new javax.swing.GroupLayout(jPanelColleges);
-        jPanelColleges.setLayout(jPanelCollegesLayout);
-        jPanelCollegesLayout.setHorizontalGroup(
-            jPanelCollegesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1075, Short.MAX_VALUE)
-        );
-        jPanelCollegesLayout.setVerticalGroup(
-            jPanelCollegesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
-
-        JTabbedNavigation.addTab("tab7", jPanelColleges);
-
-        javax.swing.GroupLayout jPanelCLUBSLayout = new javax.swing.GroupLayout(jPanelCLUBS);
-        jPanelCLUBS.setLayout(jPanelCLUBSLayout);
-        jPanelCLUBSLayout.setHorizontalGroup(
-            jPanelCLUBSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1075, Short.MAX_VALUE)
-        );
-        jPanelCLUBSLayout.setVerticalGroup(
-            jPanelCLUBSLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
-
-        JTabbedNavigation.addTab("tab8", jPanelCLUBS);
-
-        javax.swing.GroupLayout jPanelSeniorHighLayout = new javax.swing.GroupLayout(jPanelSeniorHigh);
-        jPanelSeniorHigh.setLayout(jPanelSeniorHighLayout);
-        jPanelSeniorHighLayout.setHorizontalGroup(
-            jPanelSeniorHighLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1075, Short.MAX_VALUE)
-        );
-        jPanelSeniorHighLayout.setVerticalGroup(
-            jPanelSeniorHighLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
-
-        JTabbedNavigation.addTab("tab9", jPanelSeniorHigh);
-
-        jPanelSTEvaluation.setBackground(new java.awt.Color(255, 255, 255));
-        jPanelSTEvaluation.setFont(new java.awt.Font("Segoe UI", 0, 11)); // NOI18N
+        jPanelSTEvaluation.setBackground(new java.awt.Color(245, 245, 245));
         jPanelSTEvaluation.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jRBYes1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup1.add(jRBYes1);
-        jRBYes1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBYes1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBYes1.setForeground(new java.awt.Color(51, 51, 51));
         jRBYes1.setText("Yes");
         jRBYes1.addActionListener(new java.awt.event.ActionListener() {
@@ -865,7 +617,7 @@ public class Home extends javax.swing.JFrame {
 
         jRBNo1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup1.add(jRBNo1);
-        jRBNo1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBNo1.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBNo1.setForeground(new java.awt.Color(51, 51, 51));
         jRBNo1.setLabel("No");
         jRBNo1.addActionListener(new java.awt.event.ActionListener() {
@@ -875,7 +627,7 @@ public class Home extends javax.swing.JFrame {
         });
         jPanelSTEvaluation.add(jRBNo1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 32, -1, -1));
 
-        jLabel5.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(51, 51, 51));
         jLabel5.setText("8. Do you intend to pursue Sports Related Track?");
         jPanelSTEvaluation.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 415, -1, 40));
@@ -885,39 +637,39 @@ public class Home extends javax.swing.JFrame {
         jLabel8.setText("- Enter your Grade 10 Academic Performance -");
         jPanelSTEvaluation.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(725, 40, -1, 30));
 
-        jLabel9.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel9.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(51, 51, 51));
         jLabel9.setText("2. Do you intend to work in the ICT industry?");
         jPanelSTEvaluation.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 85, -1, 30));
 
-        jLabel10.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(51, 51, 51));
         jLabel10.setText("3. Do you intend to pursue Industrial Arts?");
         jPanelSTEvaluation.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 140, -1, 30));
 
-        jLabel11.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(51, 51, 51));
         jLabel11.setText("4. Do you have interest at Home Economics?");
         jPanelSTEvaluation.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 195, -1, 30));
 
-        jLabel12.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(51, 51, 51));
         jLabel12.setText("5. Is it okay for you to spend years in College?");
         jPanelSTEvaluation.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, 30));
 
-        jLabel13.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel13.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(51, 51, 51));
         jLabel13.setText("6. Do you intend to pursue Academic Related Track?");
         jPanelSTEvaluation.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 305, -1, 40));
 
-        jLabel14.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel14.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(51, 51, 51));
         jLabel14.setText("7. Do you intend to pursue Arts Related Track?");
         jPanelSTEvaluation.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 360, -1, 40));
 
         jRBYes2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup2.add(jRBYes2);
-        jRBYes2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBYes2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBYes2.setForeground(new java.awt.Color(51, 51, 51));
         jRBYes2.setText("Yes");
         jRBYes2.addActionListener(new java.awt.event.ActionListener() {
@@ -929,7 +681,7 @@ public class Home extends javax.swing.JFrame {
 
         jRBNo2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup2.add(jRBNo2);
-        jRBNo2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBNo2.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBNo2.setForeground(new java.awt.Color(51, 51, 51));
         jRBNo2.setLabel("No");
         jRBNo2.addActionListener(new java.awt.event.ActionListener() {
@@ -941,7 +693,7 @@ public class Home extends javax.swing.JFrame {
 
         jRBYes3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup3.add(jRBYes3);
-        jRBYes3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBYes3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBYes3.setForeground(new java.awt.Color(51, 51, 51));
         jRBYes3.setText("Yes");
         jRBYes3.addActionListener(new java.awt.event.ActionListener() {
@@ -953,7 +705,7 @@ public class Home extends javax.swing.JFrame {
 
         jRBNo3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup3.add(jRBNo3);
-        jRBNo3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBNo3.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBNo3.setForeground(new java.awt.Color(51, 51, 51));
         jRBNo3.setLabel("No");
         jRBNo3.addActionListener(new java.awt.event.ActionListener() {
@@ -965,7 +717,7 @@ public class Home extends javax.swing.JFrame {
 
         jRBYes4.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup4.add(jRBYes4);
-        jRBYes4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBYes4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBYes4.setForeground(new java.awt.Color(51, 51, 51));
         jRBYes4.setText("Yes");
         jRBYes4.addActionListener(new java.awt.event.ActionListener() {
@@ -977,7 +729,7 @@ public class Home extends javax.swing.JFrame {
 
         jRBNo4.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup4.add(jRBNo4);
-        jRBNo4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBNo4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBNo4.setForeground(new java.awt.Color(51, 51, 51));
         jRBNo4.setLabel("No");
         jRBNo4.addActionListener(new java.awt.event.ActionListener() {
@@ -989,7 +741,7 @@ public class Home extends javax.swing.JFrame {
 
         jRBYes5.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup5.add(jRBYes5);
-        jRBYes5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBYes5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBYes5.setForeground(new java.awt.Color(51, 51, 51));
         jRBYes5.setText("Yes");
         jRBYes5.addActionListener(new java.awt.event.ActionListener() {
@@ -1001,7 +753,7 @@ public class Home extends javax.swing.JFrame {
 
         jRBNo5.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup5.add(jRBNo5);
-        jRBNo5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBNo5.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBNo5.setForeground(new java.awt.Color(51, 51, 51));
         jRBNo5.setLabel("No");
         jRBNo5.addActionListener(new java.awt.event.ActionListener() {
@@ -1013,7 +765,7 @@ public class Home extends javax.swing.JFrame {
 
         jRBYes6.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup6.add(jRBYes6);
-        jRBYes6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBYes6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBYes6.setForeground(new java.awt.Color(51, 51, 51));
         jRBYes6.setText("Yes");
         jRBYes6.addActionListener(new java.awt.event.ActionListener() {
@@ -1025,7 +777,7 @@ public class Home extends javax.swing.JFrame {
 
         jRBNo6.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup6.add(jRBNo6);
-        jRBNo6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBNo6.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBNo6.setForeground(new java.awt.Color(51, 51, 51));
         jRBNo6.setLabel("No");
         jRBNo6.addActionListener(new java.awt.event.ActionListener() {
@@ -1037,7 +789,7 @@ public class Home extends javax.swing.JFrame {
 
         jRBYes7.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup7.add(jRBYes7);
-        jRBYes7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBYes7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBYes7.setForeground(new java.awt.Color(51, 51, 51));
         jRBYes7.setText("Yes");
         jRBYes7.addActionListener(new java.awt.event.ActionListener() {
@@ -1049,7 +801,7 @@ public class Home extends javax.swing.JFrame {
 
         jRBNo7.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup7.add(jRBNo7);
-        jRBNo7.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBNo7.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBNo7.setForeground(new java.awt.Color(51, 51, 51));
         jRBNo7.setLabel("No");
         jRBNo7.addActionListener(new java.awt.event.ActionListener() {
@@ -1061,7 +813,7 @@ public class Home extends javax.swing.JFrame {
 
         jRBYes8.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup8.add(jRBYes8);
-        jRBYes8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBYes8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBYes8.setForeground(new java.awt.Color(51, 51, 51));
         jRBYes8.setText("Yes");
         jRBYes8.addActionListener(new java.awt.event.ActionListener() {
@@ -1073,7 +825,7 @@ public class Home extends javax.swing.JFrame {
 
         jRBNo8.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup8.add(jRBNo8);
-        jRBNo8.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jRBNo8.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jRBNo8.setForeground(new java.awt.Color(51, 51, 51));
         jRBNo8.setLabel("No");
         jRBNo8.addActionListener(new java.awt.event.ActionListener() {
@@ -1098,37 +850,37 @@ public class Home extends javax.swing.JFrame {
 
         jPanelSTEvaluation.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 0, 20, 480));
 
-        jLabel16.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel16.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(51, 51, 51));
         jLabel16.setText("1. Do you intend to pursue College?");
-        jPanelSTEvaluation.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, 30));
+        jPanelSTEvaluation.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, 30));
 
-        jLabel17.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel17.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(51, 51, 51));
         jLabel17.setText("GEN. AVE");
         jPanelSTEvaluation.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 160, -1, 30));
 
-        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 19)); // NOI18N
+        jLabel18.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(136, 0, 0));
         jLabel18.setText("NCAE RESULTS - PERCENTILE RANK");
         jPanelSTEvaluation.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 220, -1, 30));
 
-        jLabel19.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel19.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(51, 51, 51));
         jLabel19.setText("MATH");
         jPanelSTEvaluation.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 120, -1, 30));
 
-        jLabel20.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel20.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(51, 51, 51));
         jLabel20.setText("ENGLISH");
         jPanelSTEvaluation.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 120, -1, 30));
 
-        jLabel21.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel21.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel21.setForeground(new java.awt.Color(51, 51, 51));
         jLabel21.setText("• ACADEMIC TRACK");
         jPanelSTEvaluation.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 260, -1, 30));
 
-        jLabel22.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel22.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel22.setForeground(new java.awt.Color(51, 51, 51));
         jLabel22.setText("SCIENCE");
         jPanelSTEvaluation.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 80, -1, 30));
@@ -1221,7 +973,7 @@ public class Home extends javax.swing.JFrame {
 
         jPanelSTEvaluation.add(jPanel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 200, 420, 20));
 
-        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 19)); // NOI18N
+        jLabel23.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel23.setForeground(new java.awt.Color(136, 0, 0));
         jLabel23.setText("ACADEMIC RATING");
         jPanelSTEvaluation.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(785, 20, -1, 30));
@@ -1236,7 +988,7 @@ public class Home extends javax.swing.JFrame {
         });
         jPanelSTEvaluation.add(jCBNcae, new org.netbeans.lib.awtextra.AbsoluteConstraints(668, 450, -1, -1));
 
-        jLabel24.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel24.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel24.setForeground(new java.awt.Color(51, 51, 51));
         jLabel24.setText("FILIPINO");
         jPanelSTEvaluation.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 80, -1, 30));
@@ -1255,17 +1007,17 @@ public class Home extends javax.swing.JFrame {
         });
         jPanelSTEvaluation.add(jTFGenAve, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 160, 100, -1));
 
-        jLabel25.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel25.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel25.setForeground(new java.awt.Color(51, 51, 51));
         jLabel25.setText("• TVL TRACK");
         jPanelSTEvaluation.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 360, -1, 30));
 
-        jLabel26.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel26.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel26.setForeground(new java.awt.Color(51, 51, 51));
         jLabel26.setText("• ARTS & DESIGN TRACK");
         jPanelSTEvaluation.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 410, -1, 30));
 
-        jLabel27.setFont(new java.awt.Font("SansSerif", 1, 18)); // NOI18N
+        jLabel27.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel27.setForeground(new java.awt.Color(51, 51, 51));
         jLabel27.setText("• SPORTS TRACK");
         jPanelSTEvaluation.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 310, -1, 30));
@@ -1313,10 +1065,10 @@ public class Home extends javax.swing.JFrame {
         jPanelSTEvaluation.add(jTFTVL, new org.netbeans.lib.awtextra.AbsoluteConstraints(930, 360, 100, -1));
 
         jLabelNextArrow.setBackground(new java.awt.Color(245, 245, 245));
-        jLabelNextArrow.setFont(new java.awt.Font("Segoe UI Symbol", 1, 36)); // NOI18N
+        jLabelNextArrow.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
         jLabelNextArrow.setForeground(new java.awt.Color(51, 51, 51));
         jLabelNextArrow.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelNextArrow.setText("→");
+        jLabelNextArrow.setText("-->");
         jLabelNextArrow.setOpaque(true);
         jLabelNextArrow.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1329,7 +1081,7 @@ public class Home extends javax.swing.JFrame {
                 jLabelNextArrowMouseExited(evt);
             }
         });
-        jPanelSTEvaluation.add(jLabelNextArrow, new org.netbeans.lib.awtextra.AbsoluteConstraints(1040, 440, 40, 40));
+        jPanelSTEvaluation.add(jLabelNextArrow, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 440, -1, -1));
 
         jCBAcadRating.setBackground(new java.awt.Color(245, 245, 245));
         jCBAcadRating.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
@@ -1346,23 +1098,26 @@ public class Home extends javax.swing.JFrame {
         });
         jPanelSTEvaluation.add(jCBAcadRating, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 165, -1, -1));
 
-        JTabbedNavigation.addTab("tab10", jPanelSTEvaluation);
+        jTabbedPane1.addTab("tab1", jPanelSTEvaluation);
 
-        jPanelSTEvaluation_1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanelSTEvaluation_1.setBackground(new java.awt.Color(245, 245, 245));
+        jPanelSTEvaluation_1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel15.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel15.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(51, 51, 51));
         jLabel15.setText("8. Do you have an interest at Sports Officiating?");
+        jPanelSTEvaluation_1.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 405, -1, 40));
 
         jLabel42.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel42.setForeground(new java.awt.Color(136, 0, 0));
         jLabel42.setText("LIKELY");
+        jPanelSTEvaluation_1.add(jLabel42, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 20, -1, 30));
 
         jLabelBackArrow1.setBackground(new java.awt.Color(245, 245, 245));
-        jLabelBackArrow1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 36)); // NOI18N
+        jLabelBackArrow1.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
         jLabelBackArrow1.setForeground(new java.awt.Color(51, 51, 51));
         jLabelBackArrow1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelBackArrow1.setText("←");
+        jLabelBackArrow1.setText("<--");
         jLabelBackArrow1.setOpaque(true);
         jLabelBackArrow1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1375,34 +1130,42 @@ public class Home extends javax.swing.JFrame {
                 jLabelBackArrow1MouseExited(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jLabelBackArrow1, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 440, -1, -1));
 
-        jLabel29.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel29.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel29.setForeground(new java.awt.Color(51, 51, 51));
         jLabel29.setText("1. Do you intend to pursue Accountancy, Business, and Management (ABM)?");
+        jPanelSTEvaluation_1.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, -1, 40));
 
-        jLabel30.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel30.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel30.setForeground(new java.awt.Color(51, 51, 51));
         jLabel30.setText("2. Do you intend to pursue Science, Technology, Engineering and Mathematics (STEM)?");
+        jPanelSTEvaluation_1.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 105, -1, 40));
 
-        jLabel31.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel31.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel31.setForeground(new java.awt.Color(51, 51, 51));
         jLabel31.setText("3. Do you intend to pursue Humanities and Social Science (HUMMS)?");
+        jPanelSTEvaluation_1.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 155, -1, 40));
 
-        jLabel28.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel28.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel28.setForeground(new java.awt.Color(51, 51, 51));
         jLabel28.setText("4. Do you want to pursue or are you great at Animation?");
+        jPanelSTEvaluation_1.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 205, -1, 40));
 
-        jLabel32.setFont(new java.awt.Font("Segoe UI", 1, 16)); // NOI18N
+        jLabel32.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel32.setForeground(new java.awt.Color(51, 51, 51));
         jLabel32.setText("5. Do you have an interest at Performing Arts (Dance, Music, Theatre Arts)?");
+        jPanelSTEvaluation_1.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 255, -1, 40));
 
-        jLabel33.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel33.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel33.setForeground(new java.awt.Color(51, 51, 51));
         jLabel33.setText("6. Do you have an interest at Film Production?");
+        jPanelSTEvaluation_1.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 305, -1, 40));
 
-        jLabel34.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel34.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel34.setForeground(new java.awt.Color(51, 51, 51));
         jLabel34.setText("7. Do you have an interest at being an Athlete or Sport Coach?");
+        jPanelSTEvaluation_1.add(jLabel34, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 355, -1, 40));
 
         jRB1_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup9.add(jRB1_3);
@@ -1414,6 +1177,7 @@ public class Home extends javax.swing.JFrame {
                 jRB1_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB1_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 65, -1, -1));
 
         jRB1_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup9.add(jRB1_1);
@@ -1425,14 +1189,17 @@ public class Home extends javax.swing.JFrame {
                 jRB1_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB1_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 65, -1, -1));
 
         jLabel43.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel43.setForeground(new java.awt.Color(136, 0, 0));
         jLabel43.setText("RATE EVALUATION");
+        jPanelSTEvaluation_1.add(jLabel43, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 30));
 
         jLabel44.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel44.setForeground(new java.awt.Color(136, 0, 0));
         jLabel44.setText("NOT LIKELY");
+        jPanelSTEvaluation_1.add(jLabel44, new org.netbeans.lib.awtextra.AbsoluteConstraints(755, 20, -1, 30));
 
         jRB1_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup9.add(jRB1_2);
@@ -1444,6 +1211,7 @@ public class Home extends javax.swing.JFrame {
                 jRB1_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB1_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 65, -1, -1));
 
         jRB2_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup10.add(jRB2_1);
@@ -1455,6 +1223,7 @@ public class Home extends javax.swing.JFrame {
                 jRB2_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB2_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 115, -1, -1));
 
         jRB2_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup10.add(jRB2_2);
@@ -1466,6 +1235,7 @@ public class Home extends javax.swing.JFrame {
                 jRB2_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB2_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 115, -1, -1));
 
         jRB2_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup10.add(jRB2_3);
@@ -1477,6 +1247,7 @@ public class Home extends javax.swing.JFrame {
                 jRB2_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB2_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 115, -1, -1));
 
         jRB3_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup11.add(jRB3_1);
@@ -1488,6 +1259,7 @@ public class Home extends javax.swing.JFrame {
                 jRB3_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB3_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 165, -1, -1));
 
         jRB3_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup11.add(jRB3_2);
@@ -1499,6 +1271,7 @@ public class Home extends javax.swing.JFrame {
                 jRB3_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB3_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 165, -1, -1));
 
         jRB3_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup11.add(jRB3_3);
@@ -1510,6 +1283,7 @@ public class Home extends javax.swing.JFrame {
                 jRB3_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB3_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 165, -1, -1));
 
         jRB4_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup12.add(jRB4_1);
@@ -1521,6 +1295,7 @@ public class Home extends javax.swing.JFrame {
                 jRB4_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB4_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 215, -1, -1));
 
         jRB4_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup12.add(jRB4_2);
@@ -1532,6 +1307,7 @@ public class Home extends javax.swing.JFrame {
                 jRB4_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB4_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 215, -1, -1));
 
         jRB4_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup12.add(jRB4_3);
@@ -1543,6 +1319,7 @@ public class Home extends javax.swing.JFrame {
                 jRB4_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB4_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 215, -1, -1));
 
         jRB5_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup13.add(jRB5_1);
@@ -1554,6 +1331,7 @@ public class Home extends javax.swing.JFrame {
                 jRB5_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB5_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 265, -1, -1));
 
         jRB5_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup13.add(jRB5_2);
@@ -1565,6 +1343,7 @@ public class Home extends javax.swing.JFrame {
                 jRB5_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB5_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 265, -1, -1));
 
         jRB5_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup13.add(jRB5_3);
@@ -1576,6 +1355,7 @@ public class Home extends javax.swing.JFrame {
                 jRB5_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB5_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 265, -1, -1));
 
         jRB6_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup14.add(jRB6_1);
@@ -1587,6 +1367,7 @@ public class Home extends javax.swing.JFrame {
                 jRB6_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB6_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 315, -1, -1));
 
         jRB6_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup14.add(jRB6_2);
@@ -1598,6 +1379,7 @@ public class Home extends javax.swing.JFrame {
                 jRB6_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB6_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 315, -1, -1));
 
         jRB6_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup14.add(jRB6_3);
@@ -1609,6 +1391,7 @@ public class Home extends javax.swing.JFrame {
                 jRB6_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB6_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 315, -1, -1));
 
         jRB7_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup15.add(jRB7_1);
@@ -1620,6 +1403,7 @@ public class Home extends javax.swing.JFrame {
                 jRB7_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB7_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 365, -1, -1));
 
         jRB7_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup15.add(jRB7_2);
@@ -1631,6 +1415,7 @@ public class Home extends javax.swing.JFrame {
                 jRB7_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB7_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 365, -1, -1));
 
         jRB7_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup15.add(jRB7_3);
@@ -1642,6 +1427,7 @@ public class Home extends javax.swing.JFrame {
                 jRB7_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB7_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 365, -1, -1));
 
         jRB8_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup16.add(jRB8_1);
@@ -1653,6 +1439,7 @@ public class Home extends javax.swing.JFrame {
                 jRB8_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB8_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 415, -1, -1));
 
         jRB8_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup16.add(jRB8_2);
@@ -1664,6 +1451,7 @@ public class Home extends javax.swing.JFrame {
                 jRB8_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB8_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 415, -1, -1));
 
         jRB8_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup16.add(jRB8_3);
@@ -1675,6 +1463,7 @@ public class Home extends javax.swing.JFrame {
                 jRB8_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jRB8_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 415, -1, -1));
 
         jPanel5.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -1689,207 +1478,47 @@ public class Home extends javax.swing.JFrame {
             .addGap(0, 480, Short.MAX_VALUE)
         );
 
-        jLabelNextArrow1.setBackground(new java.awt.Color(245, 245, 245));
-        jLabelNextArrow1.setFont(new java.awt.Font("Segoe UI Symbol", 1, 36)); // NOI18N
-        jLabelNextArrow1.setForeground(new java.awt.Color(51, 51, 51));
-        jLabelNextArrow1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelNextArrow1.setText("→");
-        jLabelNextArrow1.setOpaque(true);
-        jLabelNextArrow1.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanelSTEvaluation_1.add(jPanel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 10, 480));
+
+        jLabelNextArrow2.setBackground(new java.awt.Color(245, 245, 245));
+        jLabelNextArrow2.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
+        jLabelNextArrow2.setForeground(new java.awt.Color(51, 51, 51));
+        jLabelNextArrow2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabelNextArrow2.setText("-->");
+        jLabelNextArrow2.setOpaque(true);
+        jLabelNextArrow2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabelNextArrow1MouseClicked(evt);
+                jLabelNextArrow2MouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabelNextArrow1MouseEntered(evt);
+                jLabelNextArrow2MouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabelNextArrow1MouseExited(evt);
+                jLabelNextArrow2MouseExited(evt);
             }
         });
+        jPanelSTEvaluation_1.add(jLabelNextArrow2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 440, -1, -1));
 
-        javax.swing.GroupLayout jPanelSTEvaluation_1Layout = new javax.swing.GroupLayout(jPanelSTEvaluation_1);
-        jPanelSTEvaluation_1.setLayout(jPanelSTEvaluation_1Layout);
-        jPanelSTEvaluation_1Layout.setHorizontalGroup(
-            jPanelSTEvaluation_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addGroup(jPanelSTEvaluation_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 647, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 683, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 533, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 474, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 594, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 374, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 481, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 397, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel43))
-                .addGap(18, 18, 18)
-                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
-                .addGroup(jPanelSTEvaluation_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                        .addGap(22, 22, 22)
-                        .addComponent(jLabel44))
-                    .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jRB1_1))
-                    .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jRB2_1))
-                    .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jRB3_1))
-                    .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jRB4_1))
-                    .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jRB5_1))
-                    .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jRB6_1))
-                    .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                        .addGap(62, 62, 62)
-                        .addComponent(jRB7_1))
-                    .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                        .addComponent(jLabelBackArrow1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22)
-                        .addComponent(jRB8_1)))
-                .addGap(26, 26, 26)
-                .addGroup(jPanelSTEvaluation_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRB1_2)
-                    .addComponent(jRB2_2)
-                    .addComponent(jRB3_2)
-                    .addComponent(jRB4_2)
-                    .addComponent(jRB5_2)
-                    .addComponent(jRB6_2)
-                    .addComponent(jRB7_2)
-                    .addComponent(jRB8_2))
-                .addGroup(jPanelSTEvaluation_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addGroup(jPanelSTEvaluation_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRB1_3)
-                            .addComponent(jRB2_3)
-                            .addComponent(jRB3_3)
-                            .addComponent(jRB4_3)
-                            .addComponent(jRB5_3)
-                            .addComponent(jRB6_3)
-                            .addComponent(jRB7_3)
-                            .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                                .addComponent(jRB8_3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabelNextArrow1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                        .addGap(45, 45, 45)
-                        .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        jPanelSTEvaluation_1Layout.setVerticalGroup(
-            jPanelSTEvaluation_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                .addGroup(jPanelSTEvaluation_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel43, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel32, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel44, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15)
-                        .addComponent(jRB1_1)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB2_1)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB3_1)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB4_1)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB5_1)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB6_1)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB7_1)
-                        .addGap(21, 21, 21)
-                        .addGroup(jPanelSTEvaluation_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addGroup(jPanelSTEvaluation_1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabelBackArrow1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                                    .addComponent(jLabelNextArrow1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jRB8_1)))
-                    .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jRB1_2)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB2_2)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB3_2)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB4_2)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB5_2)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB6_2)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB7_2)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB8_2))
-                    .addGroup(jPanelSTEvaluation_1Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel42, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15)
-                        .addComponent(jRB1_3)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB2_3)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB3_3)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB4_3)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB5_3)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB6_3)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB7_3)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB8_3)))
-                .addGap(19, 19, 19))
-        );
-
-        JTabbedNavigation.addTab("tab10", jPanelSTEvaluation_1);
+        jTabbedPane1.addTab("tab1", jPanelSTEvaluation_1);
 
         jPanelSTEvaluation_2.setBackground(new java.awt.Color(245, 245, 245));
+        jPanelSTEvaluation_2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel35.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel35.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel35.setForeground(new java.awt.Color(51, 51, 51));
         jLabel35.setText("16. Do you have an interest at Business Process Outsourcing? ");
+        jPanelSTEvaluation_2.add(jLabel35, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 405, -1, 40));
 
         jLabel45.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel45.setForeground(new java.awt.Color(136, 0, 0));
         jLabel45.setText("LIKELY");
+        jPanelSTEvaluation_2.add(jLabel45, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 20, -1, 30));
 
         jLabelNextArrow3.setBackground(new java.awt.Color(245, 245, 245));
-        jLabelNextArrow3.setFont(new java.awt.Font("Segoe UI Symbol", 1, 36)); // NOI18N
+        jLabelNextArrow3.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
         jLabelNextArrow3.setForeground(new java.awt.Color(51, 51, 51));
         jLabelNextArrow3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelNextArrow3.setText("←");
+        jLabelNextArrow3.setText("<--");
         jLabelNextArrow3.setOpaque(true);
         jLabelNextArrow3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -1902,34 +1531,42 @@ public class Home extends javax.swing.JFrame {
                 jLabelNextArrow3MouseExited(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jLabelNextArrow3, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 440, -1, -1));
 
-        jLabel36.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel36.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel36.setForeground(new java.awt.Color(51, 51, 51));
         jLabel36.setText("9. Do you have an interest at Hotel and Restaurant Servicing?");
+        jPanelSTEvaluation_2.add(jLabel36, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, -1, 40));
 
-        jLabel37.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel37.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel37.setForeground(new java.awt.Color(51, 51, 51));
         jLabel37.setText("10. Do you have an interest at Tourism Servicing?");
+        jPanelSTEvaluation_2.add(jLabel37, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 105, -1, 40));
 
-        jLabel38.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel38.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel38.setForeground(new java.awt.Color(51, 51, 51));
         jLabel38.setText("11. Do you have an interest at Food Production?");
+        jPanelSTEvaluation_2.add(jLabel38, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 155, -1, 40));
 
-        jLabel39.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel39.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel39.setForeground(new java.awt.Color(51, 51, 51));
         jLabel39.setText("12. Do you have an interest at Health Care Services?");
+        jPanelSTEvaluation_2.add(jLabel39, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 205, -1, 40));
 
-        jLabel40.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel40.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel40.setForeground(new java.awt.Color(51, 51, 51));
         jLabel40.setText("13. Do you have an interest at Emergency Medical Services?");
+        jPanelSTEvaluation_2.add(jLabel40, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 255, -1, 40));
 
-        jLabel41.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel41.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(51, 51, 51));
         jLabel41.setText("14. Do you have an interest at Computer Programming?");
+        jPanelSTEvaluation_2.add(jLabel41, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 305, -1, 40));
 
-        jLabel46.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel46.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel46.setForeground(new java.awt.Color(51, 51, 51));
         jLabel46.setText("15. Do you have an interest at Computer System Servicing?");
+        jPanelSTEvaluation_2.add(jLabel46, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 355, -1, 40));
 
         jRB9_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup17.add(jRB9_3);
@@ -1941,6 +1578,7 @@ public class Home extends javax.swing.JFrame {
                 jRB9_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB9_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 65, -1, -1));
 
         jRB9_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup17.add(jRB9_1);
@@ -1952,14 +1590,17 @@ public class Home extends javax.swing.JFrame {
                 jRB9_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB9_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 65, -1, -1));
 
         jLabel47.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel47.setForeground(new java.awt.Color(136, 0, 0));
         jLabel47.setText("RATE EVALUATION");
+        jPanelSTEvaluation_2.add(jLabel47, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, 30));
 
         jLabel48.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         jLabel48.setForeground(new java.awt.Color(136, 0, 0));
         jLabel48.setText("NOT LIKELY");
+        jPanelSTEvaluation_2.add(jLabel48, new org.netbeans.lib.awtextra.AbsoluteConstraints(755, 20, -1, 30));
 
         jRB9_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup17.add(jRB9_2);
@@ -1971,6 +1612,7 @@ public class Home extends javax.swing.JFrame {
                 jRB9_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB9_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 65, -1, -1));
 
         jRB10_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup18.add(jRB10_1);
@@ -1982,6 +1624,7 @@ public class Home extends javax.swing.JFrame {
                 jRB10_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB10_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 115, -1, -1));
 
         jRB10_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup18.add(jRB10_2);
@@ -1993,6 +1636,7 @@ public class Home extends javax.swing.JFrame {
                 jRB10_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB10_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 115, -1, -1));
 
         jRB10_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup18.add(jRB10_3);
@@ -2004,6 +1648,7 @@ public class Home extends javax.swing.JFrame {
                 jRB10_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB10_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 115, -1, -1));
 
         jRB11_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup19.add(jRB11_1);
@@ -2015,6 +1660,7 @@ public class Home extends javax.swing.JFrame {
                 jRB11_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB11_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 165, -1, -1));
 
         jRB11_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup19.add(jRB11_2);
@@ -2026,6 +1672,7 @@ public class Home extends javax.swing.JFrame {
                 jRB11_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB11_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 165, -1, -1));
 
         jRB11_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup19.add(jRB11_3);
@@ -2037,6 +1684,7 @@ public class Home extends javax.swing.JFrame {
                 jRB11_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB11_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 165, -1, -1));
 
         jRB12_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup20.add(jRB12_1);
@@ -2048,6 +1696,7 @@ public class Home extends javax.swing.JFrame {
                 jRB12_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB12_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 215, -1, -1));
 
         jRB12_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup20.add(jRB12_2);
@@ -2059,6 +1708,7 @@ public class Home extends javax.swing.JFrame {
                 jRB12_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB12_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 215, -1, -1));
 
         jRB12_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup20.add(jRB12_3);
@@ -2070,6 +1720,7 @@ public class Home extends javax.swing.JFrame {
                 jRB12_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB12_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 215, -1, -1));
 
         jRB13_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup21.add(jRB13_1);
@@ -2081,6 +1732,7 @@ public class Home extends javax.swing.JFrame {
                 jRB13_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB13_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 265, -1, -1));
 
         jRB13_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup21.add(jRB13_2);
@@ -2092,6 +1744,7 @@ public class Home extends javax.swing.JFrame {
                 jRB13_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB13_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 265, -1, -1));
 
         jRB13_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup21.add(jRB13_3);
@@ -2103,6 +1756,7 @@ public class Home extends javax.swing.JFrame {
                 jRB13_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB13_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 265, -1, -1));
 
         jRB14_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup22.add(jRB14_1);
@@ -2114,6 +1768,7 @@ public class Home extends javax.swing.JFrame {
                 jRB14_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB14_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 315, -1, -1));
 
         jRB14_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup22.add(jRB14_2);
@@ -2125,6 +1780,7 @@ public class Home extends javax.swing.JFrame {
                 jRB14_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB14_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 315, -1, -1));
 
         jRB14_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup22.add(jRB14_3);
@@ -2136,6 +1792,7 @@ public class Home extends javax.swing.JFrame {
                 jRB14_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB14_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 315, -1, -1));
 
         jRB15_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup23.add(jRB15_1);
@@ -2147,6 +1804,7 @@ public class Home extends javax.swing.JFrame {
                 jRB15_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB15_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 365, -1, -1));
 
         jRB15_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup23.add(jRB15_2);
@@ -2158,6 +1816,7 @@ public class Home extends javax.swing.JFrame {
                 jRB15_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB15_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 365, -1, -1));
 
         jRB15_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup23.add(jRB15_3);
@@ -2169,6 +1828,7 @@ public class Home extends javax.swing.JFrame {
                 jRB15_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB15_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 365, -1, -1));
 
         jRB16_1.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup24.add(jRB16_1);
@@ -2180,6 +1840,7 @@ public class Home extends javax.swing.JFrame {
                 jRB16_1ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB16_1, new org.netbeans.lib.awtextra.AbsoluteConstraints(795, 415, -1, -1));
 
         jRB16_2.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup24.add(jRB16_2);
@@ -2191,6 +1852,7 @@ public class Home extends javax.swing.JFrame {
                 jRB16_2ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB16_2, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 415, -1, -1));
 
         jRB16_3.setBackground(new java.awt.Color(245, 245, 245));
         buttonGroup24.add(jRB16_3);
@@ -2202,6 +1864,7 @@ public class Home extends javax.swing.JFrame {
                 jRB16_3ActionPerformed(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jRB16_3, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 415, -1, -1));
 
         jPanel6.setBackground(new java.awt.Color(102, 102, 102));
 
@@ -2216,11 +1879,13 @@ public class Home extends javax.swing.JFrame {
             .addGap(0, 480, Short.MAX_VALUE)
         );
 
+        jPanelSTEvaluation_2.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 10, 480));
+
         jLabelNextArrow4.setBackground(new java.awt.Color(245, 245, 245));
-        jLabelNextArrow4.setFont(new java.awt.Font("Segoe UI Symbol", 1, 36)); // NOI18N
+        jLabelNextArrow4.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
         jLabelNextArrow4.setForeground(new java.awt.Color(51, 51, 51));
         jLabelNextArrow4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelNextArrow4.setText("→");
+        jLabelNextArrow4.setText("-->");
         jLabelNextArrow4.setOpaque(true);
         jLabelNextArrow4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2233,179 +1898,11 @@ public class Home extends javax.swing.JFrame {
                 jLabelNextArrow4MouseExited(evt);
             }
         });
+        jPanelSTEvaluation_2.add(jLabelNextArrow4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 440, -1, -1));
 
-        javax.swing.GroupLayout jPanelSTEvaluation_2Layout = new javax.swing.GroupLayout(jPanelSTEvaluation_2);
-        jPanelSTEvaluation_2.setLayout(jPanelSTEvaluation_2Layout);
-        jPanelSTEvaluation_2Layout.setHorizontalGroup(
-            jPanelSTEvaluation_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(jPanelSTEvaluation_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel47)
-                    .addComponent(jLabel36)
-                    .addComponent(jLabel37)
-                    .addComponent(jLabel38)
-                    .addComponent(jLabel39)
-                    .addComponent(jLabel40)
-                    .addComponent(jLabel41)
-                    .addComponent(jLabel46)
-                    .addComponent(jLabel35))
-                .addGap(203, 203, 203)
-                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanelSTEvaluation_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addComponent(jLabel48))
-                    .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jRB9_1))
-                    .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jRB10_1))
-                    .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jRB11_1))
-                    .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jRB12_1))
-                    .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jRB13_1))
-                    .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jRB14_1))
-                    .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jRB15_1))
-                    .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addGap(0, 0, 0)
-                        .addComponent(jLabelNextArrow3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(48, 48, 48)
-                        .addComponent(jRB16_1)))
-                .addGap(26, 26, 26)
-                .addGroup(jPanelSTEvaluation_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jRB9_2)
-                    .addComponent(jRB10_2)
-                    .addComponent(jRB11_2)
-                    .addComponent(jRB12_2)
-                    .addComponent(jRB13_2)
-                    .addComponent(jRB14_2)
-                    .addComponent(jRB15_2)
-                    .addComponent(jRB16_2))
-                .addGap(45, 45, 45)
-                .addGroup(jPanelSTEvaluation_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addComponent(jLabel45)
-                        .addGap(65, 65, 65))
-                    .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addGroup(jPanelSTEvaluation_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jRB9_3)
-                            .addComponent(jRB10_3)
-                            .addComponent(jRB11_3)
-                            .addComponent(jRB12_3)
-                            .addComponent(jRB13_3)
-                            .addComponent(jRB14_3)
-                            .addComponent(jRB15_3)
-                            .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                                .addComponent(jRB16_3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jLabelNextArrow4))))))
-        );
-        jPanelSTEvaluation_2Layout.setVerticalGroup(
-            jPanelSTEvaluation_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                .addGroup(jPanelSTEvaluation_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel47, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(5, 5, 5)
-                        .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel41, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel46, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(10, 10, 10)
-                        .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel48, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15)
-                        .addComponent(jRB9_1)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB10_1)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB11_1)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB12_1)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB13_1)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB14_1)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB15_1)
-                        .addGap(21, 21, 21)
-                        .addGroup(jPanelSTEvaluation_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                                .addGap(25, 25, 25)
-                                .addGroup(jPanelSTEvaluation_2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jLabelNextArrow4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabelNextArrow3, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jRB16_1)))
-                    .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addGap(65, 65, 65)
-                        .addComponent(jRB9_2)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB10_2)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB11_2)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB12_2)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB13_2)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB14_2)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB15_2)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB16_2))
-                    .addGroup(jPanelSTEvaluation_2Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel45, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(15, 15, 15)
-                        .addComponent(jRB9_3)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB10_3)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB11_3)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB12_3)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB13_3)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB14_3)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB15_3)
-                        .addGap(21, 21, 21)
-                        .addComponent(jRB16_3)))
-                .addGap(17, 17, 17))
-        );
-
-        JTabbedNavigation.addTab("tab10", jPanelSTEvaluation_2);
+        jTabbedPane1.addTab("tab1", jPanelSTEvaluation_2);
 
         jPanelSTEvaluation_3.setBackground(new java.awt.Color(245, 245, 245));
-        jPanelSTEvaluation_3.setMaximumSize(new java.awt.Dimension(33, 48));
-        jPanelSTEvaluation_3.setMinimumSize(new java.awt.Dimension(33, 48));
-        jPanelSTEvaluation_3.setPreferredSize(new java.awt.Dimension(33, 48));
         jPanelSTEvaluation_3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel50.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
@@ -2414,10 +1911,10 @@ public class Home extends javax.swing.JFrame {
         jPanelSTEvaluation_3.add(jLabel50, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 20, -1, 30));
 
         jLabelNextArrow5.setBackground(new java.awt.Color(245, 245, 245));
-        jLabelNextArrow5.setFont(new java.awt.Font("Segoe UI Symbol", 1, 36)); // NOI18N
+        jLabelNextArrow5.setFont(new java.awt.Font("Segoe UI Historic", 1, 24)); // NOI18N
         jLabelNextArrow5.setForeground(new java.awt.Color(51, 51, 51));
         jLabelNextArrow5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabelNextArrow5.setText("←");
+        jLabelNextArrow5.setText("<--");
         jLabelNextArrow5.setOpaque(true);
         jLabelNextArrow5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -2430,29 +1927,29 @@ public class Home extends javax.swing.JFrame {
                 jLabelNextArrow5MouseExited(evt);
             }
         });
-        jPanelSTEvaluation_3.add(jLabelNextArrow5, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 440, 40, 40));
+        jPanelSTEvaluation_3.add(jLabelNextArrow5, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 440, -1, -1));
 
-        jLabel51.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel51.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel51.setForeground(new java.awt.Color(51, 51, 51));
         jLabel51.setText("17. Do you have an interest at Drafting Technology?");
         jPanelSTEvaluation_3.add(jLabel51, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 55, -1, 40));
 
-        jLabel52.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel52.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel52.setForeground(new java.awt.Color(51, 51, 51));
         jLabel52.setText("18. Do you have an interest at Automotive Servicing?");
         jPanelSTEvaluation_3.add(jLabel52, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 105, -1, 40));
 
-        jLabel53.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel53.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel53.setForeground(new java.awt.Color(51, 51, 51));
         jLabel53.setText("19. Do you have an interest at Electronic Products Assembly & Services?");
         jPanelSTEvaluation_3.add(jLabel53, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 155, -1, 40));
 
-        jLabel54.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel54.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel54.setForeground(new java.awt.Color(51, 51, 51));
         jLabel54.setText("20. Do you have an interest at Electrical Installation & Maintenance?");
         jPanelSTEvaluation_3.add(jLabel54, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 205, -1, 40));
 
-        jLabel55.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel55.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel55.setForeground(new java.awt.Color(51, 51, 51));
         jLabel55.setText("21. Do you have an interest at Construction Technology?");
         jPanelSTEvaluation_3.add(jLabel55, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 255, -1, 40));
@@ -2703,7 +2200,7 @@ public class Home extends javax.swing.JFrame {
 
         jPanelSTEvaluation_3.add(jPanel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 0, 10, 480));
 
-        jLabel57.setFont(new java.awt.Font("SansSerif", 1, 16)); // NOI18N
+        jLabel57.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
         jLabel57.setForeground(new java.awt.Color(51, 51, 51));
         jLabel57.setText("22. Do you have an interest at Welding Technology?");
         jPanelSTEvaluation_3.add(jLabel57, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 305, -1, 40));
@@ -2742,7 +2239,7 @@ public class Home extends javax.swing.JFrame {
         jLabel61.setText("Respondent's  final decision and passion that will matter the most, ");
         jPanelSTEvaluation_3.add(jLabel61, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 395, -1, 40));
 
-        JTabbedNavigation.addTab("tab10", jPanelSTEvaluation_3);
+        jTabbedPane1.addTab("tab1", jPanelSTEvaluation_3);
 
         jPanelSTEvaluation_4.setBackground(new java.awt.Color(245, 245, 245));
         jPanelSTEvaluation_4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -2925,7 +2422,7 @@ public class Home extends javax.swing.JFrame {
                         .addComponent(jLabel83, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabelANIMATION)))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
         jLabelPERFORMING_ARTS22Layout.setVerticalGroup(
             jLabelPERFORMING_ARTS22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2995,7 +2492,7 @@ public class Home extends javax.swing.JFrame {
                 .addGroup(jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabelSPORTS_OFFICIATING)
                     .addComponent(jLabelSPORTS_COACHING))
-                .addContainerGap(43, Short.MAX_VALUE))
+                .addContainerGap(42, Short.MAX_VALUE))
         );
         jPanel10Layout.setVerticalGroup(
             jPanel10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3324,35 +2821,329 @@ public class Home extends javax.swing.JFrame {
         jLabel113.setText("99");
         jPanelSTEvaluation_4.add(jLabel113, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 130, 143, -1));
 
-        JTabbedNavigation.addTab("tab10", jPanelSTEvaluation_4);
+        jTabbedPane1.addTab("tab1", jPanelSTEvaluation_4);
 
-        javax.swing.GroupLayout jPanelFunFactsLayout = new javax.swing.GroupLayout(jPanelFunFacts);
-        jPanelFunFacts.setLayout(jPanelFunFactsLayout);
-        jPanelFunFactsLayout.setHorizontalGroup(
-            jPanelFunFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1075, Short.MAX_VALUE)
-        );
-        jPanelFunFactsLayout.setVerticalGroup(
-            jPanelFunFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
+        jPanelHistory.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        JTabbedNavigation.addTab("tab11", jPanelFunFacts);
+        jBtnHistory.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnHistory.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jBtnHistory.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnHistory.setText("HISTORY");
+        jBtnHistory.setToolTipText("");
+        jBtnHistory.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        buttonGroup31.add(jBtnHistory);
+        jBtnHistory.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnHistoryMouseClicked(evt);
+            }
+        });
+        jBtnHistory.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnHistoryActionPerformed(evt);
+            }
+        });
+        jPanelHistory.add(jBtnHistory, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 55, 160, 80));
 
-        javax.swing.GroupLayout jPanelAccntInfoLayout = new javax.swing.GroupLayout(jPanelAccntInfo);
-        jPanelAccntInfo.setLayout(jPanelAccntInfoLayout);
-        jPanelAccntInfoLayout.setHorizontalGroup(
-            jPanelAccntInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1075, Short.MAX_VALUE)
-        );
-        jPanelAccntInfoLayout.setVerticalGroup(
-            jPanelAccntInfoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 482, Short.MAX_VALUE)
-        );
+        jBtnMission.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnMission.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jBtnMission.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnMission.setText("MISSION");
+        jBtnMission.setToolTipText("");
+        jBtnMission.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        buttonGroup31.add(jBtnMission);
+        jBtnMission.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnMissionMouseClicked(evt);
+            }
+        });
+        jBtnMission.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnMissionActionPerformed(evt);
+            }
+        });
+        jPanelHistory.add(jBtnMission, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 205, 160, 80));
 
-        JTabbedNavigation.addTab("tab12", jPanelAccntInfo);
+        jBtnVision.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnVision.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jBtnVision.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnVision.setText("VISION");
+        jBtnVision.setToolTipText("");
+        jBtnVision.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        buttonGroup31.add(jBtnVision);
+        jBtnVision.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnVisionMouseClicked(evt);
+            }
+        });
+        jBtnVision.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnVisionActionPerformed(evt);
+            }
+        });
+        jPanelHistory.add(jBtnVision, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 355, 160, 80));
 
-        getContentPane().add(JTabbedNavigation, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 91, 1080, 510));
+        jTxtHolder.setEditable(false);
+        jTxtHolder.setBackground(new java.awt.Color(255, 224, 224));
+        jTxtHolder.setColumns(20);
+        jTxtHolder.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTxtHolder.setLineWrap(true);
+        jTxtHolder.setRows(1);
+        jTxtHolder.setToolTipText("");
+        jTxtHolder.setWrapStyleWord(true);
+        jTxtHolder.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 5, true));
+        jTxtHolder.setDragEnabled(true);
+        jTxtHolder.setFocusable(false);
+        jScrollPane1.setViewportView(jTxtHolder);
+
+        jPanelHistory.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 50, 750, 390));
+
+        jLabel49.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/center-1080x480.jpg"))); // NOI18N
+        jPanelHistory.add(jLabel49, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, -10, -1, 500));
+
+        jTabbedPane1.addTab("tab2", jPanelHistory);
+
+        jPanelAchievement.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel63.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel63.setText("Awards & Recognitions");
+        jPanelAchievement.add(jLabel63, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 9, 780, 70));
+
+        jTxtHolder1.setEditable(false);
+        jTxtHolder1.setBackground(new java.awt.Color(255, 224, 224));
+        jTxtHolder1.setColumns(20);
+        jTxtHolder1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTxtHolder1.setLineWrap(true);
+        jTxtHolder1.setRows(1);
+        jTxtHolder1.setToolTipText("");
+        jTxtHolder1.setWrapStyleWord(true);
+        jTxtHolder1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 5, true));
+        jTxtHolder1.setDragEnabled(true);
+        jTxtHolder1.setFocusable(false);
+        jScrollPane2.setViewportView(jTxtHolder1);
+
+        jPanelAchievement.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 910, 390));
+
+        jLabel62.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/center-1080x480.jpg"))); // NOI18N
+        jPanelAchievement.add(jLabel62, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jTabbedPane1.addTab("tab2", jPanelAchievement);
+
+        jPanelFacilities.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jScrollPane3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 5));
+        jScrollPane3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+
+        jList1.setBackground(new java.awt.Color(255, 224, 224));
+        jList1.setFont(new java.awt.Font("Tahoma", 1, 16)); // NOI18N
+        jList1.setModel(new javax.swing.AbstractListModel<String>() {
+            String[] strings = { "1. 7-FLOOR HOSTEL", "2. DR. MATEO CONFERENCE ROOM", "3. DR. OLONAN AND DR. CARAGUE CONFERENCE ROOM", "4. FOOTBALL FIELD", "5. INTERFAITH CHAPEL", "6. MEDICAL AND DENTAL EQUIPMENT", "7. NINOY AQUINO LIBRARY AND LEARNING RESOURCES CENTER", "8. OLYMPIC SIZED SWIMMING POOL", "9. OUTDOOR GYM", "10. PUP-LAGOON", "11. THE BALAGTAS HALL (BULWAGANG BALAGTAS)", "12. UNIVERSITY BOOKSTORE", "13. UNIVERSITY CANTEEN", "14. UNIVERSITY GYMNASIUM" };
+            public int getSize() { return strings.length; }
+            public String getElementAt(int i) { return strings[i]; }
+        });
+        jList1.setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
+        jList1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jList1MouseClicked(evt);
+            }
+        });
+        jList1.addListSelectionListener(new javax.swing.event.ListSelectionListener() {
+            public void valueChanged(javax.swing.event.ListSelectionEvent evt) {
+                jList1ValueChanged(evt);
+            }
+        });
+        jScrollPane3.setViewportView(jList1);
+
+        jPanelFacilities.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 540, 330));
+
+        jFacility_PicHostel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/hostel.jpg"))); // NOI18N
+        jFacility_PicHostel.setText("jLabel66");
+        jFacility_PicHostel.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicHostel, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicMateo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/mateo.jpg"))); // NOI18N
+        jFacility_PicMateo.setText("jLabel66");
+        jFacility_PicMateo.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicMateo, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicOlonan.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/olona.jpg"))); // NOI18N
+        jFacility_PicOlonan.setText("jLabel66");
+        jFacility_PicOlonan.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicOlonan, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicFootball.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/football.jpg"))); // NOI18N
+        jFacility_PicFootball.setText("jLabel66");
+        jFacility_PicFootball.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicFootball, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicInterfaith.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/interfaith.jpg"))); // NOI18N
+        jFacility_PicInterfaith.setText("jLabel66");
+        jFacility_PicInterfaith.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicInterfaith, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicMedical.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/medical.jpg"))); // NOI18N
+        jFacility_PicMedical.setText("jLabel66");
+        jFacility_PicMedical.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicMedical, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicNinoyLibrary.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/ninoy library.jpg"))); // NOI18N
+        jFacility_PicNinoyLibrary.setText("jLabel66");
+        jFacility_PicNinoyLibrary.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicNinoyLibrary, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicSwimmingPool.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/olympic swimming pool.jpg"))); // NOI18N
+        jFacility_PicSwimmingPool.setText("jLabel66");
+        jFacility_PicSwimmingPool.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicSwimmingPool, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicOutdoorGym.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/outdoor gym.jpg"))); // NOI18N
+        jFacility_PicOutdoorGym.setText("jLabel66");
+        jFacility_PicOutdoorGym.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicOutdoorGym, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicLagoon.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/pup-lagoon.jpg"))); // NOI18N
+        jFacility_PicLagoon.setText("jLabel66");
+        jFacility_PicLagoon.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicLagoon, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicBalagtas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/balagtas.jpg"))); // NOI18N
+        jFacility_PicBalagtas.setText("jLabel66");
+        jFacility_PicBalagtas.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicBalagtas, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicBookstore.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/bookstore.jpg"))); // NOI18N
+        jFacility_PicBookstore.setText("jLabel66");
+        jFacility_PicBookstore.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicBookstore, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicCanteen.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/canteen.jpg"))); // NOI18N
+        jFacility_PicCanteen.setText("jLabel66");
+        jFacility_PicCanteen.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicCanteen, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jFacility_PicGym.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/gym.jpg"))); // NOI18N
+        jFacility_PicGym.setText("jLabel66");
+        jFacility_PicGym.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 10, true));
+        jPanelFacilities.add(jFacility_PicGym, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 20, 471, 330));
+
+        jTxtHolder2.setEditable(false);
+        jTxtHolder2.setBackground(new java.awt.Color(255, 224, 224));
+        jTxtHolder2.setColumns(20);
+        jTxtHolder2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTxtHolder2.setLineWrap(true);
+        jTxtHolder2.setRows(1);
+        jTxtHolder2.setToolTipText("");
+        jTxtHolder2.setWrapStyleWord(true);
+        jTxtHolder2.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 3, true));
+        jTxtHolder2.setDragEnabled(true);
+        jTxtHolder2.setFocusable(false);
+        jScrollPane4.setViewportView(jTxtHolder2);
+
+        jPanelFacilities.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 360, 470, 110));
+
+        jTxtHolder3.setEditable(false);
+        jTxtHolder3.setBackground(new java.awt.Color(255, 255, 153));
+        jTxtHolder3.setColumns(20);
+        jTxtHolder3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTxtHolder3.setLineWrap(true);
+        jTxtHolder3.setRows(1);
+        jTxtHolder3.setToolTipText("");
+        jTxtHolder3.setWrapStyleWord(true);
+        jTxtHolder3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 3, true));
+        jTxtHolder3.setDragEnabled(true);
+        jTxtHolder3.setFocusable(false);
+        jScrollPane5.setViewportView(jTxtHolder3);
+
+        jPanelFacilities.add(jScrollPane5, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 360, 540, 110));
+
+        jLabel64.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/center-1080x480.jpg"))); // NOI18N
+        jPanelFacilities.add(jLabel64, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jTabbedPane1.addTab("tab2", jPanelFacilities);
+
+        jPanelAdmission.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel66.setFont(new java.awt.Font("Tahoma", 1, 48)); // NOI18N
+        jLabel66.setText("Admission Process");
+        jPanelAdmission.add(jLabel66, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 9, 500, 70));
+
+        jBtnScholarship.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnScholarship.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jBtnScholarship.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnScholarship.setText("Scholarship");
+        jBtnScholarship.setToolTipText("");
+        jBtnScholarship.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        buttonGroup31.add(jBtnScholarship);
+        jBtnScholarship.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnScholarshipMouseClicked(evt);
+            }
+        });
+        jBtnScholarship.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnScholarshipActionPerformed(evt);
+            }
+        });
+        jPanelAdmission.add(jBtnScholarship, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 20, 140, 50));
+
+        jBtnCollege.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnCollege.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jBtnCollege.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnCollege.setText("College");
+        jBtnCollege.setToolTipText("");
+        jBtnCollege.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        buttonGroup31.add(jBtnCollege);
+        jBtnCollege.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnCollegeMouseClicked(evt);
+            }
+        });
+        jBtnCollege.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnCollegeActionPerformed(evt);
+            }
+        });
+        jPanelAdmission.add(jBtnCollege, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 110, 50));
+
+        jBtnSHS.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnSHS.setFont(new java.awt.Font("Tahoma", 1, 20)); // NOI18N
+        jBtnSHS.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnSHS.setText("SHS");
+        jBtnSHS.setToolTipText("");
+        jBtnSHS.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        buttonGroup31.add(jBtnSHS);
+        jBtnSHS.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnSHSMouseClicked(evt);
+            }
+        });
+        jBtnSHS.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSHSActionPerformed(evt);
+            }
+        });
+        jPanelAdmission.add(jBtnSHS, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 20, 110, 50));
+
+        jTxtHolder4.setEditable(false);
+        jTxtHolder4.setBackground(new java.awt.Color(255, 224, 224));
+        jTxtHolder4.setColumns(20);
+        jTxtHolder4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        jTxtHolder4.setLineWrap(true);
+        jTxtHolder4.setRows(1);
+        jTxtHolder4.setToolTipText("");
+        jTxtHolder4.setWrapStyleWord(true);
+        jTxtHolder4.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 5, true));
+        jTxtHolder4.setDragEnabled(true);
+        jTxtHolder4.setFocusable(false);
+        jScrollPane6.setViewportView(jTxtHolder4);
+
+        jPanelAdmission.add(jScrollPane6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 70, 910, 390));
+
+        jLabel67.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/center-1080x480.jpg"))); // NOI18N
+        jPanelAdmission.add(jLabel67, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jTabbedPane1.addTab("tab2", jPanelAdmission);
+
+        getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 91, 1080, 510));
 
         pack();
         setLocationRelativeTo(null);
@@ -3376,65 +3167,45 @@ public class Home extends javax.swing.JFrame {
 
     private void jLabel1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseEntered
         jLabel1.setBackground(new Color(136, 0, 0));
-        jLabel1.setFont(new Font("Segoe UI Symbol", Font.BOLD, 36));
+        jLabel1.setFont(new Font("Segoe UI", Font.BOLD, 24));
         jLabel1.setForeground(new Color(255, 255, 255));
     }//GEN-LAST:event_jLabel1MouseEntered
 
     private void jLabel1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseExited
         jLabel1.setBackground(new Color(255, 255, 255));
-        jLabel1.setFont(new Font("Segoe UI Symbol", Font.PLAIN, 36));
+        jLabel1.setFont(new Font("Segoe UI", Font.PLAIN, 24));
         jLabel1.setForeground(new Color(136,0,0));
     }//GEN-LAST:event_jLabel1MouseExited
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
-        // String strSelected = jComboBox1.getSelectedItem().toString();
+        String strSelected = jComboBox1.getSelectedItem().toString();
         
-        String selectedOption = jComboBox1.getSelectedItem().toString();
-    
-        switch(selectedOption) {
+        switch (strSelected) {
+            case "Strand and Track Evaluation":
+                jTabbedPane1.setSelectedIndex(1); // to show the page of ST_Evaluation
+                break;
             case "Home":
-                JTabbedNavigation.setSelectedIndex(0);
+                jTabbedPane1.setSelectedIndex(0); // to show the page of Home
                 break;
-            case "History, Mission, and Vision":
-                JTabbedNavigation.setSelectedIndex(1);
+            case "History, Mission and Vision":
+                jTabbedPane1.setSelectedIndex(6); // to show the page of History, Mission and Vision
                 break;
-            case "Achievement":
-                JTabbedNavigation.setSelectedIndex(2);
+            case "Achievements":
+                jTabbedPane1.setSelectedIndex(7); // to show the page of History, Mission and Vision
+                ContentAchievements();
                 break;
             case "Facilities":
-                JTabbedNavigation.setSelectedIndex(3);
+                jTabbedPane1.setSelectedIndex(8); // to show the page of History, Mission and Vision
+                jList1.setSelectedIndex(0);
                 break;
-            case "Admission":
-                JTabbedNavigation.setSelectedIndex(4);
+            case "Admission/Scholarship":
+                jTabbedPane1.setSelectedIndex(9); // to show the page of History, Mission and Vision
+                jBtnCollege.setBackground(new java.awt.Color(136, 0, 0));
+                ContentAdmission();
                 break;
-            case "Sholarship":
-                JTabbedNavigation.setSelectedIndex(5);
-                break;
-            case "Colleges":
-                JTabbedNavigation.setSelectedIndex(6);
-                break;
-            case "Department Clubs":
-                JTabbedNavigation.setSelectedIndex(7);
-                break;
-            case "Senior High":
-                JTabbedNavigation.setSelectedIndex(8);
-                break;
-            case "Strand and Track Evaluation":
-                JTabbedNavigation.setSelectedIndex(9);
-                break;
-            case "PUP Fun Facts":
-                JTabbedNavigation.setSelectedIndex(14);
-                break;
-            case "Account Information":
-                JTabbedNavigation.setSelectedIndex(15);
+            default:
                 break;
         }
-        /*if (strSelected.equals("Strand and Track Evaluation")){
-            JTabbedNavigation.setSelectedIndex(1); // to show the page of ST_Evaluation
- 
-        } else if (strSelected.equals("Home")){
-            JTabbedNavigation.setSelectedIndex(0); // to show the page of Home
-        }*/
      
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
@@ -3639,22 +3410,26 @@ public class Home extends javax.swing.JFrame {
         
         // VERIFICATION
         if (choice_made == true && grades_input == false && NCAE_input == false && valid_grade == true && valid_NCAE == true){
-            JTabbedNavigation.setSelectedIndex(11);
+            jTabbedPane1.setSelectedIndex(2);
         } else{
             JOptionPane.showMessageDialog(this,"You have an Incomplete or Invalid Response/s (Range of Input is 60-100 only), please check again.","Incomplete/Invalid Response",JOptionPane.ERROR_MESSAGE);
         }
+        
+        
+        
+        
     }//GEN-LAST:event_jLabelNextArrowMouseClicked
 
     private void jLabelNextArrowMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextArrowMouseEntered
         jLabelNextArrow.setBackground(new Color(245, 245, 245));
-        jLabelNextArrow.setFont(new Font("Segoe UI Symbol", Font.BOLD, 36));
+        jLabelNextArrow.setFont(new Font("Segoe UI", Font.BOLD, 24));
         jLabelNextArrow.setForeground(new Color(136, 0, 0));
     }//GEN-LAST:event_jLabelNextArrowMouseEntered
 
     private void jLabelNextArrowMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextArrowMouseExited
         jLabelNextArrow.setBackground(new Color(245, 245, 245));
-        jLabelNextArrow.setFont(new Font("Segoe UI Symbol", Font.BOLD, 36));
-        jLabelNextArrow.setForeground(new Color(136, 0, 0));
+        jLabelNextArrow.setFont(new Font("Segoe UI", Font.PLAIN, 24));
+        jLabelNextArrow.setForeground(new Color(51,51,51));
     }//GEN-LAST:event_jLabelNextArrowMouseExited
 
     private void jTFFilipinoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTFFilipinoKeyPressed
@@ -3755,7 +3530,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelBackArrow1MouseEntered
 
     private void jLabelBackArrow1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelBackArrow1MouseClicked
-        JTabbedNavigation.setSelectedIndex(1);
+        jTabbedPane1.setSelectedIndex(1);
         
         
     }//GEN-LAST:event_jLabelBackArrow1MouseClicked
@@ -3856,8 +3631,39 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jRB8_3ActionPerformed
 
+    private void jLabelNextArrow2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextArrow2MouseClicked
+        boolean choice_made = buttonGroup9.getSelection() != null && 
+                buttonGroup10.getSelection() != null && 
+                buttonGroup11.getSelection() != null && 
+                buttonGroup12.getSelection() != null && 
+                buttonGroup13.getSelection() != null && 
+                buttonGroup14.getSelection() != null && 
+                buttonGroup15.getSelection() != null && 
+                buttonGroup16.getSelection() != null;
+        
+        if (choice_made == true){
+            jTabbedPane1.setSelectedIndex(3);
+        } else{
+            JOptionPane.showMessageDialog(this,"You have an Incomplete or Invalid Response/s, please check again.","Incomplete Response",JOptionPane.ERROR_MESSAGE);
+        }
+        
+        
+    }//GEN-LAST:event_jLabelNextArrow2MouseClicked
+
+    private void jLabelNextArrow2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextArrow2MouseEntered
+        jLabelNextArrow2.setBackground(new Color(245, 245, 245));
+        jLabelNextArrow2.setFont(new Font("Segoe UI", Font.BOLD, 24));
+        jLabelNextArrow2.setForeground(new Color(136,0,0));
+    }//GEN-LAST:event_jLabelNextArrow2MouseEntered
+
+    private void jLabelNextArrow2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextArrow2MouseExited
+        jLabelNextArrow2.setBackground(new Color(245, 245, 245));
+        jLabelNextArrow2.setFont(new Font("Segoe UI", Font.PLAIN, 24));
+        jLabelNextArrow2.setForeground(new Color(51,51,51));
+    }//GEN-LAST:event_jLabelNextArrow2MouseExited
+
     private void jLabelNextArrow3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextArrow3MouseClicked
-        JTabbedNavigation.setSelectedIndex(2);
+        jTabbedPane1.setSelectedIndex(2);
     }//GEN-LAST:event_jLabelNextArrow3MouseClicked
 
     private void jLabelNextArrow3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextArrow3MouseEntered
@@ -3979,7 +3785,7 @@ public class Home extends javax.swing.JFrame {
                 buttonGroup24.getSelection() != null;
         
         if (choice_made == true){
-            JTabbedNavigation.setSelectedIndex(13);
+            jTabbedPane1.setSelectedIndex(4);
         } else{
             JOptionPane.showMessageDialog(this,"You have an Incomplete or Invalid Response/s, please check again.","Incomplete Response",JOptionPane.ERROR_MESSAGE);
         }
@@ -3998,7 +3804,7 @@ public class Home extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabelNextArrow4MouseExited
 
     private void jLabelNextArrow5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextArrow5MouseClicked
-        JTabbedNavigation.setSelectedIndex(12);
+        jTabbedPane1.setSelectedIndex(3);
     }//GEN-LAST:event_jLabelNextArrow5MouseClicked
 
     private void jLabelNextArrow5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextArrow5MouseEntered
@@ -4613,7 +4419,7 @@ public class Home extends javax.swing.JFrame {
             jLabelSPORTS_OFFICIATING.setText(String.valueOf(intSPORTS_OFFICIATING));
       
             // going to the RESULTS TAB & reseting choices
-            JTabbedNavigation.setSelectedIndex(13);
+            jTabbedPane1.setSelectedIndex(5);
             ResetST();
         } else{
             JOptionPane.showMessageDialog(this,"You have an Incomplete or Invalid Response/s, please check again.","Incomplete Response",JOptionPane.ERROR_MESSAGE);
@@ -4625,48 +4431,388 @@ public class Home extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jCBAcadRatingMouseClicked
 
-    private void jLabelNextArrow1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextArrow1MouseClicked
+    private void jBtnHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnHistoryActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabelNextArrow1MouseClicked
+    }//GEN-LAST:event_jBtnHistoryActionPerformed
 
-    private void jLabelNextArrow1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextArrow1MouseEntered
+    private void jBtnMissionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnMissionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabelNextArrow1MouseEntered
+    }//GEN-LAST:event_jBtnMissionActionPerformed
 
-    private void jLabelNextArrow1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelNextArrow1MouseExited
+    private void jBtnVisionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnVisionActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabelNextArrow1MouseExited
+    }//GEN-LAST:event_jBtnVisionActionPerformed
 
-    private void jLabel106MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel106MouseClicked
+    private void jBtnHistoryMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnHistoryMouseClicked
+        jBtnHistory.setBackground(new java.awt.Color(136, 0, 0));
+        jBtnMission.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnVision.setBackground(new java.awt.Color(219, 166, 37));
+       
+        
+        jTxtHolder.setText("------- History: 1904-1951 -----\n" +
+        "\n" +
+        "• 1904: Manila Business School (MBS) founded, offering vocational-technical courses and intermediate curriculum.\n" +
+        "\n" +
+        "• 1908: MBS renamed Philippine School of Commerce (PSC) due to focus on students from provinces. Four-year secondary course in commerce offered.\n" +
+        "\n" +
+        "• 1911: PSC placed under supervision of Superintendent of City Schools for administrative purposes, produces first batch of high school graduates.\n" +
+        "\n" +
+        "• 1912: One-year stenography course introduced and proves successful.\n" +
+        "\n" +
+        "• 1917: PSC revises courses and expands offerings, opens night classes (closed in 1932).\n" +
+        "\n" +
+        "• 1933: PSC merged with Philippine Normal School (PNS) and Philippine School of Arts and Trades, retains secondary curriculum.\n" +
+        "\n" +
+        "• 1940: President Manuel L. Quezon promises new building for PSC.\n" +
+        "\n" +
+        "• 1942: War disrupts PSC operations, school resumes after liberation in 1946.\n" +
+        "\n" +
+        "• 1947: PSC acquires Lepanto building in Sampaloc, Manila and officially moves there.\n" +
+        "\n" +
+        "• 1948: PSC acquires P.E. grounds in Sampaloc.\n" +
+        "\n" +
+        "• 1949: Teacher-training department established.\n" +
+        "\n" +
+        "• 1951: Three departments organized: Teacher Training, Business Education, and Research.\n" +
+        "\n" +
+        "----- History: 1952-1971-----\n" +
+        "\n" +
+        "• 1952: PSC becomes Philippine College of Commerce (PCC) under RA 778, broadens course offerings.\n" +
+        "\n" +
+        "• 1954: PCC celebrates Golden Jubilee.\n" +
+        "\n" +
+        "• 1955: PCC awarded \"Business College of the Year\" by Business Writers Association of the Philippines.\n" +
+        "\n" +
+        "• 1956: Prof. Pacifico A. Velilla takes over as PCC president.\n" +
+        "\n" +
+        "• 1962: Dr. Nemesio E. Prudente becomes president, establishes various initiatives.\n" +
+        "\n" +
+        "• 1963: College Code printed, Public Relations Program established, PCC Faculty Journal launched.\n" +
+        "\n" +
+        "• 1965: Pandacan site reserved for PCC, student assistantship program and financial aid introduced.\n" +
+        "\n" +
+        "• 1967: 10-hectare lot in Bicutan, Taguig reserved for PCC, student involvement policy adopted.\n" +
+        "\n" +
+        "• 1968: RA 6980 authorizes offering of social science courses, Sta. Mesa (A. Mabini) Campus assigned for PCC use.\n" +
+        "\n" +
+        "• 1969: President of Supreme Student Council becomes Board of Trustees member, Master of Arts and Master of Business Administration programs offered.\n" +
+        "\n" +
+        "• 1971: College Code revised, Laboratory High School transferred to A. Mabini Campus, Katipunan Foundation, Inc. created.\n" +
+        "\n" +
+        "----- History: 1972-1985 -----\n" +
+        "\n" +
+        "• 1972: Dr. Narciso Albaraccin, Jr. becomes OIC, introduces new courses, reorganizes faculties.\n" +
+        "\n" +
+        "• 1973: Dr. Isabelo T. Crisostomo becomes OIC, expands offerings, constructs gymnasium phase 1.\n" +
+        "\n" +
+        "• 1974: Bachelor of Business Administration and General Administration offered, various offices restructured.\n" +
+        "\n" +
+        "• 1975: PCC opens branch in Bataan Export Processing Zone (BEPZ), Mariveles, Bataan.\n" +
+        "\n" +
+        "• 1976: Faculty of Arts and Sciences (FAS) reestablished, graduate programs expanded.\n" +
+        "\n" +
+        "• 1977: Dr. Pablo T. Mateo becomes president, expands ladder program, introduces new courses.\n" +
+        "\n" +
+        "• 1978: PCC becomes Polytechnic University of the Philippines (PUP) through PD 1341, course offerings and administrative organization restructured.\n" +
+        "\n" +
+        "• 1979: Main library, university canteen, ecumenical chapel, and parts of PUP-Main Academic Building constructed, branch established in Lopez, Quezon.\n" +
+        "\n" +
+        "• 1983: Despite economic difficulties, PUP maintains 71 ladderized technical and professional programs, introduces Bachelor of Human Behavior Technology, includes computers in all degree programs, revives PUP Student Council.\n" +
+        "\n" +
+        "• 1984: University reorganized into \"cluster colleges\", University Center for Technological Research established, PUP partners with various agencies for training programs.\n" +
+        "\n" +
+        "----- History: 1986 - 2010 -----\n" +
+        "\n" +
+        "• 1986: Dr. Nemesio E. Prudente retakes presidency, focuses on education as equalizing factor, restructures University.\n" +
+        "\n" +
+        "• 1991-1999 - Period of continuous change with the appointment of the first lady president, Dr. Zenaida A. Olonan, and various initiatives.\n" +
+        "\n" +
+        "• 1999 - PUP celebrated its 95th Foundation Anniversary and underwent infrastructure projects, including the construction of the PUPWebSite.\n" +
+        "\n" +
+        "• 2000 - PUP became a Center of Development for Excellence in Information Technology, and the PUP ICT Center started operations.\n" +
+        "\n" +
+        "• 2001 - PUP achieved significant infrastructure developments, accreditation success, and student achievements.\n" +
+        "\n" +
+        "• 2003 - Dr. Ofelia M. Carague completed her term as President, and Dr. Samuel M. Salvador was designated Officer-in-Charge.\n" +
+        "\n" +
+        "• 2004 - PUP underwent various developments, including the establishment of the Research Center for Peace, Justice, and Democracy.\n" +
+        "\n" +
+        "• 2005 - Dr. Dante G. Guevarra was appointed Officer-in-Charge, and PUP celebrated its 101st Founding Anniversary.\n" +
+        "\n" +
+        "• 2006 - PUP participated in DOST's Technology Innovation for Commercialization Program and launched PUPCET iApply.\n" +
+        "\n" +
+        "• 2007 - PUP won awards in documentary competitions, became Southeast Asia's first Railway Academy, and launched PUP iText.\n" +
+        "\n" +
+        "• 2008 - PUP held an energy fair, became the permanent home of the Mabini Shrine, and partnered with Beijing Hangweili Educational Technology.\n" +
+        "\n" +
+        "• 2009 - PUP led in distance education studies, partnered with SMART Communications for PUP iText, and won the 1st College Debate Contest on Democracy.\n" +
+        "\n" +
+        "• 2010 - PUP was declared the permanent home of the Mabini Shrine, partnered with Jollibee for ACE scholarship, and conducted the 1st Gat Apolinario Mabini Awards.\n" +
+        "\n" +
+        "• 2011 - PUP won the PANAF Merit Award in IMC Youth Congress Competition, and the Bachelor in Transportation Management students won the DSFL Interschool Quiz Bee Competition.");
+        jTxtHolder.setCaretPosition(0);
+    }//GEN-LAST:event_jBtnHistoryMouseClicked
+
+    private void jBtnMissionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnMissionMouseClicked
+        jBtnMission.setBackground(new java.awt.Color(136, 0, 0));
+        jBtnHistory.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnVision.setBackground(new java.awt.Color(219, 166, 37));
+        
+        
+        
+        jTxtHolder.setText("Ensuring inclusive and equitable quality education and promoting lifelong learning opportunities through a re-engineered polytechnic university by committing to:"
+                + "\n\n• provide democratized access to educational opportunities for the holistic development of individuals with global perspective\n" +
+                "\n• offer industry-oriented curricula that produce highly-skilled professionals with managerial and technical capabilities and a strong sense of public service for nation building\n" +
+                "\n• embed a culture of research and innovation\n" +
+                "\n• continuously develop faculty and employees with the highest level of professionalism\n" +
+                "\n• engage public and private institutions and other stakeholders for the attainment of social development goal\n" +
+                "\n• establish a strong presence and impact in the international academic community");
+        jTxtHolder.setCaretPosition(0);
+    }//GEN-LAST:event_jBtnMissionMouseClicked
+
+    private void jBtnVisionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnVisionMouseClicked
+        jBtnVision.setBackground(new java.awt.Color(136, 0, 0));
+        jBtnHistory.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnMission.setBackground(new java.awt.Color(219, 166, 37));
+        
+        jTxtHolder.setText("\"PUP: The National Polytechnic University\" or \"PUP: Pambansang Politeknikong Unibersidad.\" \n" +
+                    "------------------------------------------------------------------------------------------------------\n" +
+                    "\n" +
+                    "This vision statement emphasizes the university's aspiration to be a premier institution for polytechnic education in the Philippines. It reflects a commitment to providing high-quality technical and vocational education, nurturing well-rounded professionals, and contributing significantly to national development.");
+        jTxtHolder.setCaretPosition(0);
+    }//GEN-LAST:event_jBtnVisionMouseClicked
+
+    private void jList1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jList1MouseClicked
         // TODO add your handling code here:
-        try {
-            Desktop.getDesktop().browse(new URL("https://twitter.com/ThePUPOfficial").toURI());
-        } catch (Exception e) {
-            // Handle exceptions, e.g., IOException or URISyntaxException
-            e.printStackTrace(); // This prints the exception details to the console
+    }//GEN-LAST:event_jList1MouseClicked
+
+    private void jList1ValueChanged(javax.swing.event.ListSelectionEvent evt) {//GEN-FIRST:event_jList1ValueChanged
+        switch (jList1.getSelectedIndex()) {
+            case 0:
+                // hostel
+                jFacility_PicHostel.setVisible(true);
+                jTxtHolder3.setText("Description: A spacious 7-floor hostel that can accommodate four students per room.");
+                jTxtHolder2.setText("Location:\nNot Applicable yet");
+                break;
+            case 1:
+                // mateo
+                jFacility_PicMateo.setVisible(true);
+                jFacility_PicHostel.setVisible(false);
+                jTxtHolder3.setText("Description: Dr. Mateo Conference room is an executive conference room with strong internet connection that can handle small group face-to-face and online meetings.");
+                jTxtHolder2.setText("Location:\nNot Applicable yet");
+                break;
+            case 2:
+                // olona
+                jFacility_PicMateo.setVisible(false);
+                jFacility_PicHostel.setVisible(false);
+                jFacility_PicOlonan.setVisible(true);
+                jTxtHolder3.setText("Description: Dr. Olonan and Dr. Carague Conference Rooms can handle small group face-to-face and online meetings.");
+                jTxtHolder2.setText("Location:\nNot Applicable yet");
+                break;
+            case 3:
+                // football
+                jFacility_PicMateo.setVisible(false);
+                jFacility_PicHostel.setVisible(false);
+                jFacility_PicOlonan.setVisible(false);
+                jFacility_PicFootball.setVisible(true);
+                jTxtHolder3.setText("Description: Dr. Olonan and Dr. Carague Conference Rooms can handle small group face-to-face and online meetings.");
+                jTxtHolder2.setText("Location:\nNot Applicable yet");
+                break;
+            case 4:
+                // interfaith chapel
+                jFacility_PicMateo.setVisible(false);
+                jFacility_PicHostel.setVisible(false);
+                jFacility_PicOlonan.setVisible(false);
+                jFacility_PicFootball.setVisible(false);
+                jFacility_PicInterfaith.setVisible(true);
+                jTxtHolder3.setText("Description: The Interfaith Chapel for students and faculty members of different faiths.");
+                jTxtHolder2.setText("Location:\nNot Applicable yet");
+                break;
+                        
+            case 5:
+                // medical clinic
+                jFacility_PicMateo.setVisible(false);
+                jFacility_PicHostel.setVisible(false);
+                jFacility_PicOlonan.setVisible(false);
+                jFacility_PicFootball.setVisible(false);
+                jFacility_PicInterfaith.setVisible(false);
+                jFacility_PicMedical.setVisible(true);
+                jTxtHolder3.setText("Description: State-of-the-art medical and dental equipment that ensures safety of students and faculty members.");
+                jTxtHolder2.setText("Location:\nNot Applicable yet");
+                break;
+                
+            case 6:
+                // ninoy aquino library
+                jFacility_PicMateo.setVisible(false);
+                jFacility_PicHostel.setVisible(false);
+                jFacility_PicOlonan.setVisible(false);
+                jFacility_PicFootball.setVisible(false);
+                jFacility_PicInterfaith.setVisible(false);
+                jFacility_PicMedical.setVisible(false);
+                jFacility_PicNinoyLibrary.setVisible(true);
+                jTxtHolder3.setText("Description: The University Librarry serves as the University's gateway to the global information society, and provides various services and development of programs to its clientele.");
+                jTxtHolder2.setText("Location:\nNot Applicable yet");
+                break;
+            
+            case 7:
+                // olympic sized swimming pool
+                jFacility_PicMateo.setVisible(false);
+                jFacility_PicHostel.setVisible(false);
+                jFacility_PicOlonan.setVisible(false);
+                jFacility_PicFootball.setVisible(false);
+                jFacility_PicInterfaith.setVisible(false);
+                jFacility_PicMedical.setVisible(false);
+                jFacility_PicNinoyLibrary.setVisible(false);
+                jFacility_PicSwimmingPool.setVisible(true);
+                jTxtHolder3.setText("Description: An olympic-sized swimming pool that is capable of handling several swimming classes and student athlete activities simultaneously.");
+                jTxtHolder2.setText("Location:\nNot Applicable yet");
+                break;
+                
+             case 8:
+                 // outdoor gym
+                jFacility_PicMateo.setVisible(false);
+                jFacility_PicHostel.setVisible(false);
+                jFacility_PicOlonan.setVisible(false);
+                jFacility_PicFootball.setVisible(false);
+                jFacility_PicInterfaith.setVisible(false);
+                jFacility_PicMedical.setVisible(false);
+                jFacility_PicNinoyLibrary.setVisible(false);
+                jFacility_PicSwimmingPool.setVisible(false);
+                jFacility_PicOutdoorGym.setVisible(true);
+                jTxtHolder3.setText("Description: Outdoor gym fit for basketball, tennis, and other Palarong Pambansa.");
+                jTxtHolder2.setText("Location:\nNot Applicable yet");
+                break;
+                
+            case 9:
+                 // PUP-Lagoon
+                jFacility_PicMateo.setVisible(false);
+                jFacility_PicHostel.setVisible(false);
+                jFacility_PicOlonan.setVisible(false);
+                jFacility_PicFootball.setVisible(false);
+                jFacility_PicInterfaith.setVisible(false);
+                jFacility_PicMedical.setVisible(false);
+                jFacility_PicNinoyLibrary.setVisible(false);
+                jFacility_PicSwimmingPool.setVisible(false);
+                jFacility_PicOutdoorGym.setVisible(false);
+                jFacility_PicLagoon.setVisible(true);
+                jTxtHolder3.setText("Description: The Lagoon serves as one of the major facilities in the university, wherein food, rest and enjoyment can take place.");
+                jTxtHolder2.setText("Location:\nNot Applicable yet");
+                break;
+                
+                
+            case 10:
+                 // balagtas hall
+                jFacility_PicMateo.setVisible(false);
+                jFacility_PicHostel.setVisible(false);
+                jFacility_PicOlonan.setVisible(false);
+                jFacility_PicFootball.setVisible(false);
+                jFacility_PicInterfaith.setVisible(false);
+                jFacility_PicMedical.setVisible(false);
+                jFacility_PicNinoyLibrary.setVisible(false);
+                jFacility_PicSwimmingPool.setVisible(false);
+                jFacility_PicOutdoorGym.setVisible(false);
+                jFacility_PicLagoon.setVisible(false);
+                jFacility_PicBalagtas.setVisible(true);
+                jTxtHolder3.setText("Description: The Balagtas Hall (Bulwagang Balagtas) has 800-seating capacity good for programs and events.");
+                jTxtHolder2.setText("Location:\nNot Applicable yet");
+                break;
+               
+            case 11:
+                 // bookstore
+                jFacility_PicMateo.setVisible(false);
+                jFacility_PicHostel.setVisible(false);
+                jFacility_PicOlonan.setVisible(false);
+                jFacility_PicFootball.setVisible(false);
+                jFacility_PicInterfaith.setVisible(false);
+                jFacility_PicMedical.setVisible(false);
+                jFacility_PicNinoyLibrary.setVisible(false);
+                jFacility_PicSwimmingPool.setVisible(false);
+                jFacility_PicOutdoorGym.setVisible(false);
+                jFacility_PicLagoon.setVisible(false);
+                jFacility_PicBalagtas.setVisible(false);
+                jFacility_PicBookstore.setVisible(true);
+                jTxtHolder3.setText("Description: Books and instructional materials that passed the evaluation and have been approved for adoption and use in the University can be purchased from the bookstore");
+                jTxtHolder2.setText("Location:\nNot Applicable yet");
+                break;
+                
+            case 12:
+                 // canteen
+                jFacility_PicMateo.setVisible(false);
+                jFacility_PicHostel.setVisible(false);
+                jFacility_PicOlonan.setVisible(false);
+                jFacility_PicFootball.setVisible(false);
+                jFacility_PicInterfaith.setVisible(false);
+                jFacility_PicMedical.setVisible(false);
+                jFacility_PicNinoyLibrary.setVisible(false);
+                jFacility_PicSwimmingPool.setVisible(false);
+                jFacility_PicOutdoorGym.setVisible(false);
+                jFacility_PicLagoon.setVisible(false);
+                jFacility_PicBalagtas.setVisible(false);
+                jFacility_PicBookstore.setVisible(false);
+                jFacility_PicCanteen.setVisible(true);
+                jTxtHolder3.setText("Description: An in-house canteen, coffee shop, and other food services from private concessionaires renting food stalls. The University Canteen offers take-out food services and reservation for events and meetings.");
+                jTxtHolder2.setText("Location:\nNot Applicable yet");
+                break;
+                
+            case 13:
+                 // gym
+                jFacility_PicMateo.setVisible(false);
+                jFacility_PicHostel.setVisible(false);
+                jFacility_PicOlonan.setVisible(false);
+                jFacility_PicFootball.setVisible(false);
+                jFacility_PicInterfaith.setVisible(false);
+                jFacility_PicMedical.setVisible(false);
+                jFacility_PicNinoyLibrary.setVisible(false);
+                jFacility_PicSwimmingPool.setVisible(false);
+                jFacility_PicOutdoorGym.setVisible(false);
+                jFacility_PicLagoon.setVisible(false);
+                jFacility_PicBalagtas.setVisible(false);
+                jFacility_PicBookstore.setVisible(false);
+                jFacility_PicCanteen.setVisible(false);
+                jFacility_PicGym.setVisible(true);
+                jTxtHolder3.setText("Description: The University Gymnasium serves as the training ground for the student athletes that participate in the intercollegiate sports program.");
+                jTxtHolder2.setText("Location:\nNot Applicable yet");
+                break;
+                
+            default:
+                break;
         }
-    }//GEN-LAST:event_jLabel106MouseClicked
+    }//GEN-LAST:event_jList1ValueChanged
 
-    private void jLabel114MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel114MouseClicked
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel114MouseClicked
+    private void jBtnScholarshipMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnScholarshipMouseClicked
+        jBtnCollege.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnSHS.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnScholarship.setBackground(new java.awt.Color(136, 0, 0));
+        ContentAdmissionScholarship();
+    }//GEN-LAST:event_jBtnScholarshipMouseClicked
 
-    private void jLabel115MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel115MouseClicked
+    private void jBtnScholarshipActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnScholarshipActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jLabel115MouseClicked
+    }//GEN-LAST:event_jBtnScholarshipActionPerformed
 
-    private void jLabel72MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel72MouseClicked
+    private void jBtnCollegeMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnCollegeMouseClicked
+        jBtnCollege.setBackground(new java.awt.Color(136, 0, 0));
+        jBtnSHS.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnScholarship.setBackground(new java.awt.Color(219, 166, 37));
+        ContentAdmission();
+    }//GEN-LAST:event_jBtnCollegeMouseClicked
+
+    private void jBtnCollegeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCollegeActionPerformed
         // TODO add your handling code here:
-        try {
-            Desktop.getDesktop().browse(new URL("https://www.facebook.com/ThePUPOfficial").toURI());
-        } catch (Exception e) {
-            // Handle exceptions, e.g., IOException or URISyntaxException
-            e.printStackTrace(); // This prints the exception details to the console
-        }
-    }//GEN-LAST:event_jLabel72MouseClicked
+    }//GEN-LAST:event_jBtnCollegeActionPerformed
+
+    private void jBtnSHSMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnSHSMouseClicked
+        jBtnCollege.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnSHS.setBackground(new java.awt.Color(136, 0, 0));
+        jBtnScholarship.setBackground(new java.awt.Color(219, 166, 37));
+        ContentAdmissionSHS();
+    }//GEN-LAST:event_jBtnSHSMouseClicked
+
+    private void jBtnSHSActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSHSActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnSHSActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTabbedPane JTabbedNavigation;
     private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.ButtonGroup buttonGroup10;
     private javax.swing.ButtonGroup buttonGroup11;
@@ -4691,18 +4837,37 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup29;
     private javax.swing.ButtonGroup buttonGroup3;
     private javax.swing.ButtonGroup buttonGroup30;
+    private javax.swing.ButtonGroup buttonGroup31;
     private javax.swing.ButtonGroup buttonGroup4;
     private javax.swing.ButtonGroup buttonGroup5;
     private javax.swing.ButtonGroup buttonGroup6;
     private javax.swing.ButtonGroup buttonGroup7;
     private javax.swing.ButtonGroup buttonGroup8;
     private javax.swing.ButtonGroup buttonGroup9;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jBtnCollege;
+    private javax.swing.JButton jBtnHistory;
+    private javax.swing.JButton jBtnMission;
+    private javax.swing.JButton jBtnSHS;
+    private javax.swing.JButton jBtnScholarship;
+    private javax.swing.JButton jBtnVision;
     private javax.swing.JButton jButtonRessults;
     private javax.swing.JCheckBox jCBAcadRating;
     private javax.swing.JCheckBox jCBNcae;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jFacility_PicBalagtas;
+    private javax.swing.JLabel jFacility_PicBookstore;
+    private javax.swing.JLabel jFacility_PicCanteen;
+    private javax.swing.JLabel jFacility_PicFootball;
+    private javax.swing.JLabel jFacility_PicGym;
+    private javax.swing.JLabel jFacility_PicHostel;
+    private javax.swing.JLabel jFacility_PicInterfaith;
+    private javax.swing.JLabel jFacility_PicLagoon;
+    private javax.swing.JLabel jFacility_PicMateo;
+    private javax.swing.JLabel jFacility_PicMedical;
+    private javax.swing.JLabel jFacility_PicNinoyLibrary;
+    private javax.swing.JLabel jFacility_PicOlonan;
+    private javax.swing.JLabel jFacility_PicOutdoorGym;
+    private javax.swing.JLabel jFacility_PicSwimmingPool;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel100;
@@ -4711,7 +4876,6 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel103;
     private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
-    private javax.swing.JLabel jLabel106;
     private javax.swing.JLabel jLabel107;
     private javax.swing.JLabel jLabel108;
     private javax.swing.JLabel jLabel109;
@@ -4720,23 +4884,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel111;
     private javax.swing.JLabel jLabel112;
     private javax.swing.JLabel jLabel113;
-    private javax.swing.JLabel jLabel114;
-    private javax.swing.JLabel jLabel115;
-    private javax.swing.JLabel jLabel116;
-    private javax.swing.JLabel jLabel117;
-    private javax.swing.JLabel jLabel118;
-    private javax.swing.JLabel jLabel119;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel120;
-    private javax.swing.JLabel jLabel121;
-    private javax.swing.JLabel jLabel122;
-    private javax.swing.JLabel jLabel123;
-    private javax.swing.JLabel jLabel124;
-    private javax.swing.JLabel jLabel125;
-    private javax.swing.JLabel jLabel126;
-    private javax.swing.JLabel jLabel127;
-    private javax.swing.JLabel jLabel128;
-    private javax.swing.JLabel jLabel129;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -4794,15 +4942,12 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel62;
     private javax.swing.JLabel jLabel63;
     private javax.swing.JLabel jLabel64;
-    private javax.swing.JLabel jLabel65;
     private javax.swing.JLabel jLabel66;
     private javax.swing.JLabel jLabel67;
-    private javax.swing.JLabel jLabel68;
     private javax.swing.JLabel jLabel69;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel70;
     private javax.swing.JLabel jLabel71;
-    private javax.swing.JLabel jLabel72;
     private javax.swing.JLabel jLabel73;
     private javax.swing.JLabel jLabel74;
     private javax.swing.JLabel jLabel75;
@@ -4841,7 +4986,7 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelICT;
     private javax.swing.JLabel jLabelINDUSTRIAL_ARTS;
     private javax.swing.JLabel jLabelNextArrow;
-    private javax.swing.JLabel jLabelNextArrow1;
+    private javax.swing.JLabel jLabelNextArrow2;
     private javax.swing.JLabel jLabelNextArrow3;
     private javax.swing.JLabel jLabelNextArrow4;
     private javax.swing.JLabel jLabelNextArrow5;
@@ -4856,13 +5001,12 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JLabel jLabelSPORTS_COACHING;
     private javax.swing.JLabel jLabelSPORTS_OFFICIATING;
     private javax.swing.JLabel jLabelSTEM;
+    private javax.swing.JList<String> jList1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
     private javax.swing.JPanel jPanel13;
-    private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
@@ -4871,22 +5015,16 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
-    private javax.swing.JPanel jPanelAccntInfo;
-    private javax.swing.JPanel jPanelAchieves;
+    private javax.swing.JPanel jPanelAchievement;
     private javax.swing.JPanel jPanelAdmission;
-    private javax.swing.JPanel jPanelCLUBS;
-    private javax.swing.JPanel jPanelColleges;
     private javax.swing.JPanel jPanelFacilities;
-    private javax.swing.JPanel jPanelFunFacts;
-    private javax.swing.JPanel jPanelHMV;
+    private javax.swing.JPanel jPanelHistory;
     private javax.swing.JPanel jPanelHome;
     private javax.swing.JPanel jPanelSTEvaluation;
     private javax.swing.JPanel jPanelSTEvaluation_1;
     private javax.swing.JPanel jPanelSTEvaluation_2;
     private javax.swing.JPanel jPanelSTEvaluation_3;
     private javax.swing.JPanel jPanelSTEvaluation_4;
-    private javax.swing.JPanel jPanelScholarship;
-    private javax.swing.JPanel jPanelSeniorHigh;
     private javax.swing.JRadioButton jRB10_1;
     private javax.swing.JRadioButton jRB10_2;
     private javax.swing.JRadioButton jRB10_3;
@@ -4970,6 +5108,11 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JRadioButton jRBYes7;
     private javax.swing.JRadioButton jRBYes8;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
     private javax.swing.JTextField jTFAcademic;
     private javax.swing.JTextField jTFArts;
     private javax.swing.JTextField jTFEnglish;
@@ -4979,5 +5122,11 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JTextField jTFScience;
     private javax.swing.JTextField jTFSports;
     private javax.swing.JTextField jTFTVL;
+    private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextArea jTxtHolder;
+    private javax.swing.JTextArea jTxtHolder1;
+    private javax.swing.JTextArea jTxtHolder2;
+    private javax.swing.JTextArea jTxtHolder3;
+    private javax.swing.JTextArea jTxtHolder4;
     // End of variables declaration//GEN-END:variables
 }

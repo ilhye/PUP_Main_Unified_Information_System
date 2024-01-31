@@ -1,18 +1,9 @@
 package Classes;
 
 import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ListIterator;
-import java.util.Scanner;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+import java.io.*;
+import java.util.*;
+import java.util.logging.*;
 
 public class FileHandling {
     private String fName;
@@ -76,26 +67,46 @@ public class FileHandling {
         this.fCode = fCode;
     }
     
-    // Method to check if username exist within a file
-    public boolean isUsernameExist(String fUsername) {
-        try {
-            File accounts = new File("Account.txt");
-            try (Scanner myReader = new Scanner(accounts)) {
-                while (myReader.hasNextLine()) {
-                    String line = myReader.nextLine();
-                    
-                    if (line.startsWith("Username: ") && line.contains(fUsername)) {
-                        myReader.close();
-                        return true;
-                    }
-                }
-            }
-            return false;
-        } catch(FileNotFoundException e){
-            System.out.println("An error occurred.");
-            return false;
+    public int isUsernameExist(String fUsername) {
+    try {
+        if (fUsername.isEmpty()) {
+            return 2; // If the provided username is empty, it does not exist
         }
+        
+        File accounts = new File("Account.txt");
+        Scanner myReader = new Scanner(accounts);
+        
+        File adminAccount = new File("Admin.txt");
+        Scanner readAdmnin = new Scanner(adminAccount);
+        
+        while (myReader.hasNextLine()) {
+            String line = myReader.nextLine();
+            
+            if (line.startsWith("Username: ") && line.contains(fUsername)) {
+                System.out.println("Username from file: " + line);
+                myReader.close();
+                return 0;
+            }
+        }
+        
+        while (readAdmnin.hasNextLine()) {
+            String line1 = readAdmnin.nextLine();
+            
+            if (line1.startsWith("Username: ") && line1.contains(fUsername)) {
+                System.out.println("Username from file: " + line1);
+                readAdmnin.close();
+                return 2;
+            }
+        }
+        
+        myReader.close();
+        return 1;
+    } catch (FileNotFoundException e) {
+        System.out.println("An error occurred.");
+        return 1;
     }
+}
+
     
     // Method to check if backup code exist within a file.
     public boolean codeExist(String fCode) {
@@ -111,6 +122,7 @@ public class FileHandling {
                     return true;
                 }
             }
+            myReader.close();
             return false;
         } catch(FileNotFoundException e){
             System.out.println("An error occurred.");
@@ -119,24 +131,40 @@ public class FileHandling {
     }
     
     // Method to check if password and username exist within a file.
-    public boolean isUnamePassValid(String fUsername, String fPassword) {
+    public int isUnamePassValid(String fUsername, String fPassword) {
         try {
             File accounts = new File("Account.txt");
             Scanner myReader = new Scanner(accounts);
-
+            
+            File adminAccount = new File("Admin.txt");
+            Scanner readAdmnin = new Scanner(adminAccount);
+            
             while (myReader.hasNextLine()) {
                 String line = myReader.nextLine();
                 
                 if (line.startsWith("Username: ") && line.contains(fUsername)
                 && myReader.nextLine().split(": ")[1].equals(fPassword)) {
                     myReader.close();
-                    return true;
+                    return 0;
+                } 
+            }
+            
+            while (readAdmnin.hasNextLine()) {
+                String line1 = readAdmnin.nextLine();
+                
+                if (line1.startsWith("Username: ") && line1.contains(fUsername)
+                && readAdmnin.nextLine().split(": ")[1].equals(fPassword)) {
+                    System.out.println("Valid username: " + fUsername + "Password: " + fPassword);
+                    readAdmnin.close();
+                    return 2;
                 }
             }
-            return false;
+            //readAdmnin.close();
+            myReader.close();
+            return 1;
         } catch(FileNotFoundException e){
             System.out.println("An error occurred.");
-            return false;
+            return 1;
         }
     }
     

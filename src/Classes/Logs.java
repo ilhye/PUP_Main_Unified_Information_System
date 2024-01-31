@@ -8,59 +8,43 @@ public class Logs {
     private String password;
     private String code;
 
-    /**
-     * @return the name
-     */
+    // return name
     public String getName() {
         return name;
     }
 
-    /**
-     * @param name the name to set
-     */
+    // set name
     public void setName(String name) {
         this.name = name;
     }
 
-    /**
-     * @return the username
-     */
+    // return name
     public String getUsername() {
         return username;
     }
 
-    /**
-     * @param username the username to set
-     */
+    // set username
     public void setUsername(String username) {
         this.username = username;
     }
 
-    /**
-     * @return the password
-     */
+    // return password
     public String getPassword() {
         return password;
     }
     
-    /**
-     * set backupCode
-     */
+    // set back-up code
     public void setCode() {
         // Generate backup Code
         SecureRandom secureRandomGenerator = new SecureRandom();
         this.code = String.valueOf(secureRandomGenerator.nextInt(999999));
     }
     
-    /**
-     * @return the code
-     */
+    // return code
     public String getCode() {
         return code;
     }
-    /**
-     * @param password the password to set
-     */
+    // set password
     public void setPassword(String password) {
         this.password = password;
     }
@@ -69,16 +53,26 @@ public class Logs {
         return (name.isEmpty() && username.isEmpty() && password.isEmpty());
     }
     
-    public boolean nameVerifier (String name) {
-        return !name.matches(".*[0-9\\p{P}&&[^.]].*|^$");
+    public int nameVerifier (String name) {
+        if (!name.matches("^[A-Za-z]+(?: [A-Za-z]\\.)?(?: [A-Za-z]+)?$")) {
+            return 1;
+        } else if (name.isEmpty()) {
+            return 2;
+        }
+        return 0;
     }
     
-    /*public boolean usernameVerifier (String username) {
-        return !username.equals("");
-    }*/
+    public boolean usernameVerifier (String username) {
+        return username.isEmpty();
+    }
     
-    public boolean passVerifier(String password, String username) {
-       return !(username.equals(password) || username.equals("") || username.length() < 12);
+    public int passVerifier(String password, String username) {
+        if (password.isEmpty()) 
+            return 1;
+        else if (username.equals(password) || username.equals("") || username.length() < 12)
+             return 2;
+        
+        return 0;
     }
 }
 

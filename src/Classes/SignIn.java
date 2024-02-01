@@ -8,7 +8,7 @@ public class SignIn extends javax.swing.JFrame {
     // Constructor
     public SignIn() {
         initComponents();
-        
+
         // App icon
         Image icon = new ImageIcon(getClass().getResource("/icons/image-300x300.jpg")).getImage();
         this.setIconImage(icon);
@@ -326,53 +326,63 @@ public class SignIn extends javax.swing.JFrame {
 
     private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
         // TODO add your handling code here:
-        jButton1.setBackground(new java.awt.Color(136,0,0));
+        jButton1.setBackground(new java.awt.Color(136, 0, 0));
     }//GEN-LAST:event_jButton1MouseExited
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-    Logs login = new Logs();
-    login.setUsername(jTextField1.getText());
-    login.setPassword(String.valueOf(jPasswordField1.getPassword()));
+        Logs login = new Logs();
+        login.setUsername(jTextField1.getText());
+        login.setPassword(String.valueOf(jPasswordField1.getPassword()));
 
-    if (login.getUsername().isEmpty() && login.getPassword().isEmpty()) {
-        jLabel10.setText("*Please enter username");
-        jLabel11.setText("*Please enter password");
-    } else if (!login.getUsername().isEmpty() && login.getPassword().isEmpty()){
-        jLabel10.setText("");
-        jLabel11.setText("*Please enter password");
-    } else if (login.getUsername().isEmpty() && !login.getPassword().isEmpty()) {
-        jLabel10.setText("*Please enter username");
-        jLabel11.setText("");
-    } else {
-        FileHandling data = new FileHandling();
-        
-        if (data.isUsernameExist(login.getUsername()) == 0 || data.isUnamePassValid(login.getUsername(), login.getPassword()) == 2) {
-            JOptionPane.showMessageDialog(this, "Login Successfully","LogIn", JOptionPane.INFORMATION_MESSAGE);
-            Home options = new Home();
-            options.pack();
-            options.setVisible(true);
-            dispose();
-        } else if (data.isUsernameExist(login.getUsername()) == 1 && data.isUnamePassValid(login.getUsername(), login.getPassword()) == 1) {
-            jLabel10.setText("*Invalid username");
-            jLabel11.setText("");
-        } else if (data.isUsernameExist(login.getUsername()) == 0 && data.isUnamePassValid(login.getUsername(), login.getPassword()) == 1) {
-            jLabel11.setText("*Invalid password");
+        if (login.getUsername().isEmpty() && login.getPassword().isEmpty()) {
+            jLabel10.setText("*Please enter username");
+            jLabel11.setText("*Please enter password");
+        } else if (!login.getUsername().isEmpty() && login.getPassword().isEmpty()) {
             jLabel10.setText("");
-        } else if (data.isUsernameExist(login.getUsername()) == 1 && data.isUnamePassValid(login.getUsername(), login.getPassword()) == 1) {
-            jLabel10.setText("*Invalid username");
-            jLabel11.setText("*Invalid password");
-        } else if (data.isUsernameExist(login.getUsername()) == 2 && data.isUnamePassValid(login.getUsername(), login.getPassword()) == 1) {
-            
+            jLabel11.setText("*Please enter password");
+        } else if (login.getUsername().isEmpty() && !login.getPassword().isEmpty()) {
+            jLabel10.setText("*Please enter username");
+            jLabel11.setText("");
+        } else {
+            UserFile data = new UserFile();
+            AdminFile aFile = new AdminFile();
+
+            // gawing equals yung sa user file since kapag contains pala pwede ma-log in kahit na mali
+            if (data.isUsernameExist(login.getUsername())) {
+                if (data.isUnamePassValid(login.getUsername(), login.getPassword())) {
+                    
+                    JOptionPane.showMessageDialog(this, "Login Successfully", "LogIn", JOptionPane.INFORMATION_MESSAGE);
+                    Home options = new Home();
+                    options.pack();
+                    options.setVisible(true);
+                    dispose();
+                } else {
+                    jLabel11.setText("*Invalid password");
+                }
+            } else if (aFile.isAdminUN(login.getUsername())) {
+                if (aFile.adminAccnt(login.getUsername(), login.getPassword())) {
+                    
+                    JOptionPane.showMessageDialog(this, "Login Successfully", "LogIn", JOptionPane.INFORMATION_MESSAGE);
+                    Home options = new Home();
+                    options.pack();
+                    options.setVisible(true);
+                    dispose();
+                } else {
+                    jLabel11.setText("*Invalid password");
+                }
+            } else {
+                jLabel10.setText("*Invalid username");
+                jLabel11.setText("");
+            }
         }
-    }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         int result = JOptionPane.showConfirmDialog(
-        this,
-        "Are you sure you want to exit?",
-        "Exit Confirmation",
-        JOptionPane.YES_NO_OPTION
+                this,
+                "Are you sure you want to exit?",
+                "Exit Confirmation",
+                JOptionPane.YES_NO_OPTION
         );
 
         if (result == JOptionPane.YES_OPTION) {
@@ -389,7 +399,7 @@ public class SignIn extends javax.swing.JFrame {
     private void jLabel8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseExited
         jLabel8.setBackground(new Color(255, 255, 255));
         jLabel8.setFont(new Font("Segoe UI", Font.PLAIN, 24));
-        jLabel8.setForeground(new Color(136,0,0));
+        jLabel8.setForeground(new Color(136, 0, 0));
     }//GEN-LAST:event_jLabel8MouseExited
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -409,9 +419,9 @@ public class SignIn extends javax.swing.JFrame {
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
         // TODO add your handling code here:
-        if (jCheckBox1.isSelected()){
-            jPasswordField1.setEchoChar((char)0);
-        } else{
+        if (jCheckBox1.isSelected()) {
+            jPasswordField1.setEchoChar((char) 0);
+        } else {
             jPasswordField1.setEchoChar('•');
         }
     }//GEN-LAST:event_jCheckBox1ActionPerformed

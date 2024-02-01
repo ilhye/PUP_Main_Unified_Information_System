@@ -173,7 +173,6 @@ public class SignUp extends javax.swing.JFrame {
         jLabel11.setForeground(new java.awt.Color(85, 85, 85));
         jLabel11.setText("Back-up Code");
 
-        jPasswordField2.setEditable(false);
         jPasswordField2.setBackground(new java.awt.Color(255, 255, 255));
         jPasswordField2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jPasswordField2.setText("••••••");
@@ -266,8 +265,7 @@ public class SignUp extends javax.swing.JFrame {
                     .addGap(50, 50, 50)
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jLabel12)
-                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(0, 0, 0)))
+                        .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE))))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -420,7 +418,7 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseExited
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        FileHandling data = new FileHandling();
+        UserFile data = new UserFile();
         
         logs.setName(jTextField1.getText().trim());
         logs.setUsername(jTextField2.getText());
@@ -443,21 +441,15 @@ public class SignUp extends javax.swing.JFrame {
         
         // System.out.println("Checking username: " + logs.getUsername());
         
-        switch (data.isUsernameExist(logs.getUsername())) {
-            case 0:
-                jLabel8.setText("*Username has already been taken");
-                break;
-            case 1:
-                jLabel8.setText("");
+        if (data.isUsernameExist(logs.getUsername())) {
+            jLabel8.setText("*Username has already been taken");
+        } else if (!data.isUsernameExist(logs.getUsername())) {
+            jLabel8.setText("");
                 isUsernameValid = true;
-                break;
-            case 2:
-                jLabel8.setText("*Please enter username");
-                break;
-            default:
-                break;
+        } else if (logs.getUsername().isEmpty()){
+            jLabel8.setText("*Please enter username");
         }
-        
+       
         switch (logs.passVerifier(logs.getUsername(), logs.getPassword())) {
             case 1:
                 jLabel10.setText("*Please enter password");

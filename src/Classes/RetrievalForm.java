@@ -1,4 +1,5 @@
 package Classes;
+
 import java.awt.*;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
@@ -8,7 +9,7 @@ public class RetrievalForm extends javax.swing.JFrame {
     // Constructor
     public RetrievalForm() {
         initComponents();
-        
+
         Image icon = new ImageIcon("C:/Users/user/Documents/Programming/GitHub/PUP_Main_Unified_Information_System/src/icons/image-300x300.jpg").getImage();
         this.setIconImage(icon);
     }
@@ -315,10 +316,10 @@ public class RetrievalForm extends javax.swing.JFrame {
 
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
         int result = JOptionPane.showConfirmDialog(
-        this,
-        "Are you sure you want to exit?",
-        "Exit Confirmation",
-        JOptionPane.YES_NO_OPTION
+                this,
+                "Are you sure you want to exit?",
+                "Exit Confirmation",
+                JOptionPane.YES_NO_OPTION
         );
 
         if (result == JOptionPane.YES_OPTION) {
@@ -335,7 +336,7 @@ public class RetrievalForm extends javax.swing.JFrame {
     private void jLabel8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseExited
         jLabel8.setBackground(new Color(255, 255, 255));
         jLabel8.setFont(new Font("Segoe UI", Font.PLAIN, 24));
-        jLabel8.setForeground(new Color(136,0,0));
+        jLabel8.setForeground(new Color(136, 0, 0));
     }//GEN-LAST:event_jLabel8MouseExited
 
     private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
@@ -343,27 +344,43 @@ public class RetrievalForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseEntered
 
     private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
-        jButton1.setBackground(new java.awt.Color(136,0,0));
+        jButton1.setBackground(new java.awt.Color(136, 0, 0));
     }//GEN-LAST:event_jButton1MouseExited
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        FileHandling fData = new FileHandling();
-        
+        UserFile fData = new UserFile();
+        // AdminFile fAdmin = new AdminFile(); (tba)
+
         fData.setfCode(String.valueOf(jPasswordField1.getPassword()));
         fData.setfUsername(jTextField1.getText());
         fData.setfPassword(String.valueOf(jPasswordField2.getPassword()));
-        
+
         if (!fData.codeExist(fData.getfCode())) {
             jLabel13.setText("*Invalid back-up code");
         } else {
-            jLabel13.setText("");
-            
-            fData.updateDate(fData.getfCode(),fData.getfUsername(), fData.getfPassword());
-            JOptionPane.showMessageDialog(this, "Account Successfully Created! Redirecting you to the Sign In Page", "Notice", JOptionPane.INFORMATION_MESSAGE);
-            SignIn logFrame = new SignIn();
-            logFrame.pack();
-            logFrame.setVisible(true);  // Display LogIn frame
-            dispose();                  // Close LogIn frame
+            jLabel13.setText("");  // Clear the label
+
+            if (fData.getfUsername().isEmpty() && !fData.getfPassword().isEmpty()) {
+                jLabel14.setText("*Please enter username");
+                jLabel6.setText("");
+            } else if (!fData.getfUsername().isEmpty() && fData.getfPassword().isEmpty()) {
+                jLabel14.setText("");
+                jLabel6.setText("*Please enter password");
+            } else if (fData.getfUsername().isEmpty() && fData.getfPassword().isEmpty()) {
+                jLabel14.setText("*Please enter username");
+                jLabel6.setText("*Please enter password");
+            } else {
+                // Username and password are not empty
+                jLabel14.setText("");
+                jLabel6.setText("");
+
+                fData.updateDate(fData.getfCode(), fData.getfUsername(), fData.getfPassword());
+                JOptionPane.showMessageDialog(this, "Account Successfully Created! Redirecting you to the Home Page", "Notice", JOptionPane.INFORMATION_MESSAGE);
+                Home home = new Home();
+                home.pack();
+                home.setVisible(true);
+                dispose();
+            }
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -379,17 +396,17 @@ public class RetrievalForm extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        if (jCheckBox1.isSelected()){
-            jPasswordField1.setEchoChar((char)0);
-        } else{
+        if (jCheckBox1.isSelected()) {
+            jPasswordField1.setEchoChar((char) 0);
+        } else {
             jPasswordField1.setEchoChar('•');
         }
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        if (jCheckBox2.isSelected()){
-            jPasswordField2.setEchoChar((char)0);
-        } else{
+        if (jCheckBox2.isSelected()) {
+            jPasswordField2.setEchoChar((char) 0);
+        } else {
             jPasswordField2.setEchoChar('•');
         }
     }//GEN-LAST:event_jCheckBox2ActionPerformed

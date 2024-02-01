@@ -669,7 +669,7 @@ public class Home extends javax.swing.JFrame {
         jPanel9.setMinimumSize(new java.awt.Dimension(319, 470));
         jPanel9.setPreferredSize(new java.awt.Dimension(319, 470));
 
-        jBtnHistory.setBackground(new java.awt.Color(255, 255, 255));
+        jBtnHistory.setBackground(new java.awt.Color(255, 224, 224));
         jBtnHistory.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jBtnHistory.setForeground(new java.awt.Color(136, 0, 0));
         jBtnHistory.setText("HISTORY");
@@ -687,7 +687,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jBtnMission.setBackground(new java.awt.Color(255, 255, 255));
+        jBtnMission.setBackground(new java.awt.Color(255, 224, 224));
         jBtnMission.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jBtnMission.setForeground(new java.awt.Color(136, 0, 0));
         jBtnMission.setText("MISSION");
@@ -705,7 +705,7 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jBtnVision.setBackground(new java.awt.Color(255, 255, 255));
+        jBtnVision.setBackground(new java.awt.Color(255, 224, 224));
         jBtnVision.setFont(new java.awt.Font("Times New Roman", 1, 18)); // NOI18N
         jBtnVision.setForeground(new java.awt.Color(136, 0, 0));
         jBtnVision.setText("VISION");

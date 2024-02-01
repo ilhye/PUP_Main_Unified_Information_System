@@ -5,7 +5,8 @@ import java.io.*;
 import java.util.*;
 import java.util.logging.*;
 
-public class FileHandling {
+public class UserFile {
+
     private String fName;
     private String fUsername;
     private String fPassword;
@@ -66,110 +67,73 @@ public class FileHandling {
     public void setfCode(String fCode) {
         this.fCode = fCode;
     }
-    
-    public int isUsernameExist(String fUsername) {
-    try {
-        if (fUsername.isEmpty()) {
-            return 2; // If the provided username is empty, it does not exist
-        }
-        
-        File accounts = new File("Account.txt");
-        Scanner myReader = new Scanner(accounts);
-        
-        File adminAccount = new File("Admin.txt");
-        Scanner readAdmnin = new Scanner(adminAccount);
-        
-        while (myReader.hasNextLine()) {
-            String line = myReader.nextLine();
-            
-            if (line.startsWith("Username: ") && line.contains(fUsername)) {
-                System.out.println("Username from file: " + line);
-                myReader.close();
-                return 0;
-            }
-        }
-        
-        while (readAdmnin.hasNextLine()) {
-            String line1 = readAdmnin.nextLine();
-            
-            if (line1.startsWith("Username: ") && line1.contains(fUsername)) {
-                System.out.println("Username from file: " + line1);
-                readAdmnin.close();
-                return 2;
-            }
-        }
-        
-        myReader.close();
-        return 1;
-    } catch (FileNotFoundException e) {
-        System.out.println("An error occurred.");
-        return 1;
-    }
-}
 
-    
+    public boolean isUsernameExist(String fUsername) {
+        try {
+            File accounts = new File("Account.txt");
+            try (Scanner myReader = new Scanner(accounts)) {
+                while (myReader.hasNextLine()) {
+                    String line = myReader.nextLine();
+
+                    if (line.startsWith("Username: ") && line.split(": ")[1].equals(fUsername)) {
+                        System.out.println("Username from file: " + line);
+                        myReader.close();
+                        return true;
+                    }
+                }
+            }
+            return false;
+        } catch (FileNotFoundException e) {
+            System.out.println("An error occurred.");
+            return false;
+        }
+    }
+
     // Method to check if backup code exist within a file.
     public boolean codeExist(String fCode) {
         try {
             File accounts = new File("Account.txt");
-            Scanner myReader = new Scanner(accounts);
+            try (Scanner myReader = new Scanner(accounts)) {
+                while (myReader.hasNextLine()) {
+                    String line = myReader.nextLine();
 
-            while (myReader.hasNextLine()) {
-                String line = myReader.nextLine();
-                
-                if (line.startsWith("Back-up Code: ") && line.contains(fCode)) {
-                    myReader.close();
-                    return true;
+                    if (line.startsWith("Back-up Code: ") && line.split(": ")[1].equals(fCode)) {
+                        myReader.close();
+                        return true;
+                    }
                 }
             }
-            myReader.close();
             return false;
-        } catch(FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
             return false;
         }
     }
-    
+
     // Method to check if password and username exist within a file.
-    public int isUnamePassValid(String fUsername, String fPassword) {
+    public boolean isUnamePassValid(String fUsername, String fPassword) {
         try {
             File accounts = new File("Account.txt");
-            Scanner myReader = new Scanner(accounts);
-            
-            File adminAccount = new File("Admin.txt");
-            Scanner readAdmnin = new Scanner(adminAccount);
-            
-            while (myReader.hasNextLine()) {
-                String line = myReader.nextLine();
-                
-                if (line.startsWith("Username: ") && line.contains(fUsername)
-                && myReader.nextLine().split(": ")[1].equals(fPassword)) {
-                    myReader.close();
-                    return 0;
-                } 
-            }
-            
-            while (readAdmnin.hasNextLine()) {
-                String line1 = readAdmnin.nextLine();
-                
-                if (line1.startsWith("Username: ") && line1.contains(fUsername)
-                && readAdmnin.nextLine().split(": ")[1].equals(fPassword)) {
-                    System.out.println("Valid username: " + fUsername + "Password: " + fPassword);
-                    readAdmnin.close();
-                    return 2;
+            try (Scanner myReader = new Scanner(accounts)) {
+                while (myReader.hasNextLine()) {
+                    String line = myReader.nextLine();
+                    
+                    if (line.startsWith("Username: ") && line.split(": ")[1].equals(fUsername) && myReader.nextLine().split(": ")[1].equals(fPassword)) {
+                        myReader.close();
+                        return true;
+                    }
+
                 }
             }
-            //readAdmnin.close();
-            myReader.close();
-            return 1;
-        } catch(FileNotFoundException e){
+            return false;
+        } catch (FileNotFoundException e) {
             System.out.println("An error occurred.");
-            return 1;
+            return false;
         }
     }
-    
+
     // Method to add data in the file
-    public boolean storeData(String fName, String fUsername, String fPassword,String fCode) {
+    public boolean storeData(String fName, String fUsername, String fPassword, String fCode) {
         File accounts = new File("Account.txt");
         if (accounts.exists()) {
             try (FileWriter fileWriter = new FileWriter(accounts, true)) {
@@ -185,7 +149,7 @@ public class FileHandling {
         }
         return false;
     }
-    
+
     public void updateDate(String fCode, String fUsername, String fPassword) {
         List<String> lines = new ArrayList<>();
 
@@ -206,12 +170,12 @@ public class FileHandling {
                     if (fIndexCode >= 2) {
                         lines.set(fIndexCode - 2, "Username: " + fUsername);
                         lines.set(fIndexCode - 1, "Password: " + fPassword);
-                    } 
+                    }
                 }
             }
         } catch (IOException ex) {
-            Logger.getLogger(FileHandling.class.getName()).log(Level.SEVERE, null, ex);
-            return; 
+            Logger.getLogger(UserFile.class.getName()).log(Level.SEVERE, null, ex);
+            return;
         }
 
         try (PrintWriter writer = new PrintWriter(new FileWriter("Account.txt"))) {
@@ -221,6 +185,6 @@ public class FileHandling {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        
+
     }
 }

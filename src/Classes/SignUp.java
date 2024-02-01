@@ -1,22 +1,28 @@
 package Classes;
 
 import java.awt.*;
+import java.security.SecureRandom;
 import javax.swing.*;
 
 public class SignUp extends javax.swing.JFrame {
+    private int code;
     Logs logs = new Logs();
-    
+
+    //String.valueOf(secureRandomGenerator.nextInt(999999))
     // Constructor
     public SignUp() {
         initComponents();
+
+        SecureRandom secureRandomGenerator = new SecureRandom();
+        code = secureRandomGenerator.nextInt(999999);
+        jPasswordField2.setText(String.valueOf(code));
         
         // App icon
         Image icon = new ImageIcon(getClass().getResource("/icons/image-300x300.jpg")).getImage();
         this.setIconImage(icon);
-        
+
         // Generate backup Code
-        logs.setCode();
-        jPasswordField2.setText(String.valueOf(logs.getCode()));
+        //logs.setCode();
     }
 
     // Iniatilize components
@@ -378,10 +384,10 @@ public class SignUp extends javax.swing.JFrame {
 
     private void jLabel14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseClicked
         int result = JOptionPane.showConfirmDialog(
-        this,
-        "Are you sure you want to exit?",
-        "Exit Confirmation",
-        JOptionPane.YES_NO_OPTION
+                this,
+                "Are you sure you want to exit?",
+                "Exit Confirmation",
+                JOptionPane.YES_NO_OPTION
         );
 
         if (result == JOptionPane.YES_OPTION) {
@@ -398,7 +404,7 @@ public class SignUp extends javax.swing.JFrame {
     private void jLabel14MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel14MouseExited
         jLabel14.setBackground(new Color(255, 255, 255));
         jLabel14.setFont(new Font("Segoe UI", Font.PLAIN, 24));
-        jLabel14.setForeground(new Color(136,0,0));
+        jLabel14.setForeground(new Color(136, 0, 0));
     }//GEN-LAST:event_jLabel14MouseExited
 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
@@ -414,16 +420,19 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton1MouseEntered
 
     private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
-        jButton1.setBackground(new java.awt.Color(136,0,0));
+        jButton1.setBackground(new java.awt.Color(136, 0, 0));
     }//GEN-LAST:event_jButton1MouseExited
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         UserFile data = new UserFile();
-        
+        //SecureRandom secureRandomGenerator = new SecureRandom();
+        //jPasswordField2.setText(String.valueOf(code));
+
         logs.setName(jTextField1.getText().trim());
         logs.setUsername(jTextField2.getText());
-        logs.setPassword(String.valueOf(jPasswordField1.getPassword()).trim());
-        
+        logs.setPassword(String.valueOf(jPasswordField1.getPassword()));
+        logs.setCode(String.valueOf(jPasswordField2.getPassword()));
+
         switch (logs.nameVerifier(logs.getName())) {
             case 0:
                 jLabel6.setText("");
@@ -438,18 +447,17 @@ public class SignUp extends javax.swing.JFrame {
             default:
                 break;
         }
-        
+
         // System.out.println("Checking username: " + logs.getUsername());
-        
         if (data.isUsernameExist(logs.getUsername())) {
             jLabel8.setText("*Username has already been taken");
-        } else if (!data.isUsernameExist(logs.getUsername())) {
-            jLabel8.setText("");
-                isUsernameValid = true;
-        } else if (logs.getUsername().isEmpty()){
+        } else if (logs.getUsername().isEmpty()) {
             jLabel8.setText("*Please enter username");
+        } else  {
+            jLabel8.setText("");
+            isUsernameValid = true;
         }
-       
+
         switch (logs.passVerifier(logs.getUsername(), logs.getPassword())) {
             case 1:
                 jLabel10.setText("*Please enter password");
@@ -462,15 +470,15 @@ public class SignUp extends javax.swing.JFrame {
                 jLabel10.setText("");
                 break;
         }
-       
+
         if (isNameValid && isUsernameValid && isPassValid) {
             data.setfName(logs.getName());
             data.setfUsername(logs.getUsername());
             data.setfPassword(logs.getPassword());
             data.setfCode(logs.getCode());
-            
+
             if (!data.storeData(data.getfName(), data.getfUsername(), data.getfPassword(), data.getfCode())) {
-                JOptionPane.showMessageDialog(this, "Account Successfully Created! \n Your back-up code: " + data.getfCode() ,"Notice", JOptionPane.INFORMATION_MESSAGE);
+                JOptionPane.showMessageDialog(this, "Account Successfully Created! \n Your back-up code: " + data.getfCode(), "Notice", JOptionPane.INFORMATION_MESSAGE);
                 Home options = new Home();
                 options.pack();
                 options.setVisible(true);   // Display Menu frame
@@ -487,17 +495,17 @@ public class SignUp extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
-        if (jCheckBox1.isSelected()){
-            jPasswordField1.setEchoChar((char)0);
-        } else{
+        if (jCheckBox1.isSelected()) {
+            jPasswordField1.setEchoChar((char) 0);
+        } else {
             jPasswordField1.setEchoChar('•');
         }
     }//GEN-LAST:event_jCheckBox1ActionPerformed
 
     private void jCheckBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox2ActionPerformed
-        if (jCheckBox2.isSelected()){
-            jPasswordField2.setEchoChar((char)0);
-        } else{
+        if (jCheckBox2.isSelected()) {
+            jPasswordField2.setEchoChar((char) 0);
+        } else {
             jPasswordField2.setEchoChar('•');
         }
     }//GEN-LAST:event_jCheckBox2ActionPerformed
@@ -536,7 +544,7 @@ public class SignUp extends javax.swing.JFrame {
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     // End of variables declaration//GEN-END:variables
-private boolean isNameValid;
-private boolean isUsernameValid;
-private boolean isPassValid;
+    private boolean isNameValid;
+    private boolean isUsernameValid;
+    private boolean isPassValid;
 }

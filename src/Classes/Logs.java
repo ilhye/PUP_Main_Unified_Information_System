@@ -34,10 +34,10 @@ public class Logs {
     }
     
     // set back-up code
-    public void setCode() {
+    public void setCode(String code) {
         // Generate backup Code
-        SecureRandom secureRandomGenerator = new SecureRandom();
-        this.code = String.valueOf(secureRandomGenerator.nextInt(999999));
+       
+        this.code = code;
     }
     
     // return code

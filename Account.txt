@@ -1,6 +1,6 @@
 Name: Jhonder Sta.Ines
-Username: Jhonder
-Password: 12345667891-111213
+Username: ffffff
+Password: fffcccccccccccccc
 Back-up Code: 689392
 
 Name: Ceferino Arrey
@@ -14,8 +14,8 @@ Password: qjc0T5E0vy2jINh
 Back-up Code: 120447
 
 Name: Jim Barcos
-Username: Cristina
-Password: fgfgfgfgf
+Username: Jim Barcos
+Password: 1234567789007878
 Back-up Code: 423904
 
 Name: Cristina Villasor
@@ -28,19 +28,3 @@ Name: Kim Dokja
 Username: fsfsdfsftrtdfgdgfdgd
 Password: dgdfdfgdgdgfd
 Back-up Code: 473110
-
-Name: fgfhghgjghghvghv
-Username: hgvhvhvghgvbhv
-Password: hvbnvbnvbnvbnv
-Back-up Code: 650149
-
-Name: yfthfgh
-Username: ghvghnvbnvbnvbn
-Password:  vbnbvnvbnhhhhhhhhhhhhhh
-Back-up Code: 431665tttttt
-
-Name: dfgdfgdfgdfgfdgdfgdfdfgdg
-Username: kimdokja@1234545
-Password: 123454554564564564565465464
-Back-up Code: 102592gtdfgfdgfd
-

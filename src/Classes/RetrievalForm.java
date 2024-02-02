@@ -166,7 +166,7 @@ public class RetrievalForm extends javax.swing.JFrame {
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel6.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(136, 0, 0));
         jLabel6.setText(" ");
 
@@ -349,18 +349,22 @@ public class RetrievalForm extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         UserFile fData = new UserFile();
-        AdminFile fAdmin = new AdminFile(); // (tba)
         Logs verify = new Logs();
-        int i = 0;
 
         verify.setCode(String.valueOf(jPasswordField1.getPassword()));
         verify.setUsername(jTextField1.getText());
         verify.setPassword(String.valueOf(jPasswordField2.getPassword()));
 
-        if (!fData.codeExist(verify.getCode()) && !fAdmin.codeExist(verify.getCode())) {
+        if (!fData.codeExist(verify.getCode())) {
             jLabel13.setText("*Invalid back-up code");
         } else {
+            jLabel13.setText("");
 
+            /*remove comment if null exception persist
+            if (null == verify) {
+                return;
+            }*/
+            
             if (verify.getUsername().isEmpty() && !verify.getPassword().isEmpty()) {
                 jLabel14.setText("*Please enter username");
                 jLabel6.setText("");
@@ -375,7 +379,8 @@ public class RetrievalForm extends javax.swing.JFrame {
                 jLabel14.setText("");
                 jLabel6.setText("");
 
-                if (fData.isUsernameExist(verify.getUsername()) || fAdmin.isAdminUN(verify.getUsername())) {
+                // validate username
+                if (fData.isUsernameExist(verify.getUsername())) {
                     jLabel14.setText("*Username has already been taken");
                 } else if (verify.usernameVerifier(verify.getUsername())) {
                     jLabel14.setText("*Invalid username");
@@ -384,7 +389,8 @@ public class RetrievalForm extends javax.swing.JFrame {
                     isUsernameValid = true;
                 }
 
-                switch (verify.passVerifier(verify.getUsername(), verify.getPassword())) {
+                // password verification
+                switch (verify.passVerifier(verify.getPassword(), verify.getUsername())) {
                     case 1:
                         jLabel6.setText("*Please enter password");
                         break;
@@ -392,11 +398,12 @@ public class RetrievalForm extends javax.swing.JFrame {
                         jLabel6.setText("*Weak password");
                         break;
                     default:
-                        jLabel6.setText("");
                         isPassValid = true;
+                        jLabel6.setText("");
                         break;
                 }
-// ang mapapalitan pa lang is yung sa user file
+
+                // ang mapapalitan pa lang is yung sa user file
                 if (isPassValid && isUsernameValid) {
                     // Username and password are not empty
                     jLabel14.setText("");
@@ -409,15 +416,7 @@ public class RetrievalForm extends javax.swing.JFrame {
                         home.pack();
                         home.setVisible(true);
                         dispose();
-                    } else if (fAdmin.codeExist(verify.getCode())) {
-                        fAdmin.updateDate(verify.getCode(), verify.getUsername(), verify.getPassword());
-                        JOptionPane.showMessageDialog(this, "Account Successfully Created! Redirecting you to the Home Page", "Notice", JOptionPane.INFORMATION_MESSAGE);
-                        Home home = new Home();
-                        home.pack();
-                        home.setVisible(true);
-                        dispose();
                     }
-
                 }
             }
         }

@@ -1,7 +1,5 @@
 package Classes;
 
-import java.security.SecureRandom;
-
 public class Logs {
     private String name;
     private String username;
@@ -54,10 +52,12 @@ public class Logs {
     }
     
     public int nameVerifier (String name) {
-        if (!name.matches("^[A-Za-z]+(?: [A-Za-z]\\.)?(?: [A-Za-z]+)?$")) {
+        if (!name.matches("^[A-Za-z]+(?: [A-Za-z]\\.)?(?: [A-Za-z]+)?$") || name.length() < 5) {
             return 1;
         } else if (name.isEmpty()) {
             return 2;
+        } else if (name.length() < 5) {
+            return 1;
         }
         return 0;
     }
@@ -69,8 +69,12 @@ public class Logs {
     public int passVerifier(String password, String username) {
         if (password.isEmpty()) 
             return 1;
-        else if (username.equals(password) || username.equals("") || username.length() < 12)
+        
+        if (username.equals(password))
              return 2;
+        
+        if (password.length() <= 12)
+            return 2;
         
         return 0;
     }

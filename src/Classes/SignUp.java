@@ -5,10 +5,9 @@ import java.security.SecureRandom;
 import javax.swing.*;
 
 public class SignUp extends javax.swing.JFrame {
-    private int code;
+    private int code = 0;
     Logs logs = new Logs();
 
-    //String.valueOf(secureRandomGenerator.nextInt(999999))
     // Constructor
     public SignUp() {
         initComponents();
@@ -16,13 +15,10 @@ public class SignUp extends javax.swing.JFrame {
         SecureRandom secureRandomGenerator = new SecureRandom();
         code = secureRandomGenerator.nextInt(999999);
         jPasswordField2.setText(String.valueOf(code));
-        
+
         // App icon
         Image icon = new ImageIcon(getClass().getResource("/icons/image-300x300.jpg")).getImage();
         this.setIconImage(icon);
-
-        // Generate backup Code
-        //logs.setCode();
     }
 
     // Iniatilize components
@@ -248,8 +244,8 @@ public class SignUp extends javax.swing.JFrame {
             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 450, javax.swing.GroupLayout.PREFERRED_SIZE)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(50, 50, 50)
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(5, 5, 5)
+                .addComponent(jLabel7)
+                .addGap(3, 3, 3)
                 .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(140, 140, 140)
@@ -425,8 +421,6 @@ public class SignUp extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         UserFile data = new UserFile();
-        //SecureRandom secureRandomGenerator = new SecureRandom();
-        //jPasswordField2.setText(String.valueOf(code));
 
         logs.setName(jTextField1.getText().trim());
         logs.setUsername(jTextField2.getText());

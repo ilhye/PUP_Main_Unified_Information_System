@@ -165,7 +165,6 @@ public class SignIn extends javax.swing.JFrame {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
         jButton3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jButton3.setForeground(new java.awt.Color(130, 0, 0));
         jButton3.setText("Forgot Password?");
@@ -181,8 +180,10 @@ public class SignIn extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(130, 0, 0));
         jLabel7.setText("Don't have an account?");
 
+        jLabel10.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(136, 0, 0));
 
+        jLabel11.setFont(new java.awt.Font("Tahoma", 1, 11)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(136, 0, 0));
 
         jCheckBox1.setBackground(new java.awt.Color(255, 255, 255));
@@ -350,7 +351,6 @@ public class SignIn extends javax.swing.JFrame {
             // gawing equals yung sa user file since kapag contains pala pwede ma-log in kahit na mali
             if (data.isUsernameExist(login.getUsername())) {
                 if (data.isUnamePassValid(login.getUsername(), login.getPassword())) {
-                    
                     JOptionPane.showMessageDialog(this, "Login Successfully", "LogIn", JOptionPane.INFORMATION_MESSAGE);
                     Home options = new Home();
                     options.pack();
@@ -362,7 +362,6 @@ public class SignIn extends javax.swing.JFrame {
                 }
             } else if (aFile.isAdminUN(login.getUsername())) {
                 if (aFile.adminAccnt(login.getUsername(), login.getPassword())) {
-                    
                     JOptionPane.showMessageDialog(this, "Login Successfully", "LogIn", JOptionPane.INFORMATION_MESSAGE);
                     Home options = new Home();
                     options.pack();

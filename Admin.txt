@@ -1,4 +1,3 @@
 Name: admin
 Username: ADMIN#11111
 Password: adminItoOcakessssss
-Back-up Code: 000000

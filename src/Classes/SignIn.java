@@ -357,6 +357,7 @@ public class SignIn extends javax.swing.JFrame {
                     options.setVisible(true);
                     dispose();
                 } else {
+                    jLabel10.setText("");
                     jLabel11.setText("*Invalid password");
                 }
             } else if (aFile.isAdminUN(login.getUsername())) {
@@ -368,6 +369,7 @@ public class SignIn extends javax.swing.JFrame {
                     options.setVisible(true);
                     dispose();
                 } else {
+                    jLabel10.setText("");
                     jLabel11.setText("*Invalid password");
                 }
             } else {

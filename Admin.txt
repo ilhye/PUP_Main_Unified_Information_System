@@ -1,4 +1,4 @@
 Name: admin
-Username: admin
-Password: adminPage123456
+Username: ADMIN#11111
+Password: adminItoOcakessssss
 Back-up Code: 000000

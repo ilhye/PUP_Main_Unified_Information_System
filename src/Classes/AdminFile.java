@@ -4,9 +4,19 @@
  */
 package Classes;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.ListIterator;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -65,11 +75,6 @@ public class AdminFile {
                         }
 
                     }
-                    /*if (line1.startsWith("Username: ") && line1.contains(adminUserN)) {
-                        System.out.println("Username from file: " + line1);
-                        readAdmnin.close();
-                        return true;
-                    }*/
                 }
             }
             return false;
@@ -117,5 +122,43 @@ public class AdminFile {
             System.out.println("An error occurred.");
             return false;
         }
+    }
+    
+    public void updateDate(String fCode, String fUsername, String fPassword) {
+        List<String> lines = new ArrayList<>();
+
+        try (BufferedReader reader = new BufferedReader(new FileReader("Admin.txt"))) {
+            String line;
+
+            while ((line = reader.readLine()) != null) {
+                lines.add(line);
+            }
+
+            ListIterator<String> iterator = lines.listIterator();
+            while (iterator.hasNext()) {
+                String currentLine = iterator.next();
+
+                if (currentLine.startsWith("Back-up Code:") && currentLine.contains(fCode)) {
+                    int fIndexCode = iterator.previousIndex();
+
+                    if (fIndexCode >= 2) {
+                        lines.set(fIndexCode - 2, "Username: " + fUsername);
+                        lines.set(fIndexCode - 1, "Password: " + fPassword);
+                    }
+                }
+            }
+        } catch (IOException ex) {
+//            Logger.getLogger(UserFile.class.getName()).log(Level.SEVERE, null, ex);
+            return;
+        }
+
+        try (PrintWriter writer = new PrintWriter(new FileWriter("Admin.txt"))) {
+            for (String updatedLine : lines) {
+                writer.println(updatedLine);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }

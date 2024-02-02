@@ -63,7 +63,7 @@ public class Logs {
     }
     
     public boolean usernameVerifier (String username) {
-        return username.isEmpty();
+        return (username.isEmpty() || username.length() < 4);
     }
     
     public int passVerifier(String password, String username) {

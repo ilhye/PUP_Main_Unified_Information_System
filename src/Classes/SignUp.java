@@ -453,7 +453,9 @@ public class SignUp extends javax.swing.JFrame {
             jLabel8.setText("*Username has already been taken");
         } else if (logs.getUsername().isEmpty()) {
             jLabel8.setText("*Please enter username");
-        } else  {
+        } else  if (logs.usernameVerifier(logs.getUsername())){
+            jLabel8.setText("*Invalid username");
+        } else if (!logs.usernameVerifier(logs.getUsername())){
             jLabel8.setText("");
             isUsernameValid = true;
         }

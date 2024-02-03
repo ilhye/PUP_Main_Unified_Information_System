@@ -5304,7 +5304,7 @@ public class Home extends javax.swing.JFrame {
                         + "Direct Line: (+632) 335-1PUP (335-1787) or 335-1777");
                 break;
             case "College of Tourism, Hospitality and Transportation Management (CTHTM)":
-                imageIcon = new ImageIcon(getClass().getResource("/icons/logo_cthtm.jpg"));
+                imageIcon = new ImageIcon(getClass().getResource("/icons/logo-cthtm.jpg"));
                 jDisplayCollege.setIcon(imageIcon);
                 jTextLocation.setText("Location: College of Tourism, Hospitality and Transportation Management, G/F Hasmin Hostel, M.H. Del Pilar Campus, Valencia St. near R. Magsaysay Blvd., Sta. Mesa, Manila 1016");
                 jTextDesc.setText("Courses Offered: \n>>Bachelor of Science in Hospitality Management (BSHM)\n>>Bachelor of Science in Tourism Management (BSTM)\n>>Bachelor of Science in Transportation Management (formerly Bachelor in Transportation Management) (BSTRM)"

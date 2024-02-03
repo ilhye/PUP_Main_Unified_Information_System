@@ -52,13 +52,13 @@ public class Logs {
     }
     
     public int nameVerifier (String name) {
-        if (!name.matches("^[A-Za-z]+(?: [A-Za-z]\\.)?(?: [A-Za-z]+)?$") || name.length() < 5) {
+        if (!name.matches("^[A-Za-z]+(?: [A-Za-z]\\.)?(?: [A-Za-z]+)?$") || (!name.isEmpty() && name.length() < 5)) {
             return 1;
         } else if (name.isEmpty()) {
             return 2;
-        } else if (name.length() < 5) {
+        } /*else if (!name.isEmpty() && name.length() < 5) {
             return 1;
-        }
+        }*/
         return 0;
     }
     

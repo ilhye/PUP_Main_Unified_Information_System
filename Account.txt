@@ -23,23 +23,8 @@ Username: Cristina
 Password: Villasor12345678
 Back-up Code: 760051
 
-
 Name: Kim Dokja
 Username: fsfsdfsftrtdfgdgfdgd
 Password: dgdfdfgdgdgfd
 Back-up Code: 473110
-Name: Pennywise3
-Username: rereeeee
-Password: eeeeeeeeeeeeeeeeeeee
-Back-up Code: 456393
-
-Name: weweew22
-Username: risinafds45454545454545
-Password: 4545454544545454
-Back-up Code: 344564
-
-Name: rtjritjirutirtui r. rerereer
-Username: trtrtrtrtrrtrtrtr
-Password: rtrrrrrrrrrrrrrrrrrrrr
-Back-up Code: 858676
 

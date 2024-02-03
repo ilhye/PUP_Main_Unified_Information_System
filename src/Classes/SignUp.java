@@ -428,10 +428,7 @@ public class SignUp extends javax.swing.JFrame {
         logs.setCode(String.valueOf(jPasswordField2.getPassword()));
 
         switch (logs.nameVerifier(logs.getName())) {
-            case 0:
-                jLabel6.setText("");
-                isNameValid = true;
-                break;
+         
             case 1:
                 jLabel6.setText("*Invalid name");
                 break;
@@ -439,7 +436,11 @@ public class SignUp extends javax.swing.JFrame {
                 jLabel6.setText("*Please enter your name");
                 break;
             default:
+                jLabel6.setText("");
+                isNameValid = true;
                 break;
+                
+         
         }
 
         // System.out.println("Checking username: " + logs.getUsername());
@@ -454,7 +455,7 @@ public class SignUp extends javax.swing.JFrame {
             isUsernameValid = true;
         }
 
-        switch (logs.passVerifier(logs.getUsername(), logs.getPassword())) {
+        switch (logs.passVerifier(logs.getPassword(), logs.getUsername())) {
             case 1:
                 jLabel10.setText("*Please enter password");
                 break;

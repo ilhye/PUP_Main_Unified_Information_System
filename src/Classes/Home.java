@@ -2,7 +2,15 @@ package Classes;
 
 import java.awt.*;
 import java.awt.event.ActionEvent;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.net.URL;
+import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 
@@ -17,268 +25,179 @@ public class Home extends javax.swing.JFrame {
         this.setIconImage(icon);
 
         JTabbedNavigation.setSelectedIndex(0); // to show the page of Home
+        if (JTabbedNavigation.getSelectedIndex() == 0){
+                    try {
+                    File fread = new File("isAdmin.txt");
+                    Scanner in = new Scanner(fread);
+                    
+                    while (in.hasNext()){
+                        String holder = in.nextLine();
+                        System.out.print(holder);
+                        
+                        if ("true".equals(holder)){
+                            jBtnAdmin.setVisible(true);
+                            jBtnAdmin.setEnabled(true);
+                            jTxtHolder5.setEditable(true);
+                        } else if ("false".equals(holder)){
+                            jBtnAdmin.setVisible(false);
+                            jBtnAdmin.setEnabled(false);
+                        }
+                        
+                        
+                    }
+                    } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+        }
     }
 
     private void ContentAchievements() {
-        jTxtHolder1.setText("• Top school of choice of many companies in the country (2016, JobStreet.com Philippines)\n"
-                + "\n• PUP is 9th most popular university in the Philippines based on the popularity of its website (2016, http://www.4icu.org/ph/)\n"
-                + "\n• QS World University Rankings by Subject 2013 (Country File on the Philippines): Rank 3 in Life Science and Medicine, Rank 5 in Natural Science (Chemistry), Rank 4 in Economics and Econometrics, Rank 5 in Communication and Media Studies\n"
-                + "\n• Commission on Higher Education (CHED) Center of Development for Excellence in Journalism and Filipino (2013)\n"
-                + "\n• Accrediting Agency of Chartered Colleges and Universities in the Philippines (AACCUP): 58 programs of PUP are in the list of accreditation (4 Level III accredited programs, 15 qualified for Level III accreditation with 9 programs undergoing assessment, 14 Level II accredited programs, 11 Level I accredited programs, and 5 programs in the list as candidate for accreditation, as of 2012)\n"
-                + "\n• President of the Philippines Proclamation No. 1992 and National Historical Institute's Board Resolution No. 01, s. 2008: Declaration of the PUP Mabini Campus as the permanent home of the Mabini Shrine.\n"
-                + "\n• President of the Philippines Proclamation No. 482: Declaring the period of October 1, 2003 to October 31, 2004 as the Centenary of the Polytechnic University of the Philippines.\n"
-                + "\n• Guinness Book of World Records: World's Largest Human Rainbow (2004)");
+        if (jBtnAdmin.isEnabled()){
+            jTxtHolder1.setFocusable(true);
+            jTxtHolder1.setEditable(true);
+            jBtnSaveChangesAwards.setEnabled(true);
+            jBtnSaveChangesAwards.setVisible(true);
+        } else{
+            jTxtHolder1.setFocusable(false);
+            jTxtHolder1.setEditable(false);
+            jBtnSaveChangesAwards.setEnabled(false);
+            jBtnSaveChangesAwards.setVisible(false);
+        }
+        
+        String holder = "";
+        
+        try {
+                    File fread = new File("Achievements.txt");
+                    Scanner in = new Scanner(fread);
+                    
+                    while (in.hasNext()){
+                        holder += in.nextLine() + "\n";
+
+                    }
+                    } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+       
+        jTxtHolder1.setText(holder);
         jTxtHolder1.setCaretPosition(0);
     }
 
     private void ContentAdmission() {
-        jTxtHolder4.setText("• Admission Details:\n"
-                + "1. Baccalaureate Degree (4 or 5 years): Requires PUPCET and application through PUP iApply.\n"
-                + "2. Diploma Program (3 years) leading to Baccalaureate Degree: Same application process as Baccalaureate Degree.\n"
-                + "\n"
-                + "• Eligibility for PUPCET:\n"
-                + "1. Grade 12 student graduating in AY 2023-2024 with GWA ≥ 82%.\n"
-                + "2. Passer of PEPT/ALS or NFEA & E-Program.\n"
-                + "\n"
-                + "• Application Process:\n"
-                + "1. Go to PUP iApply (https://www.pup.edu.ph/iapply/pupcet).\n"
-                + "2. Click Apply Now.\n"
-                + "3. Create an account.\n"
-                + "4. Answer prequalification questions.\n"
-                + "5. Fill up the registration form.\n"
-                + "6. Submit and sign in again.\n"
-                + "7. Choose from options:\n"
-                + "8. Application Form: Complete and finalize your application.\n"
-                + "9. Finalize Application: Submit your application for evaluation.\n"
-                + "10. Print ePermit: Download and print your exam permit (after approval).\n"
-                + "11. Check PUPCET Results: Check after official release.\n"
-                + "12. Sign out: Secure your account.\n"
-                + "13. Review guidelines for online application photo.\n"
-                + "14. Read FAQs about who can take PUPCET and where to apply.\n"
-                + "\n"
-                + "• Additional Information:\n"
-                + "1. Apply for PUPCET only in one branch/campus and once per academic year.\n"
-                + "2. Download ePermit 6-20 working days after application.\n"
-                + "3. Use Chrome, Firefox, or Edge for PUP iApply.");
-        jTxtHolder4.setLineWrap(true);
+        String holder = "";
+        
+        try {
+                    File fread = new File("College.txt");
+                    Scanner in = new Scanner(fread);
+                    
+                    while (in.hasNext()){
+                        holder += in.nextLine() + "\n";
+
+                    }
+                    } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+       
+        jTxtHolder4.setText(holder);
         jTxtHolder4.setCaretPosition(0);
     }
 
     private void ContentAdmissionSHS() {
-        jTxtHolder4.setText(">> Required Documents for Online Registration <<\n"
-                + "\n"
-                + "1. Scanned photo of the applicant (JPEG file, 2x2 inches, recent, white background, name tag at chest)\n"
-                + "2. Scanned Grade 9 Report Card/F137 (JPEG file)\n"
-                + "3. Scanned Grade 10 Report Card (JPEG file, 1st and 2nd grading periods)\n"
-                + "4. ESC/QVR Certificate (for students from private schools, currently enrolled in Grade 10 for SY 2022-2023)\n"
-                + "\n"
-                + ">> Important Reminders <<\n"
-                + "• Report cards must clearly show:\n"
-                + "     oComplete name\n"
-                + "     oLRN\n"
-                + "     oGrades in English, Math, and Science\n"
-                + "• JPEG file size limit: 300 KB\n"
-                + "• Use an active and correct email address.\n"
-                + "• Finalized applications cannot be edited.\n"
-                + "\n"
-                + ">> Grounds for Invalid Registration <<\n"
-                + "1.Multiple accounts/applications\n"
-                + "2.Incorrect personal information or grades\n"
-                + "3.Failure to upload required documents properly\n"
-                + "\n"
-                + ">> Grade Requirements <<\n"
-                + "• English, Math, and Science: 85% and above\n"
-                + "• Other subjects: No grade below 82%\n"
-                + "     Admission is subject to slot availability.\n"
-                + "\n"
-                + ">> Tracks and Strands Offered <<\n"
-                + "• Academic Track:\n"
-                + "1.STEM (Science, Technology, Engineering, and Mathematics)\n"
-                + "2.ABM (Accountancy, Business, and Management)\n"
-                + "3.HUMSS (Humanities and Social Sciences)\n"
-                + "\n"
-                + "• Technical, Vocational, and Livelihood Track:\n"
-                + "1. ICT (Information Communications Technology)\n"
-                + "\n"
-                + "• Inquiries:\n"
-                + "Office of the Senior High School Admission Telephone Number: 53351787 loc. 356");
+        String holder = "";
+        
+        try {
+                    File fread = new File("SHS.txt");
+                    Scanner in = new Scanner(fread);
+                    
+                    while (in.hasNext()){
+                        holder += in.nextLine() + "\n";
+
+                    }
+                    } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+       
+        jTxtHolder4.setText(holder);
         jTxtHolder4.setCaretPosition(0);
     }
 
     private void ContentAdmissionScholarship() {
-        jTxtHolder4.setText("PUP Scholarship and Financial Assistance (SFAS) Information:\n"
-                + "------------------------------------------------------------------------------------\n"
-                + "\n"
-                + ">> Types of Support <<\n"
-                + "1. Scholarships:\n"
-                + "     o Entrance scholarships\n"
-                + "     o Resident scholarships\n"
-                + "     o Special grants\n"
-                + "2. Financial Assistance:\n"
-                + "     o Service grant-in-aid\n"
-                + "     o Student loan\n"
-                + "     o Work-study plan/Student assistantship\n"
-                + "\n"
-                + ">> Benefits <<\n"
-                + "• Incentive equivalent to total assessed fees, either full or partial.\n"
-                + "\n"
-                + "• Source: Scholarship and Financial Assistance Services (SFAS), PUP Student Handbook, Rev. 2019\n"
-                + "• Note: Information is from 2019. For updated details, please contact SFAS directly.\n"
-                + "• Facebook Link: https://www.facebook.com/PUPSFAS");
+        String holder = "";
+        
+        try {
+                    File fread = new File("Scholarship.txt");
+                    Scanner in = new Scanner(fread);
+                    
+                    while (in.hasNext()){
+                        holder += in.nextLine() + "\n";
+
+                    }
+                    } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+       
+        jTxtHolder4.setText(holder);
         jTxtHolder4.setCaretPosition(0);
     }
 
     private void ContentFunFacts() {
-        jTxtHolder8.setText("• PUP traces its roots back to 1904 when it was a vocational school called the Manila Business School.\n\n"
-                + "• It was renamed the Philippine School of Commerce after four years, and then the Philippine College of Commerce in 1952.\n\n"
-                + "• In April 1978, it was given its present name, the Polytechnic University of the Philippines.\n\n"
-                + "• The PUP Lepanto Building, where vocational and technopreneurial non-degree courses are offered, is a testimony of PUP’s origin as a small clerical school.\n\n"
-                + "• PUP is nationally acknowledged as a pioneer in vocational and business education and a leader in polytechnic education.\n\n"
-                + "• It is also referred to as the “people’s university”, catering to economically challenged yet deserving students.\n\n"
-                + "• PUP’s robust student population–reaching about 50,000 in-campus and off-campus students–is the largest across the country.\n\n"
-                + "• Academic offerings have grown considerably into nine technopreneurial courses, seventy-two bachelors’ degrees, fifteen masters’ degrees, and two postgraduate degrees.\n\n"
-                + "• PUP is a dual-mode institution offering both traditional classroom-based education and distance education.\n\n"
-                + "• PUP broke the record for most organ donation pledges in one hour. 3,548 people signed up in the span of 30 minutes, beating India’s 2,755 pledged organ donors.");
+        if (jBtnAdmin.isEnabled()){
+                    jTxtHolder8.setFocusable(true);
+                    jTxtHolder8.setEditable(true);
+                    jBtnSaveChangesFun.setEnabled(true);
+                    jBtnSaveChangesFun.setVisible(true);
+        } else{
+                    jTxtHolder8.setFocusable(false);
+                    jTxtHolder8.setEditable(false);
+                    jBtnSaveChangesFun.setEnabled(false);
+                    jBtnSaveChangesFun.setVisible(false);
+        }
+        
+        String holder = "";
+        
+        try {
+                    File fread = new File("Fun Facts.txt");
+                    Scanner in = new Scanner(fread);
+                    
+                    while (in.hasNext()){
+                        holder += in.nextLine() + "\n";
+
+                    }
+                    } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+       
+        jTxtHolder8.setText(holder);
         jTxtHolder8.setCaretPosition(0);
     }
 
     private void ContentClubs() {
-        jTxtHolder10.setText(">> University Wide: \n\n• Agham Youth–Polytechnic University of the Philippines (AY PUP)\n"
-                + "• Bahaghari PUP (BH PUP)\n"
-                + "• Band of Young and Outstanding Bartenders (BYOB)\n"
-                + "• Bayanihan Youth for Peace-PUP Main Chapter (BYP-PUP)\n"
-                + "• Bible Readers Society International (BREAD SOCIETY INTL)\n"
-                + "• Bukluran ng Progresibong Mag-aaral (BUKLURAN)\n"
-                + "• Cru\n"
-                + "• Every Nation Campus Polytechnic University of the Philippines (ENC PUP)\n"
-                + "• For Adults Only Dance Crew (FAO Dance Crew)\n"
-                + "• Gabriela Youth PUP (GY PUP)\n"
-                + "• Google Developer Student Clubs–Polytechnic University of the Philippines (GDSC–PUP)\n"
-                + "• Hataw PUP (HPUP)\n"
-                + "• Kabataan para sa Tribung Pilipino–Polytechnic University of the Philippines (KATRIBU–PUP)\n"
-                + "• Kalasag Christian Fellowship (KCF)\n"
-                + "• PAGLAYA (PAGLAYA PUP)\n"
-                + "• Polytechnic University of the Philippines – Radio Engineering Circle Manila Section (PUP-REC Manila Section)\n"
-                + "• Polytechnic University of the Philippines Federation of Junior Philippine Institute of Accountants (PUPFJPIA)\n"
-                + "• Polytechnic University of the Philippines Lawôd (PUP Lawôd)\n"
-                + "• Polytechnic University of the Philippines Sintang Pusa (PUP SP)\n"
-                + "• Polytechnic University of the Philippines–Association of DOST Scholars (PUP-ADS)\n"
-                + "• PUP BiblioFlix (BiblioFlix)\n"
-                + "• PUP for Jesus Movement (PUPJM)\n"
-                + "• PUP House of Parliamentarians (PUP HOP)\n"
-                + "• PUP Hygears (PUP HG)\n"
-                + "• PUP KASARIANLAN\n"
-                + "• PUP Peer Facilitators Association (PUPPFA)\n"
-                + "• PUP Samahang Nagtataguyod ng Iisang Diwa’t Adhika (PUP-SANDIWA)\n"
-                + "• PUP School of Debaters (SOD)\n"
-                + "• Pup Society of Pangasinan Students (PUP SOPAS)\n"
-                + "• PUP Sukarela Association of Young Extensionists (PUP SAYE)\n"
-                + "• PUP The Programmers’ Guild (PUP TPG)\n"
-                + "• PUP-Bukluran sa Sikolohiyang Pilipino (PUP-BSP)\n"
-                + "• Rotaract Club of Polytechnic University of the Philippines (RAC PUP)\n"
-                + "• Sandigan ng Mag-aaral para sa Sambayanan PUP (SAMASA PUP)\n"
-                + "• Sining na Naglilikongkod sa Bayan - Polytechnic University of the Philippines (SINAGBAYAN-PUP)\n"
-                + "• Students’ Public Information Center (SPIC)\n"
-                + "• The Polytechnic University of the Philippines Manila Pre-Law Society (PUP PLS)\n"
-                + "• Women’s Initiative for Social Development and Freedom (WISDOM)\n"
-                + "• Youth on the Rock (YTR)\n\n" + ">> COC: \n\n• Advertising and Public Relations Organization of Students (ADPROS)\n"
-                + "• DZMC – Young Communicators’ Guild (DZMC-YCG)\n"
-                + "• Film Aficionados Circle (FILAC)\n"
-                + "• PUP BroadCircle (PUP BroadCircle)\n"
-                + "• PUP Circle of Research Enthusiasts (PUP CORE)\n"
-                + "• PUP COC Ensemble\n"
-                + "• PUP Communication Society (PUP CommSoc)\n"
-                + "• PUP Journalism Guild (PUP JG)\n"
-                + "• Quadro Photography Club (QUADRO)\n"
-                + "• Teatro Komunikado (TK)\n"
-                + "• Viva Voce COC (VVC)\n"
-                + "• MULAT Documentary Guild (MDG)\n"
-                + "• Advertising and Public Relations Organization of Students (ADPROS)\n"
-                + "• DZMC – Young Communicators’ Guild (DZMC-YCG)\n"
-                + "• Film Aficionados Circle (FILAC)\n"
-                + "• PUP BroadCircle (PUP BroadCircle)\n"
-                + "• PUP Circle of Research Enthusiasts (PUP CORE)\n"
-                + "• PUP COC Ensemble\n"
-                + "• PUP Communication Society (PUP CommSoc)\n"
-                + "• PUP Journalism Guild (PUP JG)\n"
-                + "• Quadro Photography Club (QUADRO)\n"
-                + "• Teatro Komunikado (TK)\n"
-                + "• Viva Voce COC (VVC)\n"
-                + "• MULAT Documentary Guild (MDG)\n"
-                + "• Advertising and Public Relations Organization of Students (ADPROS)\n"
-                + "• DZMC – Young Communicators’ Guild (DZMC-YCG)\n"
-                + "• Film Aficionados Circle (FILAC)\n"
-                + "• PUP BroadCircle (PUP BroadCircle)\n"
-                + "• PUP Circle of Research Enthusiasts (PUP CORE)\n"
-                + "• PUP COC Ensemble\n"
-                + "• PUP Communication Society (PUP CommSoc)\n"
-                + "• PUP Journalism Guild (PUP JG)\n"
-                + "• Quadro Photography Club (QUADRO)\n"
-                + "• Teatro Komunikado (TK)\n"
-                + "• Viva Voce COC (VVC)\n"
-                + "• MULAT Documentary Guild (MDG)\n"
-                + "• Advertising and Public Relations Organization of Students (ADPROS)\n"
-                + "• DZMC – Young Communicators’ Guild (DZMC-YCG)\n"
-                + "• Film Aficionados Circle (FILAC)\n\n>> CAL:\n\n• Alyansa ng mga Panulat na Sumusuong (ALPAS)\n"
-                + "• Dulaang Suhay-Fil (DSF)\n"
-                + "• Guild of English Majors (GEMs)\n"
-                + "• Kabataang Mamamahayag sa Filipinolohiya  (KMF)\n"
-                + "• Literature, Arts, and Culture Society (LACS)\n"
-                + "• PUP Kabataang Tanggol Wika (PUP KTW)\n"
-                + "• PUP Tanghalang Molave (PUP TM)\n"
-                + "• Societas Philosophiae (SP)\n"
-                + "• Tulos Baybay (TB)\n"
-                + "• Ugnayan ng Talino at Kagalingan (UTAK)\n\n>> CE:\n\n• American Concrete Institute Philippines – Polytechnic University of the Philippines Student Chapter (ACIP-PUPSC)\n"
-                + "• Association of Concerned Computer Engineering Students for Service (ACCESS)\n"
-                + "• Pambansang Samahan ng Inhenyero Mekanikal – Polytechnic University of the Philippines Student Unit (PSIM–PUPSU)\n"
-                + "• Philippine Institute of Civil Engineers - Polytechnic University of the Philippines Student Chapter (Charter No. 30) (PICE-PUPSC)\n"
-                + "• Philippine Institute of Industrial Engineers – Polytechnic University of the Philippines Student Chapter (PIIE-PUPSC)\n"
-                + "• Polytechnic University of the Philippines – Electronics Engineering Students’ Society (PUP-ECESS)\n"
-                + "• Polytechnic University of the Philippines Aggregates (PUP Aggregates)\n"
-                + "• PUP College of Engineering Honors’ Society (PUP-CEHS)\n"
-                + "• Railway Engineering Students’ Society (RailSS)\n"
-                + "• Wired\n\n>> COED:\n\n• Bachelor of Elementary Education Association (BEEDA)\n"
-                + "• Damdamin at Malay PUP Sta. Mesa (DAMLAY PUP Sta. Mesa)\n"
-                + "• Future Business Teachers’ Organization (FBTO)\n"
-                + "• Guild of Livelihood and Technology Education Students (GLITES)\n"
-                + "• Library and Information Science Student Organization (LISSO)\n"
-                + "• Mathematics: Road to Excellence (MATH:RIIX)\n"
-                + "• Polytechnic University of the Philippines Social Studies Guild (PUP SSG)\n"
-                + "• PUP Epistemic League of Interactive future Teachers of English (PUP-ELITE)\n"
-                + "• Science Instructors of Education, Nature, Technology, and Innovation Alliance (SCIENTIA)\n"
-                + "• Society Of Information Technology Educators (SITE)\n\n>> CTHTM:\n\n• Association of Concerned Transportation Students (ACTS)\n"
-                + "• CTHTM Cerberus (CBR)\n"
-                + "• Harmonix–CTHTM (HMX-CTHTM\n"
-                + "• Hospitality Management Society (HMS)\n"
-                + "• PUP Balikhaan (PUP BLKN)\n"
-                + "• PUP Iskusina (PUP-I)\n"
-                + "• PUP Tour Guiding and Escorting Society (PUP TGES)\n"
-                + "• PUP Tourism Management Society (PUP TMS)\n\n>> CADBE: \n\n• CADBE Research and Innovation Club (CADBE-RIC)\n"
-                + "• Environmental Planning Society (EPSoc)\n"
-                + "• Students’ Integrated League of Interior Design (SILID)\n\n>> CPSPA: \n\n• Circle of Public Administration and Governance Students (CPAGS)\n"
-                + "• Junior Political Economists’ Guild (JPEG)\n"
-                + "• Political Science Society (PSS)\n\n>> CBA:\n\n• Entrepreneurial Students Society (ESS)\n"
-                + "• Human Resource Students Society (HRSS)\n"
-                + "• Junior Marketing Executives (JME)\n"
-                + "• Polytechnic University of the Philippines- Junior Philippine Association of Secretaries and Administrative Professionals (PUP-JPASAP)\n\n>> CAF: \n\n• Junior Financial Executives – PUP (JFINEX-PUP)\n"
-                + "• Polytechnic University of the Philippines Junior Philippine Institute of Accountants Manila (PUP JPIA Manila)\n"
-                + "• PUP BES Honors Society (PUP BES HS)\n"
-                + "• PUP HNS Honors Society (PUP HNS HS)\n"
-                + "• PUP Junior Philippine Association of Management Accountants (PUP JPAMA)\n\nCSSD: \n\n• Junior Cooperators Association (JCA)\n"
-                + "• Philippine Association of Food Technologists Incorporation–Theta Chapter (PAFT INC.–THETA)\n"
-                + "• PUP Economics Research Society (PUP ECONRES)\n"
-                + "• PUP Psychology Students Association (PUPPSA)\n"
-                + "• PUP Samahan ng mga Mag-aaral ng Kasaysayan (PUPSMK)\n"
-                + "• PUP Sociology Society (PUP-Soc-Soc)\n\n>> CS: \n\n• Philippine Association of Nutrition–Alpha Epsilon Chapter  (PAN-AEC)\n"
-                + "• Polytechnic University of the Philippines Chemical Society (PUP CHEMSOC)\n"
-                + "• Polytechnic University of the Philippines Mathematics Club (PUP Math Club)\n"
-                + "• Polytechnic University of the Philippines-Physics Society (PUP PhySoc)\n"
-                + "• PUP Society of Biology Students (PUP SBS)\n"
-                + "• PUP Statistics Students' Clique (PUP STATSCLIQUE)\n\n>> CCIS: \n\n• Institute of Bachelors in Information Technology Studies (IBITS)\n"
-                + "• Out of Codes (OC)\n"
-                + "• PUP Association of Students for Computer Intelligence Integration (PUP ASCII)\n\n>> OUS: \n\n• League of Innovators in the Public Administration Discipline (LIPAD)\n"
-                + "• PUP ValorOUS Society (PUPVS)\n\n >> ITECH: \n\n • Society of Engineering Technology Students (SETS)");
+        if (jBtnAdmin.isEnabled()){
+                    jTxtHolder10.setFocusable(true);
+                    jTxtHolder10.setEditable(true);
+                    jBtnSaveChangesClubs.setEnabled(true);
+                    jBtnSaveChangesClubs.setVisible(true);
+        } else{
+                    jTxtHolder10.setFocusable(false);
+                    jTxtHolder10.setEditable(false);
+                    jBtnSaveChangesClubs.setEnabled(false);
+                    jBtnSaveChangesClubs.setVisible(false);
+        }
+        
+        String holder = "";
+        
+        try {
+                    File fread = new File("Clubs.txt");
+                    Scanner in = new Scanner(fread);
+                    
+                    while (in.hasNext()){
+                        holder += in.nextLine() + "\n";
 
+                    }
+                    } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+       
+        jTxtHolder10.setText(holder);
         jTxtHolder10.setCaretPosition(0);
     }
 
@@ -325,6 +244,7 @@ public class Home extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
+        jBtnAdmin = new javax.swing.JButton();
         JTabbedNavigation = new javax.swing.JTabbedPane();
         jPanelHome = new javax.swing.JPanel();
         jLabel68 = new javax.swing.JLabel();
@@ -338,6 +258,7 @@ public class Home extends javax.swing.JFrame {
         jBtnHistory = new javax.swing.JButton();
         jBtnMission = new javax.swing.JButton();
         jBtnVision = new javax.swing.JButton();
+        jBtnSaveChangesHMV = new javax.swing.JButton();
         jScrollPane10 = new javax.swing.JScrollPane();
         jTxtHolder5 = new javax.swing.JTextArea();
         jLabel65 = new javax.swing.JLabel();
@@ -349,6 +270,7 @@ public class Home extends javax.swing.JFrame {
         jTxtHolder6 = new javax.swing.JTextArea();
         jScrollPane12 = new javax.swing.JScrollPane();
         jTxtHolder1 = new javax.swing.JTextArea();
+        jBtnSaveChangesAwards = new javax.swing.JButton();
         jLabel132 = new javax.swing.JLabel();
         jPanelFacilities = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
@@ -366,6 +288,7 @@ public class Home extends javax.swing.JFrame {
         jBtnCollege = new javax.swing.JButton();
         jBtnSHS = new javax.swing.JButton();
         JBtnScholarship = new javax.swing.JButton();
+        jBtnSaveChangesAdmission = new javax.swing.JButton();
         jLabel138 = new javax.swing.JLabel();
         jPanelColleges = new javax.swing.JPanel();
         jDisplayCollege = new javax.swing.JLabel();
@@ -376,7 +299,7 @@ public class Home extends javax.swing.JFrame {
         jComboBox3 = new javax.swing.JComboBox<>();
         jLabel139 = new javax.swing.JLabel();
         jPanelClubs = new javax.swing.JPanel();
-        jLabel140 = new javax.swing.JLabel();
+        jBtnSaveChangesClubs = new javax.swing.JButton();
         jPanel17 = new javax.swing.JPanel();
         jLabel115 = new javax.swing.JLabel();
         jLabel116 = new javax.swing.JLabel();
@@ -384,6 +307,7 @@ public class Home extends javax.swing.JFrame {
         jTxtHolder9 = new javax.swing.JTextArea();
         jScrollPane8 = new javax.swing.JScrollPane();
         jTxtHolder10 = new javax.swing.JTextArea();
+        jLabel140 = new javax.swing.JLabel();
         jPanelSTEvaluation = new javax.swing.JPanel();
         jRBYes1 = new javax.swing.JRadioButton();
         jRBNo1 = new javax.swing.JRadioButton();
@@ -615,7 +539,6 @@ public class Home extends javax.swing.JFrame {
         jLabelResultTVLTrack = new javax.swing.JLabel();
         jLabel113 = new javax.swing.JLabel();
         jPanelFunFacts = new javax.swing.JPanel();
-        jLabel141 = new javax.swing.JLabel();
         jPanel16 = new javax.swing.JPanel();
         jLabel106 = new javax.swing.JLabel();
         jLabel114 = new javax.swing.JLabel();
@@ -623,6 +546,8 @@ public class Home extends javax.swing.JFrame {
         jTxtHolder7 = new javax.swing.JTextArea();
         jScrollPane15 = new javax.swing.JScrollPane();
         jTxtHolder8 = new javax.swing.JTextArea();
+        jBtnSaveChangesFun = new javax.swing.JButton();
+        jLabel141 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(1080, 600));
@@ -691,20 +616,24 @@ public class Home extends javax.swing.JFrame {
         jPanel2.setMaximumSize(new java.awt.Dimension(1080, 90));
         jPanel2.setMinimumSize(new java.awt.Dimension(1080, 90));
         jPanel2.setName(""); // NOI18N
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setFont(new java.awt.Font("Times New Roman", 0, 20)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("POLYTECHNIC UNIVERSITY OF THE PHILIPPINES");
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(404, 14, -1, 30));
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/image-50x50.jpg"))); // NOI18N
         jLabel4.setAlignmentY(0.0F);
         jLabel4.setName(""); // NOI18N
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 20, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Times New Roman", 1, 15)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("THE COUNTRY'S FIRST POLYTECHNIC");
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(488, 50, 303, -1));
 
         jComboBox1.setFont(new java.awt.Font("Tahoma", 0, 16)); // NOI18N
         jComboBox1.setForeground(new java.awt.Color(136, 0, 0));
@@ -717,42 +646,33 @@ public class Home extends javax.swing.JFrame {
                 jComboBox1ActionPerformed(evt);
             }
         });
+        jPanel2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(87, 30, 280, 30));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
-                .addComponent(jLabel4)
-                .addGap(18, 18, 18)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 280, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(37, 37, 37)
-                        .addComponent(jLabel2))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(121, 121, 121)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 303, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(215, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jLabel4))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(30, 30, 30)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(14, 14, 14)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3)))
-                .addContainerGap(20, Short.MAX_VALUE))
-        );
+        jBtnAdmin.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnAdmin.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jBtnAdmin.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnAdmin.setText("Admin Mode");
+        jBtnAdmin.setToolTipText("");
+        jBtnAdmin.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        jBtnAdmin.setEnabled(false);
+        jBtnAdmin.setFocusable(false);
+        jBtnAdmin.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnAdminMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jBtnAdminMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jBtnAdminMouseExited(evt);
+            }
+        });
+        jBtnAdmin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnAdminActionPerformed(evt);
+            }
+        });
+        jPanel2.add(jBtnAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 27, 150, 40));
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 40, 1080, 90));
 
@@ -873,12 +793,32 @@ public class Home extends javax.swing.JFrame {
 
         jPanelHMV.add(jPanel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 480));
 
+        jBtnSaveChangesHMV.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnSaveChangesHMV.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBtnSaveChangesHMV.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnSaveChangesHMV.setText("SAVE CHANGES");
+        jBtnSaveChangesHMV.setToolTipText("");
+        jBtnSaveChangesHMV.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        jBtnSaveChangesHMV.setEnabled(false);
+        jBtnSaveChangesHMV.setFocusable(false);
+        jBtnSaveChangesHMV.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnSaveChangesHMVMouseClicked(evt);
+            }
+        });
+        jBtnSaveChangesHMV.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSaveChangesHMVActionPerformed(evt);
+            }
+        });
+        jPanelHMV.add(jBtnSaveChangesHMV, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 26, 160, 30));
+
         jTxtHolder5.setEditable(false);
         jTxtHolder5.setBackground(new java.awt.Color(255, 224, 224));
         jTxtHolder5.setColumns(20);
         jTxtHolder5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jTxtHolder5.setLineWrap(true);
-        jTxtHolder5.setRows(1);
+        jTxtHolder5.setRows(5);
         jTxtHolder5.setToolTipText("");
         jTxtHolder5.setWrapStyleWord(true);
         jTxtHolder5.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(136, 0, 0), 5, true));
@@ -886,7 +826,7 @@ public class Home extends javax.swing.JFrame {
         jTxtHolder5.setFocusable(false);
         jScrollPane10.setViewportView(jTxtHolder5);
 
-        jPanelHMV.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, 640, 390));
+        jPanelHMV.add(jScrollPane10, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 60, 640, 390));
 
         jLabel65.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Untitled design.png"))); // NOI18N
         jPanelHMV.add(jLabel65, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 480));
@@ -942,7 +882,27 @@ public class Home extends javax.swing.JFrame {
         jTxtHolder1.setFocusable(false);
         jScrollPane12.setViewportView(jTxtHolder1);
 
-        jPanelAchievement.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, 640, 390));
+        jPanelAchievement.add(jScrollPane12, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 60, 640, 390));
+
+        jBtnSaveChangesAwards.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnSaveChangesAwards.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBtnSaveChangesAwards.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnSaveChangesAwards.setText("SAVE CHANGES");
+        jBtnSaveChangesAwards.setToolTipText("");
+        jBtnSaveChangesAwards.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        jBtnSaveChangesAwards.setEnabled(false);
+        jBtnSaveChangesAwards.setFocusable(false);
+        jBtnSaveChangesAwards.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnSaveChangesAwardsMouseClicked(evt);
+            }
+        });
+        jBtnSaveChangesAwards.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSaveChangesAwardsActionPerformed(evt);
+            }
+        });
+        jPanelAchievement.add(jBtnSaveChangesAwards, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 26, 160, 30));
 
         jLabel132.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Untitled design.png"))); // NOI18N
         jPanelAchievement.add(jLabel132, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 480));
@@ -1088,6 +1048,26 @@ public class Home extends javax.swing.JFrame {
 
         jPanelAdmission.add(jPanel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 310, 480));
 
+        jBtnSaveChangesAdmission.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnSaveChangesAdmission.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBtnSaveChangesAdmission.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnSaveChangesAdmission.setText("SAVE CHANGES");
+        jBtnSaveChangesAdmission.setToolTipText("");
+        jBtnSaveChangesAdmission.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        jBtnSaveChangesAdmission.setEnabled(false);
+        jBtnSaveChangesAdmission.setFocusable(false);
+        jBtnSaveChangesAdmission.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnSaveChangesAdmissionMouseClicked(evt);
+            }
+        });
+        jBtnSaveChangesAdmission.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSaveChangesAdmissionActionPerformed(evt);
+            }
+        });
+        jPanelAdmission.add(jBtnSaveChangesAdmission, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 25, 160, 30));
+
         jLabel138.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Untitled design.png"))); // NOI18N
         jPanelAdmission.add(jLabel138, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1080, 480));
 
@@ -1150,8 +1130,27 @@ public class Home extends javax.swing.JFrame {
         JTabbedNavigation.addTab("tab7", jPanelColleges);
 
         jPanelClubs.setMaximumSize(new java.awt.Dimension(1080, 480));
+        jPanelClubs.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel140.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Untitled design.png"))); // NOI18N
+        jBtnSaveChangesClubs.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnSaveChangesClubs.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBtnSaveChangesClubs.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnSaveChangesClubs.setText("SAVE CHANGES");
+        jBtnSaveChangesClubs.setToolTipText("");
+        jBtnSaveChangesClubs.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        jBtnSaveChangesClubs.setEnabled(false);
+        jBtnSaveChangesClubs.setFocusable(false);
+        jBtnSaveChangesClubs.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnSaveChangesClubsMouseClicked(evt);
+            }
+        });
+        jBtnSaveChangesClubs.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSaveChangesClubsActionPerformed(evt);
+            }
+        });
+        jPanelClubs.add(jBtnSaveChangesClubs, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 30, 160, 36));
 
         jPanel17.setBackground(new java.awt.Color(250, 250, 250));
         jPanel17.setMaximumSize(new java.awt.Dimension(319, 470));
@@ -1185,6 +1184,8 @@ public class Home extends javax.swing.JFrame {
 
         jPanel17.add(jScrollPane16, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 180, 220, 90));
 
+        jPanelClubs.add(jPanel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 485));
+
         jTxtHolder10.setEditable(false);
         jTxtHolder10.setBackground(new java.awt.Color(255, 224, 224));
         jTxtHolder10.setColumns(20);
@@ -1198,30 +1199,10 @@ public class Home extends javax.swing.JFrame {
         jTxtHolder10.setFocusable(false);
         jScrollPane8.setViewportView(jTxtHolder10);
 
-        javax.swing.GroupLayout jPanelClubsLayout = new javax.swing.GroupLayout(jPanelClubs);
-        jPanelClubs.setLayout(jPanelClubsLayout);
-        jPanelClubsLayout.setHorizontalGroup(
-            jPanelClubsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelClubsLayout.createSequentialGroup()
-                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 69, Short.MAX_VALUE)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(65, 65, 65))
-            .addGroup(jPanelClubsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel140, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanelClubsLayout.setVerticalGroup(
-            jPanelClubsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelClubsLayout.createSequentialGroup()
-                .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, 485, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 17, Short.MAX_VALUE))
-            .addGroup(jPanelClubsLayout.createSequentialGroup()
-                .addGap(48, 48, 48)
-                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanelClubsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addComponent(jLabel140, javax.swing.GroupLayout.PREFERRED_SIZE, 502, Short.MAX_VALUE))
-        );
+        jPanelClubs.add(jScrollPane8, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 640, 380));
+
+        jLabel140.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Untitled design.png"))); // NOI18N
+        jPanelClubs.add(jLabel140, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1110, 560));
 
         JTabbedNavigation.addTab("tab8", jPanelClubs);
 
@@ -3476,7 +3457,7 @@ public class Home extends javax.swing.JFrame {
 
         JTabbedNavigation.addTab("tab10", jPanelSTEvaluation_4);
 
-        jLabel141.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Untitled design.png"))); // NOI18N
+        jPanelFunFacts.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel16.setBackground(new java.awt.Color(250, 250, 250));
         jPanel16.setMaximumSize(new java.awt.Dimension(319, 470));
@@ -3510,6 +3491,8 @@ public class Home extends javax.swing.JFrame {
 
         jPanel16.add(jScrollPane14, new org.netbeans.lib.awtextra.AbsoluteConstraints(42, 180, 220, 90));
 
+        jPanelFunFacts.add(jPanel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, 480));
+
         jTxtHolder8.setEditable(false);
         jTxtHolder8.setBackground(new java.awt.Color(255, 224, 224));
         jTxtHolder8.setColumns(20);
@@ -3523,36 +3506,30 @@ public class Home extends javax.swing.JFrame {
         jTxtHolder8.setFocusable(false);
         jScrollPane15.setViewportView(jTxtHolder8);
 
-        javax.swing.GroupLayout jPanelFunFactsLayout = new javax.swing.GroupLayout(jPanelFunFacts);
-        jPanelFunFacts.setLayout(jPanelFunFactsLayout);
-        jPanelFunFactsLayout.setHorizontalGroup(
-            jPanelFunFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanelFunFactsLayout.createSequentialGroup()
-                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(66, 66, 66)
-                .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 640, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(68, Short.MAX_VALUE))
-            .addGroup(jPanelFunFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelFunFactsLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel141)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanelFunFactsLayout.setVerticalGroup(
-            jPanelFunFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanelFunFactsLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(jPanelFunFactsLayout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanelFunFactsLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanelFunFactsLayout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jLabel141, javax.swing.GroupLayout.PREFERRED_SIZE, 480, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jPanelFunFacts.add(jScrollPane15, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 70, 640, 380));
+
+        jBtnSaveChangesFun.setBackground(new java.awt.Color(219, 166, 37));
+        jBtnSaveChangesFun.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
+        jBtnSaveChangesFun.setForeground(new java.awt.Color(255, 255, 255));
+        jBtnSaveChangesFun.setText("SAVE CHANGES");
+        jBtnSaveChangesFun.setToolTipText("");
+        jBtnSaveChangesFun.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 5, true));
+        jBtnSaveChangesFun.setEnabled(false);
+        jBtnSaveChangesFun.setFocusable(false);
+        jBtnSaveChangesFun.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jBtnSaveChangesFunMouseClicked(evt);
+            }
+        });
+        jBtnSaveChangesFun.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnSaveChangesFunActionPerformed(evt);
+            }
+        });
+        jPanelFunFacts.add(jBtnSaveChangesFun, new org.netbeans.lib.awtextra.AbsoluteConstraints(373, 30, 160, 36));
+
+        jLabel141.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons/Untitled design.png"))); // NOI18N
+        jPanelFunFacts.add(jLabel141, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 1080, 480));
 
         JTabbedNavigation.addTab("tab11", jPanelFunFacts);
 
@@ -3598,8 +3575,35 @@ public class Home extends javax.swing.JFrame {
             case "HOME":
                 JTabbedNavigation.setSelectedIndex(0);
                 break;
+
             case "HISTORY, MISSION, and VISION":
                 JTabbedNavigation.setSelectedIndex(1);
+                try {
+                    File fread = new File("isAdmin.txt");
+                    Scanner in = new Scanner(fread);
+                    
+                    while (in.hasNext()){
+                        String holder = in.nextLine();
+                        
+                        if ("true".equals(holder)){
+                            jBtnAdmin.setVisible(true);
+                            jBtnAdmin.setEnabled(true);
+                            jTxtHolder5.setEditable(true);
+                            jTxtHolder5.setFocusable(true);
+                            jBtnSaveChangesHMV.setVisible(true);
+                            jBtnSaveChangesHMV.setEnabled(true);
+                        } else if ("false".equals(holder)){
+                            jBtnAdmin.setVisible(false);
+                            jBtnAdmin.setEnabled(false);
+                            jBtnSaveChangesHMV.setVisible(false);
+                            jBtnSaveChangesHMV.setEnabled(false);
+                        }
+                        
+                        
+                    }
+                    } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+                    }
                 break;
             case "ACHIEVEMENTS":
                 JTabbedNavigation.setSelectedIndex(2);
@@ -3612,6 +3616,17 @@ public class Home extends javax.swing.JFrame {
                 break;
             case "ADMISSION/SCHOLARSHIP":
                 JTabbedNavigation.setSelectedIndex(4);
+                if (jBtnAdmin.isEnabled()){
+                    jTxtHolder4.setFocusable(true);
+                    jTxtHolder4.setEditable(true);
+                    jBtnSaveChangesAdmission.setEnabled(true);
+                    jBtnSaveChangesAdmission.setVisible(true);
+                } else{
+                    jTxtHolder4.setFocusable(false);
+                    jTxtHolder4.setEditable(false);
+                    jBtnSaveChangesAdmission.setEnabled(false);
+                    jBtnSaveChangesAdmission.setVisible(false);
+                }
                 break;
             case "COLLEGES":
                 JTabbedNavigation.setSelectedIndex(5);
@@ -4303,405 +4318,404 @@ public class Home extends javax.swing.JFrame {
     }
     private void jButtonRessultsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonRessultsMouseClicked
 
-// process first before resetting
-        boolean choice_made = buttonGroup25.getSelection() != null
-                && buttonGroup26.getSelection() != null
-                && buttonGroup27.getSelection() != null
-                && buttonGroup28.getSelection() != null
-                && buttonGroup29.getSelection() != null
-                && buttonGroup30.getSelection() != null;
+ // process first before resetting
+        boolean choice_made = buttonGroup25.getSelection() != null && 
+                buttonGroup26.getSelection() != null && 
+                buttonGroup27.getSelection() != null && 
+                buttonGroup28.getSelection() != null && 
+                buttonGroup29.getSelection() != null && 
+                buttonGroup30.getSelection() != null;
+        
+        if (choice_made == true){
+            // set of points for Strand & Track
+            int intTVL_score = 0, intACAD_score = 0, intSPORTS_score = 0, intARTS_score = 0;
+            int intABM = 0, intSTEM = 0, intHUMMS = 0, intANIMATION = 0, intPERFORMING_ARTS = 0, intFILM_PRODUCTION = 0, intSPORTS_COACHING = 0, intSPORTS_OFFICIATING = 0, intHOME_ECONOMICS = 0, intICT = 0, intINDUSTRIAL = 0;
 
-        if (choice_made == true) {
 
             //get grades and NCAE
-            filText = jTFFilipino.getText();
-            engText = jTFEnglish.getText();
-            genText = jTFGenAve.getText();
-            mathText = jTFMath.getText();
-            sciText = jTFScience.getText();
-            AcadText = jTFAcademic.getText();
-            SportsText = jTFSports.getText();
-            TVLText = jTFTVL.getText();
-            ArtsText = jTFArts.getText();
-
+            String filText = jTFFilipino.getText(), engText = jTFEnglish.getText(), genText = jTFGenAve.getText(), mathText = jTFMath.getText(), sciText = jTFScience.getText();
+            String AcadText = jTFAcademic.getText(), SportsText = jTFSports.getText(), TVLText = jTFTVL.getText(), ArtsText = jTFArts.getText();
+            
             //grades
-            intConvertFil = filText.isEmpty() ? 0 : Integer.parseInt(filText);
-            intConvertEng = engText.isEmpty() ? 0 : Integer.parseInt(engText);
-            intConvertGen = genText.isEmpty() ? 0 : Integer.parseInt(genText);
-            intConvertMath = mathText.isEmpty() ? 0 : Integer.parseInt(mathText);
-            intConvertSci = sciText.isEmpty() ? 0 : Integer.parseInt(sciText);
-
+            int intConvertFil = filText.isEmpty() ? 0 : Integer.parseInt(filText);
+            int intConvertEng = engText.isEmpty() ? 0 : Integer.parseInt(engText);
+            int intConvertGen = genText.isEmpty() ? 0 : Integer.parseInt(genText);
+            int intConvertMath = mathText.isEmpty() ? 0 : Integer.parseInt(mathText);
+            int intConvertSci = sciText.isEmpty() ? 0 : Integer.parseInt(sciText);
+            
             //NCAE
-            intConvertAcads = AcadText.isEmpty() ? 0 : Integer.parseInt(AcadText);
-            intConvertSports = SportsText.isEmpty() ? 0 : Integer.parseInt(SportsText);
-            intConvertTVL = TVLText.isEmpty() ? 0 : Integer.parseInt(TVLText);
-            intConvertArts = ArtsText.isEmpty() ? 0 : Integer.parseInt(ArtsText);
-
+            int intConvertAcads = AcadText.isEmpty() ? 0 : Integer.parseInt(AcadText);
+            int intConvertSports = SportsText.isEmpty() ? 0 : Integer.parseInt(SportsText);
+            int intConvertTVL = TVLText.isEmpty() ? 0 : Integer.parseInt(TVLText);
+            int intConvertArts = ArtsText.isEmpty() ? 0 : Integer.parseInt(ArtsText);
+            
             // Pointing System Begins for Grades & NCAE
-            if (!jCBAcadRating.isSelected()) {
-                if (intConvertFil >= 85) {
+            if (!jCBAcadRating.isSelected()){
+                if (intConvertFil >= 85){
                     intTVL_score += 1;
                     intACAD_score += 2;
                     intARTS_score += 1;
                     intSPORTS_score += 1;
                 }
-                if (intConvertEng >= 85) {
+                if (intConvertEng >= 85){
                     intTVL_score += 1;
                     intACAD_score += 2;
                     intARTS_score += 1;
                     intSPORTS_score += 1;
                 }
-                if (intConvertGen >= 85) {
+                if (intConvertGen >= 85){
                     intTVL_score += 1;
                     intACAD_score += 2;
                     intARTS_score += 1;
                     intSPORTS_score += 1;
                 }
-                if (intConvertMath >= 85) {
+                if (intConvertMath >= 85){
                     intTVL_score += 1;
                     intACAD_score += 2;
                     intARTS_score += 1;
                     intSPORTS_score += 1;
                 }
-                if (intConvertSci >= 85) {
+                if (intConvertSci >= 85){
                     intTVL_score += 1;
                     intACAD_score += 2;
                     intARTS_score += 1;
                     intSPORTS_score += 1;
                 }
             }
-
-            if (!jCBNcae.isSelected()) {
+            
+            if (!jCBNcae.isSelected()){
                 intACAD_score += intConvertAcads / 10;
                 intTVL_score += intConvertSports / 10;
                 intSPORTS_score += intConvertTVL / 10;
                 intARTS_score += intConvertArts / 10;
             }
-
+            
             // Pointing System Begins for Radio Buttons
             //#1
-            if (jRBYes1.isSelected()) {
+            if (jRBYes1.isSelected()){
                 intACAD_score += 3;
                 intARTS_score += 2;
                 intTVL_score += 2;
-            } else if (jRBNo1.isSelected()) {
+            } else if (jRBNo1.isSelected()){
                 intTVL_score += 3;
                 intSPORTS_score += 2;
             }
-
+            
             //#2
-            if (jRBYes2.isSelected()) {
+            if (jRBYes2.isSelected()){
                 intTVL_score += 3;
                 intACAD_score += 2;
-            } else if (jRBNo2.isSelected()) {
+            } else if (jRBNo2.isSelected()){
                 intARTS_score += 2;
                 intSPORTS_score += 2;
             }
-
+            
             //#3
-            if (jRBYes3.isSelected()) {
+            if (jRBYes3.isSelected()){
                 intTVL_score += 3;
                 intACAD_score += 2;
             }
-
+            
             //#4
-            if (jRBYes4.isSelected()) {
+            if (jRBYes4.isSelected()){
                 intTVL_score += 2;
             }
-
+            
             //#5
-            if (jRBYes5.isSelected()) {
+            if (jRBYes5.isSelected()){
                 intACAD_score += 3;
                 intARTS_score += 2;
                 intTVL_score += 1;
                 intSPORTS_score += 2;
             }
-
+            
             //#6
-            if (jRBYes6.isSelected()) {
+            if (jRBYes6.isSelected()){
                 intACAD_score += 2;
             }
-
+            
             //#7
-            if (jRBYes7.isSelected()) {
+            if (jRBYes7.isSelected()){
                 intARTS_score += 5;
             }
-
+            
             //#8
-            if (jRBYes8.isSelected()) {
+            if (jRBYes8.isSelected()){
                 intSPORTS_score += 3;
             }
-
+            
             //#9
-            if (jRB1_1.isSelected()) {
+            if (jRB1_1.isSelected()){
                 intABM += 3;
-            } else if (jRB1_2.isSelected()) {
+            } else if (jRB1_2.isSelected()){
                 intABM += 9;
-            } else if (jRB1_3.isSelected()) {
+            } else if (jRB1_3.isSelected()){
                 intABM += 15;
             }
-
+                        
             //#10
-            if (jRB2_1.isSelected()) {
+            if (jRB2_1.isSelected()){
                 intSTEM += 3;
-            } else if (jRB2_2.isSelected()) {
-                intSTEM += 9;
-            } else if (jRB2_3.isSelected()) {
-                intSTEM += 15;
+            } else if (jRB2_2.isSelected()){
+                intSTEM  += 9;
+            } else if (jRB2_3.isSelected()){
+                intSTEM  += 15;
             }
-
+            
             //#11
-            if (jRB3_1.isSelected()) {
+            if (jRB3_1.isSelected()){
                 intHUMMS += 3;
-            } else if (jRB3_2.isSelected()) {
-                intHUMMS += 9;
-            } else if (jRB3_3.isSelected()) {
-                intHUMMS += 15;
+            } else if (jRB3_2.isSelected()){
+                intHUMMS  += 9;
+            } else if (jRB3_3.isSelected()){
+                intHUMMS  += 15;
             }
-
+            
             //#12
-            if (jRB4_1.isSelected()) {
+            if (jRB4_1.isSelected()){
                 intANIMATION += 3;
-            } else if (jRB4_2.isSelected()) {
-                intANIMATION += 9;
-            } else if (jRB4_3.isSelected()) {
-                intANIMATION += 15;
+            } else if (jRB4_2.isSelected()){
+                intANIMATION  += 9;
+            } else if (jRB4_3.isSelected()){
+                intANIMATION  += 15;
             }
-
+            
             //#13
-            if (jRB5_1.isSelected()) {
+            if (jRB5_1.isSelected()){
                 intPERFORMING_ARTS += 3;
-            } else if (jRB5_2.isSelected()) {
+            } else if (jRB5_2.isSelected()){
                 intPERFORMING_ARTS += 9;
-            } else if (jRB5_3.isSelected()) {
-                intPERFORMING_ARTS += 15;
+            } else if (jRB5_3.isSelected()){
+                intPERFORMING_ARTS  += 15;
             }
-
+            
             //#14
-            if (jRB6_1.isSelected()) {
+            if (jRB6_1.isSelected()){
                 intFILM_PRODUCTION += 3;
-            } else if (jRB6_2.isSelected()) {
+            } else if (jRB6_2.isSelected()){
                 intFILM_PRODUCTION += 9;
-            } else if (jRB6_3.isSelected()) {
-                intFILM_PRODUCTION += 15;
+            } else if (jRB6_3.isSelected()){
+                intFILM_PRODUCTION  += 15;
             }
-
+            
             //#15
-            if (jRB7_1.isSelected()) {
+            if (jRB7_1.isSelected()){
                 intSPORTS_COACHING += 3;
-            } else if (jRB7_2.isSelected()) {
+            } else if (jRB7_2.isSelected()){
                 intSPORTS_COACHING += 9;
-            } else if (jRB7_3.isSelected()) {
-                intSPORTS_COACHING += 15;
+            } else if (jRB7_3.isSelected()){
+                intSPORTS_COACHING  += 15;
             }
-
+            
             //#16
-            if (jRB8_1.isSelected()) {
+            if (jRB8_1.isSelected()){
                 intSPORTS_OFFICIATING += 3;
-            } else if (jRB8_2.isSelected()) {
+            } else if (jRB8_2.isSelected()){
                 intSPORTS_OFFICIATING += 9;
-            } else if (jRB8_3.isSelected()) {
-                intSPORTS_OFFICIATING += 15;
+            } else if (jRB8_3.isSelected()){
+                intSPORTS_OFFICIATING  += 15;
             }
-
+            
             //----- HOME ECO
             //#17
-            if (jRB9_1.isSelected()) {
+            if (jRB9_1.isSelected()){
                 intHOME_ECONOMICS += 0;
-            } else if (jRB9_2.isSelected()) {
+            } else if (jRB9_2.isSelected()){
                 intHOME_ECONOMICS += 1;
-            } else if (jRB9_3.isSelected()) {
-                intHOME_ECONOMICS += 3;
+            } else if (jRB9_3.isSelected()){
+                intHOME_ECONOMICS  += 3;
             }
-
+            
             //#18
-            if (jRB10_1.isSelected()) {
+            if (jRB10_1.isSelected()){
                 intHOME_ECONOMICS += 0;
-            } else if (jRB10_2.isSelected()) {
+            } else if (jRB10_2.isSelected()){
                 intHOME_ECONOMICS += 1;
-            } else if (jRB10_3.isSelected()) {
-                intHOME_ECONOMICS += 3;
+            } else if (jRB10_3.isSelected()){
+                intHOME_ECONOMICS  += 3;
             }
-
+            
             //#19
-            if (jRB11_1.isSelected()) {
+            if (jRB11_1.isSelected()){
                 intHOME_ECONOMICS += 0;
-            } else if (jRB11_2.isSelected()) {
+            } else if (jRB11_2.isSelected()){
                 intHOME_ECONOMICS += 1;
-            } else if (jRB11_3.isSelected()) {
-                intHOME_ECONOMICS += 3;
+            } else if (jRB11_3.isSelected()){
+                intHOME_ECONOMICS  += 3;
             }
-
+            
             //#20
-            if (jRB12_1.isSelected()) {
+            if (jRB12_1.isSelected()){
                 intHOME_ECONOMICS += 0;
-            } else if (jRB12_2.isSelected()) {
+            } else if (jRB12_2.isSelected()){
                 intHOME_ECONOMICS += 1;
-            } else if (jRB12_3.isSelected()) {
-                intHOME_ECONOMICS += 3;
+            } else if (jRB12_3.isSelected()){
+                intHOME_ECONOMICS  += 3;
             }
-
+            
             //#21
-            if (jRB13_1.isSelected()) {
+            if (jRB13_1.isSelected()){
                 intHOME_ECONOMICS += 0;
-            } else if (jRB13_2.isSelected()) {
+            } else if (jRB13_2.isSelected()){
                 intHOME_ECONOMICS += 1;
-            } else if (jRB13_3.isSelected()) {
-                intHOME_ECONOMICS += 3;
+            } else if (jRB13_3.isSelected()){
+                intHOME_ECONOMICS  += 3;
             }
-
+            
             //---- ICT
             //#22
-            if (jRB14_1.isSelected()) {
+            if (jRB14_1.isSelected()){
                 intICT += 1;
-            } else if (jRB14_2.isSelected()) {
+            } else if (jRB14_2.isSelected()){
                 intICT += 3;
-            } else if (jRB14_3.isSelected()) {
-                intICT += 5;
+            } else if (jRB14_3.isSelected()){
+                intICT  += 5;
             }
-
+            
             //#23
-            if (jRB15_1.isSelected()) {
+            if (jRB15_1.isSelected()){
                 intICT += 1;
-            } else if (jRB15_2.isSelected()) {
+            } else if (jRB15_2.isSelected()){
                 intICT += 3;
-            } else if (jRB15_3.isSelected()) {
-                intICT += 5;
+            } else if (jRB15_3.isSelected()){
+                intICT  += 5;
             }
-
+            
             //#24
-            if (jRB16_1.isSelected()) {
+            if (jRB16_1.isSelected()){
                 intICT += 1;
-            } else if (jRB16_2.isSelected()) {
+            } else if (jRB16_2.isSelected()){
                 intICT += 3;
-            } else if (jRB16_3.isSelected()) {
-                intICT += 5;
+            } else if (jRB16_3.isSelected()){
+                intICT  += 5;
             }
-
+            
             // ---- INDUSTRIAL
             //#25
-            if (jRB17_1.isSelected()) {
+            if (jRB17_1.isSelected()){
                 intINDUSTRIAL += 0;
-            } else if (jRB17_2.isSelected()) {
+            } else if (jRB17_2.isSelected()){
                 intINDUSTRIAL += 1;
-            } else if (jRB17_3.isSelected()) {
-                intINDUSTRIAL += 3;
+            } else if (jRB17_3.isSelected()){
+                intINDUSTRIAL  += 3;
             }
-
+            
             //#26
-            if (jRB18_1.isSelected()) {
+            if (jRB18_1.isSelected()){
                 intINDUSTRIAL += 0;
-            } else if (jRB18_2.isSelected()) {
+            } else if (jRB18_2.isSelected()){
                 intINDUSTRIAL += 1;
-            } else if (jRB18_3.isSelected()) {
-                intINDUSTRIAL += 3;
+            } else if (jRB18_3.isSelected()){
+                intINDUSTRIAL  += 3;
             }
-
+            
             //#27
-            if (jRB19_1.isSelected()) {
+            if (jRB19_1.isSelected()){
                 intINDUSTRIAL += 0;
-            } else if (jRB19_2.isSelected()) {
+            } else if (jRB19_2.isSelected()){
                 intINDUSTRIAL += 1;
-            } else if (jRB19_3.isSelected()) {
-                intINDUSTRIAL += 3;
+            } else if (jRB19_3.isSelected()){
+                intINDUSTRIAL  += 3;
             }
-
+            
             //#28
-            if (jRB20_1.isSelected()) {
+            if (jRB20_1.isSelected()){
                 intINDUSTRIAL += 0;
-            } else if (jRB20_2.isSelected()) {
+            } else if (jRB20_2.isSelected()){
                 intINDUSTRIAL += 1;
-            } else if (jRB20_3.isSelected()) {
-                intINDUSTRIAL += 3;
+            } else if (jRB20_3.isSelected()){
+                intINDUSTRIAL  += 3;
             }
-
+            
             //#29
-            if (jRB21_1.isSelected()) {
+            if (jRB21_1.isSelected()){
                 intINDUSTRIAL += 0;
-            } else if (jRB21_2.isSelected()) {
+            } else if (jRB21_2.isSelected()){
                 intINDUSTRIAL += 1;
-            } else if (jRB21_3.isSelected()) {
-                intINDUSTRIAL += 3;
+            } else if (jRB21_3.isSelected()){
+                intINDUSTRIAL  += 3;
             }
-
+            
             //#30
-            if (jRB22_1.isSelected()) {
+            if (jRB22_1.isSelected()){
                 intINDUSTRIAL += 0;
-            } else if (jRB22_2.isSelected()) {
+            } else if (jRB22_2.isSelected()){
                 intINDUSTRIAL += 1;
-            } else if (jRB22_3.isSelected()) {
-                intINDUSTRIAL += 3;
+            } else if (jRB22_3.isSelected()){
+                intINDUSTRIAL  += 3;
             }
-
+            
+            
             /* ----- BALANCING (when scores of strand match within the other, there will be an equally incrementation of scores)
                     intTVL_score += ;
                     intACAD_score += ;
                     intARTS_score += ;
                     intSPORTS_score += ;
-             */
-            if ((intACAD_score == intARTS_score) || (intACAD_score == intTVL_score) || (intACAD_score == intSPORTS_score)) {
+            */
+            
+            if ((intACAD_score == intARTS_score) || (intACAD_score == intTVL_score) || (intACAD_score == intSPORTS_score)){
                 intACAD_score += 3;
             }
-
-            if ((intARTS_score == intTVL_score) || (intARTS_score == intSPORTS_score)) {
+            
+            if ((intARTS_score == intTVL_score) || (intARTS_score == intSPORTS_score)){
                 intARTS_score += 2;
             }
-
-            if ((intTVL_score == intSPORTS_score)) {
+            
+            if ((intTVL_score == intSPORTS_score)){
                 intTVL_score += 1;
             }
-
+            
             // RESULT VERFICATION & DISPLAYING
             String strResultStrand = "-", strResultTrack = "-";
-
-            if ((intACAD_score > intARTS_score) && (intACAD_score > intTVL_score) && (intACAD_score > intSPORTS_score)) {
+            
+            if ((intACAD_score > intARTS_score) && (intACAD_score > intTVL_score) && (intACAD_score > intSPORTS_score)){
                 strResultTrack = "ACADEMIC TRACK";
-
-                if (intABM > intSTEM && intABM > intHUMMS) {
+                
+                if (intABM > intSTEM && intABM > intHUMMS){
                     strResultStrand = "Accountancy, Business, and Management Strand";
                     intABM += 1;
-                } else if (intABM == intSTEM) {
+                } else if (intABM == intSTEM){
                     strResultStrand = "Accountancy, Business, and Management Strand";
                     intABM += 1;
-                } else if (intABM == intHUMMS) {
+                } else if (intABM == intHUMMS){
                     strResultStrand = "Humanities and Social Science Strand";
                     intHUMMS += 1;
-                } else if (intHUMMS == intSTEM) {
+                } else if (intHUMMS == intSTEM){
                     strResultStrand = "Humanities and Social Science Strand";
                     intHUMMS += 1;
                 }
-
-                if (intSTEM > intABM && intSTEM > intHUMMS) {
+                
+                if (intSTEM > intABM && intSTEM > intHUMMS){
                     strResultStrand = "Science, Technology, Engineering and Mathematics Strand";
-                } else if (intHUMMS > intABM && intHUMMS > intSTEM) {
+                }else if (intHUMMS > intABM && intHUMMS > intSTEM){
                     strResultStrand = "Humanities and Social Science Strand";
                 }
-
-            } else if ((intARTS_score > intACAD_score) && (intARTS_score > intTVL_score) && (intARTS_score > intSPORTS_score)) {
+                
+            } else if ((intARTS_score > intACAD_score) && (intARTS_score > intTVL_score) && (intARTS_score > intSPORTS_score)){
                 strResultTrack = "ARTS & DESIGN TRACK";
-
-                if (intANIMATION > intFILM_PRODUCTION && intANIMATION > intPERFORMING_ARTS) {
+                
+                if (intANIMATION > intFILM_PRODUCTION && intANIMATION > intPERFORMING_ARTS){
                     strResultStrand = "Animation Strand";
-                } else if (intANIMATION == intFILM_PRODUCTION) {
+                } else if (intANIMATION == intFILM_PRODUCTION){
                     strResultStrand = "Animation Strand";
                     intANIMATION += 1;
-                } else if (intFILM_PRODUCTION == intPERFORMING_ARTS) {
+                } else if (intFILM_PRODUCTION == intPERFORMING_ARTS){
                     strResultStrand = "Film Production Strand";
                     intFILM_PRODUCTION += 1;
-                } else if (intPERFORMING_ARTS == intANIMATION) {
+                } else if (intPERFORMING_ARTS == intANIMATION){
                     strResultStrand = "Performing Arts Strand";
                     intPERFORMING_ARTS += 1;
                 }
-
-                if (intFILM_PRODUCTION > intANIMATION && intFILM_PRODUCTION > intPERFORMING_ARTS) {
+                
+                if (intFILM_PRODUCTION > intANIMATION && intFILM_PRODUCTION > intPERFORMING_ARTS){
                     strResultStrand = "Film Production Strand";
                 }
-                if (intPERFORMING_ARTS > intANIMATION && intPERFORMING_ARTS > intFILM_PRODUCTION) {
+                if (intPERFORMING_ARTS > intANIMATION && intPERFORMING_ARTS > intFILM_PRODUCTION){
                     strResultStrand = "Performing Arts Strand";
                 }
-            } else if ((intTVL_score > intACAD_score) && (intTVL_score > intARTS_score) && (intTVL_score > intSPORTS_score)) {
+            } else if ((intTVL_score > intACAD_score) && (intTVL_score > intARTS_score) && (intTVL_score > intSPORTS_score)){
                 strResultTrack = "TECHNICAL-VOCATIONAL-LIVELIHOOD TRACK";
-
+                
                 if (intHOME_ECONOMICS > intICT && intHOME_ECONOMICS > intINDUSTRIAL) {
                     strResultStrand = "Home Economics Strand";
                 } else if (intHOME_ECONOMICS == intICT) {
@@ -4722,14 +4736,14 @@ public class Home extends javax.swing.JFrame {
                 if (intINDUSTRIAL > intHOME_ECONOMICS && intINDUSTRIAL > intICT) {
                     strResultStrand = "Industrial Arts Strand";
                 }
-            } else if ((intSPORTS_score > intACAD_score) && (intSPORTS_score > intARTS_score) && (intSPORTS_score > intTVL_score)) {
+            } else if ((intSPORTS_score > intACAD_score) && (intSPORTS_score > intARTS_score) && (intSPORTS_score > intTVL_score)){
                 strResultTrack = "SPORTS TRACK";
-
-                if (intSPORTS_COACHING > intSPORTS_OFFICIATING) {
+               
+                if (intSPORTS_COACHING > intSPORTS_OFFICIATING){
                     strResultStrand = "Sports Coaching Strand";
-                } else if (intSPORTS_COACHING < intSPORTS_OFFICIATING) {
+                } else if (intSPORTS_COACHING < intSPORTS_OFFICIATING){
                     strResultStrand = "Sports Officiating Strand";
-                } else if (intSPORTS_COACHING == intSPORTS_OFFICIATING) {
+                } else if (intSPORTS_COACHING == intSPORTS_OFFICIATING){
                     strResultStrand = "Sports Officiating Strand";
                     intSPORTS_OFFICIATING += 1;
                 }
@@ -4740,41 +4754,41 @@ public class Home extends javax.swing.JFrame {
                     intACAD_score += ;
                     intARTS_score += ;
                     intSPORTS_score += ;
-             */
+            */
             // FINAL RESULT
             jLabelResultStrand.setText(strResultStrand);
             jLabelResultTrack2.setText(strResultTrack);
-
+            
             // MAIN TRACKS
             jLabelResultAcadTrack.setText(String.valueOf(intACAD_score));
             jLabelResultArtsTrack.setText(String.valueOf(intARTS_score));
             jLabelResultTVLTrack.setText(String.valueOf(intTVL_score));
             jLabelResultSportsTrack.setText(String.valueOf(intSPORTS_score));
-
+            
             // ACADEMIC TRACK
             jLabelHUMMS.setText(String.valueOf(intHUMMS));
             jLabelSTEM.setText(String.valueOf(intSTEM));
             jLabelABM.setText(String.valueOf(intABM));
-
+            
             // ARTS & DESIGN TRACK
             jLabelPERFORMING_ARTS.setText(String.valueOf(intPERFORMING_ARTS));
             jLabelFILM_PRODUCTION.setText(String.valueOf(intFILM_PRODUCTION));
             jLabelANIMATION.setText(String.valueOf(intANIMATION));
-
+            
             // TVL TRACK
             jLabelHOME_ECONOMICS.setText(String.valueOf(intHOME_ECONOMICS));
             jLabelICT.setText(String.valueOf(intICT));
             jLabelINDUSTRIAL_ARTS.setText(String.valueOf(intINDUSTRIAL));
-
+            
             // SPORTS TRACK
             jLabelSPORTS_COACHING.setText(String.valueOf(intSPORTS_COACHING));
             jLabelSPORTS_OFFICIATING.setText(String.valueOf(intSPORTS_OFFICIATING));
-
+      
             // going to the RESULTS TAB & reseting choices
             JTabbedNavigation.setSelectedIndex(11);
             ResetST();
-        } else {
-            JOptionPane.showMessageDialog(this, "You have an Incomplete or Invalid Response/s, please check again.", "Incomplete Response", JOptionPane.ERROR_MESSAGE);
+        } else{
+            JOptionPane.showMessageDialog(this,"You have an Incomplete or Invalid Response/s, please check again.","Incomplete Response",JOptionPane.ERROR_MESSAGE);
         }
 
     }//GEN-LAST:event_jButtonRessultsMouseClicked
@@ -4829,7 +4843,7 @@ public class Home extends javax.swing.JFrame {
                     imageIcon = new ImageIcon(getClass().getResource("/icons/mateo.jpg"));
                     jFacility_PicDisplay.setIcon(imageIcon);
                     jTxtHolder3.setText("Description: Dr. Mateo Conference room is an executive conference room with strong internet connection that can handle small group face-to-face and online meetings.");
-                    jTxtHolder2.setText("Location:\nNot Applicable yet");
+                    jTxtHolder2.setText("Location:\n2nd Floor South Wing Main Building");
                     break;
                 case 2:
                     // olona
@@ -4850,7 +4864,7 @@ public class Home extends javax.swing.JFrame {
                     imageIcon = new ImageIcon(getClass().getResource("/icons/interfaith.jpg"));
                     jFacility_PicDisplay.setIcon(imageIcon);
                     jTxtHolder3.setText("Description: The Interfaith Chapel for students and faculty members of different faiths.");
-                    jTxtHolder2.setText("Location:\n>>Infront of the College of Nutrition and Food Science Building\n>>Infront of the Main Building East Wing and North Wing");
+                    jTxtHolder2.setText("Location:\nInfront of the Main Building East Wing and North Wing");
                     break;
 
                 case 5:
@@ -4866,7 +4880,7 @@ public class Home extends javax.swing.JFrame {
                     imageIcon = new ImageIcon(getClass().getResource("/icons/ninoy library.jpg"));
                     jFacility_PicDisplay.setIcon(imageIcon);
                     jTxtHolder3.setText("Description: The University Librarry serves as the University's gateway to the global information society, and provides various services and development of programs to its clientele.");
-                    jTxtHolder2.setText("Location:\nInfront of the Charlie del Rosario Student Development Center\nInfront of the Laboratory High School\nInfront of the Charlie del Rosario Building");
+                    jTxtHolder2.setText("Location:\nFront Passage near PUP-Lagoon");
                     break;
 
                 case 7:
@@ -4890,7 +4904,7 @@ public class Home extends javax.swing.JFrame {
                     imageIcon = new ImageIcon(getClass().getResource("/icons/pup-lagoon.jpg"));
                     jFacility_PicDisplay.setIcon(imageIcon);
                     jTxtHolder3.setText("Description: The Lagoon serves as one of the major facilities in the university, wherein food, rest and enjoyment can take place.");
-                    jTxtHolder2.setText("Location:\nNot Applicable yet");
+                    jTxtHolder2.setText("Location:\nNear Center of PUP, before coming to West Building");
                     break;
 
                 case 10:
@@ -4930,27 +4944,27 @@ public class Home extends javax.swing.JFrame {
                     imageIcon = new ImageIcon(getClass().getResource("/icons/cea.jpg"));
                     jFacility_PicDisplay.setIcon(imageIcon);
                     jTxtHolder3.setText("Description: The College of Engineering and Architecture Building serves as the building for engineering courses");
-                    jTxtHolder2.setText("Location:\nNot Applicable yet");
+                    jTxtHolder2.setText("Location:\nH2X4+H5R, Anonas, Sta. Mesa, Maynila, 1015 Kalakhang Maynila");
                     break;
                 case 15:
                     imageIcon = new ImageIcon(getClass().getResource("/icons/coc.jpg"));
                     jFacility_PicDisplay.setIcon(imageIcon);
                     jTxtHolder3.setText("Description: The College of Communications Building serves as the building for mass com. and marketing related courses");
-                    jTxtHolder2.setText("Location:\nNot Applicable yet");
+                    jTxtHolder2.setText("Location:\nCOC Building, NDC Compound Anonas St., Sta. Mesa Manila 1016\n");
                     break;
 
                 case 16:
                     imageIcon = new ImageIcon(getClass().getResource("/icons/south.jpg"));
                     jFacility_PicDisplay.setIcon(imageIcon);
                     jTxtHolder3.setText("Description: The main building of PUP Sta. Mesa South Wing is designed to accommodate various academic departments, classrooms, laboratories, and support facilities.");
-                    jTxtHolder2.setText("Location:\nNot Applicable yet");
+                    jTxtHolder2.setText("Location:\nNear PUP Ferry Station");
                     break;
 
                 case 17:
                     imageIcon = new ImageIcon(getClass().getResource("/icons/west.jpg"));
                     jFacility_PicDisplay.setIcon(imageIcon);
                     jTxtHolder3.setText("Description: Serves as a central hub for academic activities, administrative functions, and student services, facilitating learning, collaboration, and campus operations.");
-                    jTxtHolder2.setText("Location:\nNot Applicable yet");
+                    jTxtHolder2.setText("Location:\nNear PUP-Lagoon");
                     break;
 
                 case 18:
@@ -5011,109 +5025,24 @@ public class Home extends javax.swing.JFrame {
         jBtnHistory.setBackground(new java.awt.Color(136, 0, 0));
         jBtnMission.setBackground(new java.awt.Color(219, 166, 37));
         jBtnVision.setBackground(new java.awt.Color(219, 166, 37));
+        
+        String holder = "";
+        
+        try {
+                    File fread = new File("History.txt");
+                    Scanner in = new Scanner(fread);
+                    
+                    while (in.hasNext()){
+                        holder += in.nextLine() + "\n";
 
-        jTxtHolder5.setText("----- History: 1904-1951 -----\n"
-                + "\n"
-                + "• 1904: Manila Business School (MBS) founded, offering vocational-technical courses and intermediate curriculum.\n"
-                + "\n"
-                + "• 1908: MBS renamed Philippine School of Commerce (PSC) due to focus on students from provinces. Four-year secondary course in commerce offered.\n"
-                + "\n"
-                + "• 1911: PSC placed under supervision of Superintendent of City Schools for administrative purposes, produces first batch of high school graduates.\n"
-                + "\n"
-                + "• 1912: One-year stenography course introduced and proves successful.\n"
-                + "\n"
-                + "• 1917: PSC revises courses and expands offerings, opens night classes (closed in 1932).\n"
-                + "\n"
-                + "• 1933: PSC merged with Philippine Normal School (PNS) and Philippine School of Arts and Trades, retains secondary curriculum.\n"
-                + "\n"
-                + "• 1940: President Manuel L. Quezon promises new building for PSC.\n"
-                + "\n"
-                + "• 1942: War disrupts PSC operations, school resumes after liberation in 1946.\n"
-                + "\n"
-                + "• 1947: PSC acquires Lepanto building in Sampaloc, Manila and officially moves there.\n"
-                + "\n"
-                + "• 1948: PSC acquires P.E. grounds in Sampaloc.\n"
-                + "\n"
-                + "• 1949: Teacher-training department established.\n"
-                + "\n"
-                + "• 1951: Three departments organized: Teacher Training, Business Education, and Research.\n"
-                + "\n"
-                + "----- History: 1952-1971-----\n"
-                + "\n"
-                + "• 1952: PSC becomes Philippine College of Commerce (PCC) under RA 778, broadens course offerings.\n"
-                + "\n"
-                + "• 1954: PCC celebrates Golden Jubilee.\n"
-                + "\n"
-                + "• 1955: PCC awarded \"Business College of the Year\" by Business Writers Association of the Philippines.\n"
-                + "\n"
-                + "• 1956: Prof. Pacifico A. Velilla takes over as PCC president.\n"
-                + "\n"
-                + "• 1962: Dr. Nemesio E. Prudente becomes president, establishes various initiatives.\n"
-                + "\n"
-                + "• 1963: College Code printed, Public Relations Program established, PCC Faculty Journal launched.\n"
-                + "\n"
-                + "• 1965: Pandacan site reserved for PCC, student assistantship program and financial aid introduced.\n"
-                + "\n"
-                + "• 1967: 10-hectare lot in Bicutan, Taguig reserved for PCC, student involvement policy adopted.\n"
-                + "\n"
-                + "• 1968: RA 6980 authorizes offering of social science courses, Sta. Mesa (A. Mabini) Campus assigned for PCC use.\n"
-                + "\n"
-                + "• 1969: President of Supreme Student Council becomes Board of Trustees member, Master of Arts and Master of Business Administration programs offered.\n"
-                + "\n"
-                + "• 1971: College Code revised, Laboratory High School transferred to A. Mabini Campus, Katipunan Foundation, Inc. created.\n"
-                + "\n"
-                + "----- History: 1972-1985 -----\n"
-                + "\n"
-                + "• 1972: Dr. Narciso Albaraccin, Jr. becomes OIC, introduces new courses, reorganizes faculties.\n"
-                + "\n"
-                + "• 1973: Dr. Isabelo T. Crisostomo becomes OIC, expands offerings, constructs gymnasium phase 1.\n"
-                + "\n"
-                + "• 1974: Bachelor of Business Administration and General Administration offered, various offices restructured.\n"
-                + "\n"
-                + "• 1975: PCC opens branch in Bataan Export Processing Zone (BEPZ), Mariveles, Bataan.\n"
-                + "\n"
-                + "• 1976: Faculty of Arts and Sciences (FAS) reestablished, graduate programs expanded.\n"
-                + "\n"
-                + "• 1977: Dr. Pablo T. Mateo becomes president, expands ladder program, introduces new courses.\n"
-                + "\n"
-                + "• 1978: PCC becomes Polytechnic University of the Philippines (PUP) through PD 1341, course offerings and administrative organization restructured.\n"
-                + "\n"
-                + "• 1979: Main library, university canteen, ecumenical chapel, and parts of PUP-Main Academic Building constructed, branch established in Lopez, Quezon.\n"
-                + "\n"
-                + "• 1983: Despite economic difficulties, PUP maintains 71 ladderized technical and professional programs, introduces Bachelor of Human Behavior Technology, includes computers in all degree programs, revives PUP Student Council.\n"
-                + "\n"
-                + "• 1984: University reorganized into \"cluster colleges\", University Center for Technological Research established, PUP partners with various agencies for training programs.\n"
-                + "\n"
-                + "----- History: 1986 - 2010 -----\n"
-                + "\n"
-                + "• 1986: Dr. Nemesio E. Prudente retakes presidency, focuses on education as equalizing factor, restructures University.\n"
-                + "\n"
-                + "• 1991-1999 - Period of continuous change with the appointment of the first lady president, Dr. Zenaida A. Olonan, and various initiatives.\n"
-                + "\n"
-                + "• 1999 - PUP celebrated its 95th Foundation Anniversary and underwent infrastructure projects, including the construction of the PUPWebSite.\n"
-                + "\n"
-                + "• 2000 - PUP became a Center of Development for Excellence in Information Technology, and the PUP ICT Center started operations.\n"
-                + "\n"
-                + "• 2001 - PUP achieved significant infrastructure developments, accreditation success, and student achievements.\n"
-                + "\n"
-                + "• 2003 - Dr. Ofelia M. Carague completed her term as President, and Dr. Samuel M. Salvador was designated Officer-in-Charge.\n"
-                + "\n"
-                + "• 2004 - PUP underwent various developments, including the establishment of the Research Center for Peace, Justice, and Democracy.\n"
-                + "\n"
-                + "• 2005 - Dr. Dante G. Guevarra was appointed Officer-in-Charge, and PUP celebrated its 101st Founding Anniversary.\n"
-                + "\n"
-                + "• 2006 - PUP participated in DOST's Technology Innovation for Commercialization Program and launched PUPCET iApply.\n"
-                + "\n"
-                + "• 2007 - PUP won awards in documentary competitions, became Southeast Asia's first Railway Academy, and launched PUP iText.\n"
-                + "\n"
-                + "• 2008 - PUP held an energy fair, became the permanent home of the Mabini Shrine, and partnered with Beijing Hangweili Educational Technology.\n"
-                + "\n"
-                + "• 2009 - PUP led in distance education studies, partnered with SMART Communications for PUP iText, and won the 1st College Debate Contest on Democracy.\n"
-                + "\n"
-                + "• 2010 - PUP was declared the permanent home of the Mabini Shrine, partnered with Jollibee for ACE scholarship, and conducted the 1st Gat Apolinario Mabini Awards.\n"
-                + "\n"
-                + "• 2011 - PUP won the PANAF Merit Award in IMC Youth Congress Competition, and the Bachelor in Transportation Management students won the DSFL Interschool Quiz Bee Competition.");
+                    }
+                    } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+       
+        jTxtHolder5.setText(holder);
         jTxtHolder5.setCaretPosition(0);
+        
     }//GEN-LAST:event_jBtnHistoryMouseClicked
 
     private void jBtnHistoryActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnHistoryActionPerformed
@@ -5124,14 +5053,22 @@ public class Home extends javax.swing.JFrame {
         jBtnMission.setBackground(new java.awt.Color(136, 0, 0));
         jBtnHistory.setBackground(new java.awt.Color(219, 166, 37));
         jBtnVision.setBackground(new java.awt.Color(219, 166, 37));
+        
+        String holder = "";
+        
+        try {
+                    File fread = new File("Mission.txt");
+                    Scanner in = new Scanner(fread);
+                    
+                    while (in.hasNext()){
+                        holder += in.nextLine() + "\n";
 
-        jTxtHolder5.setText("Ensuring inclusive and equitable quality education and promoting lifelong learning opportunities through a re-engineered polytechnic university by committing to:"
-                + "\n\n• provide democratized access to educational opportunities for the holistic development of individuals with global perspective\n"
-                + "\n• offer industry-oriented curricula that produce highly-skilled professionals with managerial and technical capabilities and a strong sense of public service for nation building\n"
-                + "\n• embed a culture of research and innovation\n"
-                + "\n• continuously develop faculty and employees with the highest level of professionalism\n"
-                + "\n• engage public and private institutions and other stakeholders for the attainment of social development goal\n"
-                + "\n• establish a strong presence and impact in the international academic community");
+                    }
+                    } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+       
+        jTxtHolder5.setText(holder);
         jTxtHolder5.setCaretPosition(0);
     }//GEN-LAST:event_jBtnMissionMouseClicked
 
@@ -5144,10 +5081,21 @@ public class Home extends javax.swing.JFrame {
         jBtnHistory.setBackground(new java.awt.Color(219, 166, 37));
         jBtnMission.setBackground(new java.awt.Color(219, 166, 37));
 
-        jTxtHolder5.setText("\"PUP: The National Polytechnic University\" or \"PUP: Pambansang Politeknikong Unibersidad.\" \n"
-                + "--------------------------------------------------------------------------------------\n"
-                + "\n"
-                + "This vision statement emphasizes the university's aspiration to be a premier institution for polytechnic education in the Philippines. It reflects a commitment to providing high-quality technical and vocational education, nurturing well-rounded professionals, and contributing significantly to national development.");
+        String holder = "";
+        
+        try {
+                    File fread = new File("Vision.txt");
+                    Scanner in = new Scanner(fread);
+                    
+                    while (in.hasNext()){
+                        holder += in.nextLine() + "\n";
+
+                    }
+                    } catch (FileNotFoundException ex) {
+                    Logger.getLogger(Home.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+       
+        jTxtHolder5.setText(holder);
         jTxtHolder5.setCaretPosition(0);
     }//GEN-LAST:event_jBtnVisionMouseClicked
 
@@ -5417,6 +5365,145 @@ public class Home extends javax.swing.JFrame {
         jLabelNextArrow2.setForeground(new Color(245, 245, 245));
     }//GEN-LAST:event_jLabelNextArrow2MouseExited
 
+    private void jBtnAdminMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnAdminMouseClicked
+        JOptionPane.showMessageDialog(null,"You are log-in to an admin account\nYou can edit some areas of this program", "Admin Mode",  JOptionPane.INFORMATION_MESSAGE);
+    }//GEN-LAST:event_jBtnAdminMouseClicked
+
+    private void jBtnAdminMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnAdminMouseEntered
+        jBtnAdmin.setBackground(new Color(136, 0, 0));
+        jBtnAdmin.setFont(new Font("Arial", Font.BOLD, 18));
+        jBtnAdmin.setForeground(new Color(245, 245, 245));
+    }//GEN-LAST:event_jBtnAdminMouseEntered
+
+    private void jBtnAdminMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnAdminMouseExited
+        jBtnAdmin.setBackground(new Color(219, 166, 37));
+        jBtnAdmin.setFont(new Font("Arial", Font.BOLD, 18));
+        jBtnAdmin.setForeground(new Color(245, 245, 245));
+    }//GEN-LAST:event_jBtnAdminMouseExited
+
+    private void jBtnAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnAdminActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnAdminActionPerformed
+
+    private void jBtnSaveChangesHMVMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnSaveChangesHMVMouseClicked
+        try {
+            Color targetColor = new Color(136, 0, 0);
+
+            if (jBtnHistory.getBackground().equals(targetColor)) {
+                FileWriter fwrite = new FileWriter("History.txt");
+                BufferedWriter buff = new BufferedWriter(fwrite);
+                buff.write(jTxtHolder5.getText());
+                buff.close();
+                JOptionPane.showMessageDialog(null,"History Changes Saved.","Admin Mode",  JOptionPane.INFORMATION_MESSAGE);
+          } else if (jBtnMission.getBackground().equals(targetColor)) {
+                FileWriter fwrite = new FileWriter("Mission.txt");
+                BufferedWriter buff = new BufferedWriter(fwrite);
+                buff.write(jTxtHolder5.getText());
+                buff.close();
+                JOptionPane.showMessageDialog(null,"Mission Changes Saved.","Admin Mode",  JOptionPane.INFORMATION_MESSAGE);
+          } else if (jBtnVision.getBackground().equals(targetColor)) {
+                FileWriter fwrite = new FileWriter("Vision.txt");
+                BufferedWriter buff = new BufferedWriter(fwrite);
+                buff.write(jTxtHolder5.getText());
+                buff.close();
+                JOptionPane.showMessageDialog(null,"Vision Changes Saved.","Admin Mode",  JOptionPane.INFORMATION_MESSAGE);
+          }
+          
+           
+      } catch (IOException e){
+          
+      }
+    }//GEN-LAST:event_jBtnSaveChangesHMVMouseClicked
+
+    private void jBtnSaveChangesHMVActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSaveChangesHMVActionPerformed
+         
+    }//GEN-LAST:event_jBtnSaveChangesHMVActionPerformed
+
+    private void jBtnSaveChangesAwardsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnSaveChangesAwardsMouseClicked
+        try {
+                FileWriter fwrite = new FileWriter("Achievements.txt");
+                BufferedWriter buff = new BufferedWriter(fwrite);
+                buff.write(jTxtHolder1.getText());
+                buff.close();
+          
+           JOptionPane.showMessageDialog(null,"Awards Changes Saved.","Admin Mode",  JOptionPane.INFORMATION_MESSAGE);
+      } catch (IOException e){
+          
+      }
+    }//GEN-LAST:event_jBtnSaveChangesAwardsMouseClicked
+
+    private void jBtnSaveChangesAwardsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSaveChangesAwardsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnSaveChangesAwardsActionPerformed
+
+    private void jBtnSaveChangesAdmissionMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnSaveChangesAdmissionMouseClicked
+        try {
+            Color targetColor = new Color(136, 0, 0);
+
+            if (jBtnCollege.getBackground().equals(targetColor)) {
+                FileWriter fwrite = new FileWriter("College.txt");
+                BufferedWriter buff = new BufferedWriter(fwrite);
+                buff.write(jTxtHolder4.getText());
+                buff.close();
+                JOptionPane.showMessageDialog(null,"College Changes Saved.","Admin Mode",  JOptionPane.INFORMATION_MESSAGE);
+          } else if (jBtnSHS.getBackground().equals(targetColor)) {
+                FileWriter fwrite = new FileWriter("SHS.txt");
+                BufferedWriter buff = new BufferedWriter(fwrite);
+                buff.write(jTxtHolder4.getText());
+                buff.close();
+                JOptionPane.showMessageDialog(null,"SHS Changes Saved.","Admin Mode",  JOptionPane.INFORMATION_MESSAGE);
+          } else if (JBtnScholarship.getBackground().equals(targetColor)) {
+                FileWriter fwrite = new FileWriter("Scholarship.txt");
+                BufferedWriter buff = new BufferedWriter(fwrite);
+                buff.write(jTxtHolder4.getText());
+                buff.close();
+                JOptionPane.showMessageDialog(null,"Scholarship Changes Saved.","Admin Mode",  JOptionPane.INFORMATION_MESSAGE);
+          }
+          
+           
+      } catch (IOException e){
+          
+      }
+    }//GEN-LAST:event_jBtnSaveChangesAdmissionMouseClicked
+
+    private void jBtnSaveChangesAdmissionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSaveChangesAdmissionActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnSaveChangesAdmissionActionPerformed
+
+    private void jBtnSaveChangesClubsMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnSaveChangesClubsMouseClicked
+        try {
+                FileWriter fwrite = new FileWriter("Clubs.txt");
+                BufferedWriter buff = new BufferedWriter(fwrite);
+                buff.write(jTxtHolder10.getText());
+                buff.close();
+          
+           JOptionPane.showMessageDialog(null,"Department Clubs Changes Saved.","Admin Mode",  JOptionPane.INFORMATION_MESSAGE);
+      } catch (IOException e){
+          
+      }
+    }//GEN-LAST:event_jBtnSaveChangesClubsMouseClicked
+
+    private void jBtnSaveChangesClubsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSaveChangesClubsActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnSaveChangesClubsActionPerformed
+
+    private void jBtnSaveChangesFunMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBtnSaveChangesFunMouseClicked
+        try {
+                FileWriter fwrite = new FileWriter("Fun Facts.txt");
+                BufferedWriter buff = new BufferedWriter(fwrite);
+                buff.write(jTxtHolder8.getText());
+                buff.close();
+          
+           JOptionPane.showMessageDialog(null,"Fun Facts Saved.","Admin Mode",  JOptionPane.INFORMATION_MESSAGE);
+      } catch (IOException e){
+          
+      }
+    }//GEN-LAST:event_jBtnSaveChangesFunMouseClicked
+
+    private void jBtnSaveChangesFunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSaveChangesFunActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnSaveChangesFunActionPerformed
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton JBtnScholarship;
     private javax.swing.JTabbedPane JTabbedNavigation;
@@ -5450,10 +5537,16 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.ButtonGroup buttonGroup7;
     private javax.swing.ButtonGroup buttonGroup8;
     private javax.swing.ButtonGroup buttonGroup9;
+    private javax.swing.JButton jBtnAdmin;
     private javax.swing.JButton jBtnCollege;
     private javax.swing.JButton jBtnHistory;
     private javax.swing.JButton jBtnMission;
     private javax.swing.JButton jBtnSHS;
+    private javax.swing.JButton jBtnSaveChangesAdmission;
+    private javax.swing.JButton jBtnSaveChangesAwards;
+    private javax.swing.JButton jBtnSaveChangesClubs;
+    private javax.swing.JButton jBtnSaveChangesFun;
+    private javax.swing.JButton jBtnSaveChangesHMV;
     private javax.swing.JButton jBtnVision;
     private javax.swing.JButton jButtonRessults;
     private javax.swing.JCheckBox jCBAcadRating;
@@ -5755,16 +5848,9 @@ public class Home extends javax.swing.JFrame {
     private javax.swing.JTextArea jTxtHolder8;
     private javax.swing.JTextArea jTxtHolder9;
     // End of variables declaration//GEN-END:variables
-    private int intTVL_score = 0, intACAD_score = 0, intSPORTS_score = 0, intARTS_score = 0;
-    private int intABM = 0, intSTEM = 0, intHUMMS = 0, intANIMATION = 0, intPERFORMING_ARTS = 0, intFILM_PRODUCTION = 0, intSPORTS_COACHING = 0, intSPORTS_OFFICIATING = 0, intHOME_ECONOMICS = 0, intICT = 0, intINDUSTRIAL = 0;
-    private String filText, engText, genText, mathText, sciText;
-    private String AcadText, SportsText, TVLText, ArtsText;
-
-    //grades
-    private int intConvertFil = 0, intConvertEng = 0, intConvertGen = 0, intConvertMath = 0, intConvertSci = 0;
-    private int intConvertAcads = 0, intConvertSports = 0, intConvertTVL = 0, intConvertArts = 0;
-
     private void setCaretPosition(int i) {
         throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }
+
+

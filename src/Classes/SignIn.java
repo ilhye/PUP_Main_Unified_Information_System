@@ -1,6 +1,9 @@
 package Classes;
 
 import java.awt.*;
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import javax.swing.*;
 
 public class SignIn extends javax.swing.JFrame {
@@ -12,6 +15,32 @@ public class SignIn extends javax.swing.JFrame {
         // App icon
         Image icon = new ImageIcon(getClass().getResource("/icons/image-300x300.jpg")).getImage();
         this.setIconImage(icon);
+    }
+
+    public void adminbool() {
+
+        try {
+            FileWriter fwrite = new FileWriter("isAdmin.txt");
+            BufferedWriter buff = new BufferedWriter(fwrite);
+            buff.write("true");
+            buff.close();
+
+        } catch (IOException e) {
+
+        }
+    }
+
+    public void visitorbool() {
+
+        try {
+            FileWriter fwrite = new FileWriter("isAdmin.txt");
+            BufferedWriter buff = new BufferedWriter(fwrite);
+            buff.write("false");
+            buff.close();
+
+        } catch (IOException e) {
+
+        }
     }
 
     // Initialize form
@@ -352,6 +381,7 @@ public class SignIn extends javax.swing.JFrame {
             if (data.isUsernameExist(login.getUsername())) {
                 if (data.isUnamePassValid(login.getUsername(), login.getPassword())) {
                     JOptionPane.showMessageDialog(this, "Login Successfully", "LogIn", JOptionPane.INFORMATION_MESSAGE);
+                    visitorbool();
                     Home options = new Home();
                     options.pack();
                     options.setVisible(true);
@@ -363,6 +393,7 @@ public class SignIn extends javax.swing.JFrame {
             } else if (aFile.isAdminUN(login.getUsername())) {
                 if (aFile.adminAccnt(login.getUsername(), login.getPassword())) {
                     JOptionPane.showMessageDialog(this, "Login Successfully", "LogIn", JOptionPane.INFORMATION_MESSAGE);
+                    adminbool();
                     Home options = new Home();
                     options.pack();
                     options.setVisible(true);

@@ -5,6 +5,7 @@ import java.security.SecureRandom;
 import javax.swing.*;
 
 public class SignUp extends javax.swing.JFrame {
+
     private int code = 0;
     Logs logs = new Logs();
 
@@ -428,19 +429,14 @@ public class SignUp extends javax.swing.JFrame {
         logs.setCode(String.valueOf(jPasswordField2.getPassword()));
 
         switch (logs.nameVerifier(logs.getName())) {
-         
             case 1:
-                jLabel6.setText("*Invalid name");
-                break;
-            case 2:
                 jLabel6.setText("*Please enter your name");
                 break;
             default:
                 jLabel6.setText("");
                 isNameValid = true;
                 break;
-                
-         
+
         }
 
         // System.out.println("Checking username: " + logs.getUsername());
@@ -448,9 +444,9 @@ public class SignUp extends javax.swing.JFrame {
             jLabel8.setText("*Username has already been taken");
         } else if (logs.getUsername().isEmpty()) {
             jLabel8.setText("*Please enter username");
-        } else  if (logs.usernameVerifier(logs.getUsername())){
+        } else if (logs.usernameVerifier(logs.getUsername())) {
             jLabel8.setText("*Invalid username");
-        } else if (!logs.usernameVerifier(logs.getUsername())){
+        } else if (!logs.usernameVerifier(logs.getUsername())) {
             jLabel8.setText("");
             isUsernameValid = true;
         }
@@ -476,10 +472,10 @@ public class SignUp extends javax.swing.JFrame {
 
             if (!data.storeData(data.getfName(), data.getfUsername(), data.getfPassword(), data.getfCode())) {
                 JOptionPane.showMessageDialog(this, "Account Successfully Created! \n Your back-up code: " + data.getfCode(), "Notice", JOptionPane.INFORMATION_MESSAGE);
-                Home options = new Home();
-                options.pack();
-                options.setVisible(true);   // Display Menu frame
-                dispose();                  // Close menu frame
+                SignIn logFrame = new SignIn();
+                logFrame.pack();
+                logFrame.setVisible(true);  // Display LogIn frame
+                dispose();                  // Close LogIn frame
             }
         }
     }//GEN-LAST:event_jButton1ActionPerformed

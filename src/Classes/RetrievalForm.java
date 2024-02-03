@@ -364,7 +364,6 @@ public class RetrievalForm extends javax.swing.JFrame {
             if (null == verify) {
                 return;
             }*/
-            
             if (verify.getUsername().isEmpty() && !verify.getPassword().isEmpty()) {
                 jLabel14.setText("*Please enter username");
                 jLabel6.setText("");
@@ -411,11 +410,11 @@ public class RetrievalForm extends javax.swing.JFrame {
 
                     if (fData.codeExist(verify.getCode())) {
                         fData.updateDate(verify.getCode(), verify.getUsername(), verify.getPassword());
-                        JOptionPane.showMessageDialog(this, "Account Successfully Created! Redirecting you to the Home Page", "Notice", JOptionPane.INFORMATION_MESSAGE);
-                        Home home = new Home();
-                        home.pack();
-                        home.setVisible(true);
-                        dispose();
+                        JOptionPane.showMessageDialog(this, "Account Successfully Created! Redirecting you to the Sign In Page", "Notice", JOptionPane.INFORMATION_MESSAGE);
+                        SignIn logFrame = new SignIn();
+                        logFrame.pack();
+                        logFrame.setVisible(true);  // Display LogIn frame
+                        dispose();                  // Close LogIn frame
                     }
                 }
             }

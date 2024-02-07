@@ -5,14 +5,14 @@ import java.security.SecureRandom;
 import javax.swing.*;
 
 public class SignUp extends javax.swing.JFrame {
-
+    
     private int code = 0;
     Logs logs = new Logs();
 
     // Constructor
     public SignUp() {
         initComponents();
-
+        
         SecureRandom secureRandomGenerator = new SecureRandom();
         code = secureRandomGenerator.nextInt(999999);
         jPasswordField2.setText(String.valueOf(code));
@@ -386,7 +386,7 @@ public class SignUp extends javax.swing.JFrame {
                 "Exit Confirmation",
                 JOptionPane.YES_NO_OPTION
         );
-
+        
         if (result == JOptionPane.YES_OPTION) {
             System.exit(0);
         }
@@ -422,35 +422,43 @@ public class SignUp extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         UserFile data = new UserFile();
-
+        AdminFile admin = new AdminFile();
+        
         logs.setName(jTextField1.getText().trim());
         logs.setUsername(jTextField2.getText());
         logs.setPassword(String.valueOf(jPasswordField1.getPassword()));
         logs.setCode(String.valueOf(jPasswordField2.getPassword()));
-
+        
         switch (logs.nameVerifier(logs.getName())) {
             case 1:
                 jLabel6.setText("*Please enter your name");
                 break;
             default:
+            
                 jLabel6.setText("");
                 isNameValid = true;
                 break;
-
+            
         }
 
-        // System.out.println("Checking username: " + logs.getUsername());
-        if (data.isUsernameExist(logs.getUsername())) {
-            jLabel8.setText("*Username has already been taken");
-        } else if (logs.getUsername().isEmpty()) {
+        if (logs.getUsername().isEmpty()) {
             jLabel8.setText("*Please enter username");
         } else if (logs.usernameVerifier(logs.getUsername())) {
             jLabel8.setText("*Invalid username");
-        } else if (!logs.usernameVerifier(logs.getUsername())) {
-            jLabel8.setText("");
+        } 
+        
+        // System.out.println("Checking username: " + logs.getUsername());
+        if (data.isUsernameExist(logs.getUsername()) && admin.isAdminUN(logs.getUsername())) {
+            jLabel8.setText("*Username has already been taken");
+            isUsernameValid = false;
+        } else {
+            if (!logs.usernameVerifier(logs.getUsername())) {
+                jLabel8.setText("");
             isUsernameValid = true;
+            }
         }
-
+       
+        
         switch (logs.passVerifier(logs.getPassword(), logs.getUsername())) {
             case 1:
                 jLabel10.setText("*Please enter password");
@@ -463,13 +471,13 @@ public class SignUp extends javax.swing.JFrame {
                 jLabel10.setText("");
                 break;
         }
-
+        
         if (isNameValid && isUsernameValid && isPassValid) {
             data.setfName(logs.getName());
             data.setfUsername(logs.getUsername());
             data.setfPassword(logs.getPassword());
             data.setfCode(logs.getCode());
-
+            
             if (!data.storeData(data.getfName(), data.getfUsername(), data.getfPassword(), data.getfCode())) {
                 JOptionPane.showMessageDialog(this, "Account Successfully Created! \n Your back-up code: " + data.getfCode(), "Notice", JOptionPane.INFORMATION_MESSAGE);
                 SignIn logFrame = new SignIn();

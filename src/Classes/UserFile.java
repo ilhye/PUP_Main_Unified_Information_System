@@ -11,7 +11,12 @@ public class UserFile {
     private String fUsername;
     private String fPassword;
     private String fCode;
+    private List<String> lines;
 
+    public UserFile() {
+        this.lines = new ArrayList<>();
+    }
+    
     /**
      * @return the fName
      */
@@ -151,7 +156,7 @@ public class UserFile {
     }
 
     public void updateDate(String fCode, String fUsername, String fPassword) {
-        List<String> lines = new ArrayList<>();
+        // List<String> lines = new ArrayList<>();
 
         try (BufferedReader reader = new BufferedReader(new FileReader("Account.txt"))) {
             String line;
@@ -164,7 +169,7 @@ public class UserFile {
             while (iterator.hasNext()) {
                 String currentLine = iterator.next();
 
-                if (currentLine.startsWith("Back-up Code:") && currentLine.contains(fCode)) {
+                if (currentLine.startsWith("Back-up Code:") && currentLine.split(": ")[1].equals(fCode)) {
                     int fIndexCode = iterator.previousIndex();
 
                     if (fIndexCode >= 2) {
@@ -183,7 +188,7 @@ public class UserFile {
                 writer.println(updatedLine);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("An error occurred");
         }
 
     }

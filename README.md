@@ -11,14 +11,14 @@ This repository contains the main codebase for the Unified Information System de
 5. Villasor, Cristina
 
 ### Features:
-**History:** Overview of PUP's founding and growth.
-**Mission & Vision:** Core objectives of PUP.
-**Strand and Track Evaluation:** Evaluate academic offerings.
-**Facilities of PUP:** Explore campus amenities.
-**Colleges:** Discover academic departments.
-**Fun Facts:** Interesting insights about PUP.
-**Achievements:** Highlights of PUP's success.
-**Clubs:** Explore student organizations.
+- **History:** Overview of PUP's founding and growth.
+- **Mission & Vision:** Core objectives of PUP.
+- **Strand and Track Evaluation:** Evaluate academic offerings.
+- **Facilities of PUP:** Explore campus amenities.
+- **Colleges:** Discover academic departments.
+- **Fun Facts:** Interesting insights about PUP.
+- **Achievements:** Highlights of PUP's success.
+- **Clubs:** Explore student organizations.
 
 ### Usage:
 1. Clone the repository to your local machine.

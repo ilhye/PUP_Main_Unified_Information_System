@@ -1,4 +1,5 @@
-**<h1 style="justify-content: center;">PUP_Main_Unified_Information_System </h1>**
+# PUP MAIN-UNIFIED INFORMATION SYSTEM
+----
 
 ### Description:
 This repository contains the main codebase for the Unified Information System developed for PUP (Polytechnic University of the Philippines). The system aims to streamline various administrative and academic processes within the university, enhancing efficiency and accessibility.

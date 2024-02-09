@@ -4,11 +4,11 @@
 This repository contains the main codebase for the Unified Information System developed for PUP (Polytechnic University of the Philippines). The system aims to streamline various administrative and academic processes within the university, enhancing efficiency and accessibility.
 
 ### Members:
-Arrey, Ceferino
-Barcos, Jim
-Silerio, Aaron Gabriel
-Sta.Ines, Jhonder
-Villasor, Cristina
+1. Arrey, Ceferino
+2. Barcos, Jim
+3. Silerio, Aaron Gabriel
+4. Sta.Ines, Jhonder
+5. Villasor, Cristina
 
 ### Features:
 **History:** Overview of PUP's founding and growth.
